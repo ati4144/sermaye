@@ -1,0 +1,1137 @@
+{{Dieser Artikel|behandelt den Aktienindex. Zu weiteren Bedeutungen siehe [[Dax]].}}
+{| class="wikitable float-right"
+| colspan="2" style="text-align:center" | [[Datei:DAX-logo.svg|250px|DAX]]
+|-
+!colspan="2"| Performanceindex
+|-
+| [[Internationale Wertpapierkennnummer|ISIN]] || {{ISIN|DE0008469008}}
+|-
+| [[Wertpapierkennnummer|WKN]] || 846900
+|-
+| [[Tickersymbol|Symbol]] || DAX
+|-
+| [[Reuters Instrument Code|RIC]] || .GDAXI
+|-
+| [[Bloomberg L.P.|Bloomberg-Code]] || DAX &lt;Index>
+|-
+!colspan="2"| Kursindex
+|-
+| ISIN || {{ISIN|DE0008467440}}
+|-
+| WKN || 846744
+|-
+| Symbol || DAXK
+|-
+| RIC || .GDAXIP
+|-
+| Bloomberg-Code || DAXK Index
+|}
+Der '''DAX''' (Abkürzung für '''Deutscher Aktienindex''')<ref>Deutsche Börse Group, DAX-Indices: {{Webarchiv |url=http://www.dax-indices.com/DE/MediaLibrary/Document/Factsheets/Factsheet_DAX_de.pdf |text=Factsheet DAX |wayback=20140602195808}} (PDF; 130&nbsp;kB).</ref> ist der bedeutendste deutsche [[Aktienindex]]. Er misst aktuell die Wertentwicklung der 40 größten und (bezogen auf die [[Streubesitz]]-[[Marktkapitalisierung]]) liquidesten Unternehmen des deutschen Aktienmarktes und repräsentiert rund 80 Prozent der Marktkapitalisierung börsennotierter Aktiengesellschaften in Deutschland.<ref name=":0">{{Internetquelle |url=http://deutsche-boerse.com/dbg-de/presse/pressemitteilungen/Deutsche-Boerse-startet-neuen-XDAXDAX-Index/2386400 |titel=Deutsche Börse startet neuen XDAXDAX-Index |titelerg=Index deckt gesamte Handelszeit des Derivatemarktes ab |hrsg=Deutsche Börse AG |datum=2016-02-03 |archiv-url=https://web.archive.org/web/20171204061235/http://deutsche-boerse.com/dbg-de/presse/pressemitteilungen/Deutsche-Boerse-startet-neuen-XDAXDAX-Index/2386400 |archiv-datum=2017-12-04 |offline=1 |abruf=2017-12-03}}</ref>
+
+Die im DAX enthaltenen Aktiengesellschaften sind mindestens im [[General Standard]] an der [[Frankfurter Wertpapierbörse]] notiert. Der Index basiert auf Handelsdaten im elektronischen Handelssystem [[Xetra]] und wird börsentäglich von ca. 9 Uhr bis 17:30 Uhr berechnet.<ref name=":0" /> Der Index ist ein Produkt und eingetragene [[Wortmarke]] und [[Bildmarke]] der [[Deutsche Börse|Deutschen Börse AG]].<ref>{{DtPatentMarkenA|Nummer=1164323 |Name=„DAX“}}.</ref><ref>{{DtPatentMarkenA|Nummer=003109551 |Auskunft=1 |Name=DAX}}.</ref> Er ist das wichtigste Mitglied der [[DAX-Indexfamilie]].
+
+== Geschichte ==
+Entwickelt wurde der DAX gemeinsam von der Arbeitsgemeinschaft der Deutschen [[Wertpapierbörse]]n, der Frankfurter Wertpapierbörse und der [[Börsen-Zeitung]]. Er wurde am 1. Juli 1988 eingeführt und setzt den Index der Börsen-Zeitung fort, dessen Geschichte bis ins Jahr 1959 zurückgeht. Für den 31. Dezember 1987 wurde er auf 1.000 Indexpunkte normiert. Zunächst wurde der DAX lediglich als Ergänzung zu bereits etablierten deutschen Aktienindizes gesehen, inzwischen hat er die anderen Indizes aber an Bekanntheit hinter sich gelassen und ist als Leitindex für den deutschen Aktienmarkt national und international anerkannt.<ref>Torsten Hampel: [https://www.tagesspiegel.de/wirtschaft/der-dax-wird-25-jahre-die-kurvenfunktion/8428058.html ''Die Kurvenfunktion.''] In: [[Der Tagesspiegel]]. 1. Juli 2013.</ref>
+
+Ursprünglich basierend auf den Werten der 30 bedeutendsten notierten Aktiengesellschaften, wurde er im September 2021 von 30 auf 40 Aktiengesellschaften erweitert.<ref>{{Internetquelle |url=https://www.tagesschau.de/wirtschaft/boerse/dax-reform-103.html |titel=Börsenindex DAX besteht künftig aus 40 Unternehmen |werk=tagesschau.de |datum=2020-11-24 |abruf=2020-12-16}}</ref>
+
+== Typologie und weitere DAX-Indizes ==
+Der DAX wird sowohl als [[Aktienindex#Performanceindex|Performance-]] als auch als [[Kursindex]] veröffentlicht. Als Performanceindex (Symbol DAX) werden die [[Dividende]]n der im DAX enthaltenen Unternehmen rechnerisch reinvestiert; beim Kursindex (Symbol DAXK) bleiben die Dividenden unberücksichtigt. Umgangssprachlich wird unter der einfachen Bezeichnung „DAX“ der Performanceindex verstanden. Bei anderen Indizes (z.&nbsp;B. beim [[EURO STOXX 50]]) ist mit der einfachen Bezeichnung meistens der jeweilige Kursindex gemeint.
+
+Im Frühjahr 1994 wurde der sogenannte DAX 100 eingeführt. Dieser Index sollte die Wertentwicklung der 100 liquidesten Werte des [[Aktienmarkt]]s dokumentieren. Mit Einführung des [[MDAX]] 1996 umfasste er die 30 Werte des DAX und die 70 des MDAX. Durch die Änderung des MDAX auf 50 Werte, seit dem 24. September 2018 auf 60 Werte, trat an die Stelle des DAX 100 der [[HDAX]]. Der [[CDAX]] umfasst dagegen alle in Frankfurt gehandelten Aktien. Der [[SDAX]] umfasst seit dem 24. September 2018 70 kleinere Werte hinter dem MDAX.
+
+Als sogenannten Strategie-Index gibt es u.&nbsp;a. den [[ShortDAX]].<ref>{{Webarchiv |url=http://www.dax-indices.com/DE/MediaLibrary/Document/FS%20ShortDAX_d.pdf |text=Factsheet ShortDAX. |format=PDF; 178&nbsp;kB |wayback=20121101113023}}</ref> Er ist umgekehrt proportional zur täglichen Entwicklung des DAX und ermöglicht so Anlegern, die nur [[Long und Short|Long-Positionen]] eingehen können, die Partizipation an negativen Kursentwicklungen. Verliert beispielsweise der DAX an einem Tag 5 %, dann legt der ShortDAX um eben soviel Prozent zu. Dadurch haben z.&nbsp;B. Indexanbieter die Möglichkeit, ein Produkt zu offerieren, das bei negativer Entwicklung des DAX steigt und dem „Käufer“ Möglichkeiten eröffnet, auch bei negativen Kursentwicklungen Gewinne zu erzielen. Daneben gibt es Branchenindizes oder Strategieindizes wie den [[DivDAX]] für dividendenstarke Unternehmen. Zu den wichtigsten deutschen Indizes gehört auch der [[TecDAX]], der 30 der größten Technologiewerte beinhaltet.
+
+Die [[implizite Volatilität]], also die erwartete Schwankungsbreite des DAX für den Zeitraum der nächsten 30&nbsp;Tage misst der [[VDAX-NEW]], ein ebenfalls von der Deutschen Börse AG veröffentlichter [[Volatilitätsindex]]. Sein Vorgänger, der [[VDAX]], gibt die implizite Volatilität des DAX über 45&nbsp;Tage auf Grundlage eines anderen methodischen Ansatzes an. Beide Volaindizes werden in annualisierter Form notiert.
+
+Die [[Eurex]] bietet [[Option (Wirtschaft)|Optionen]] (ODAX) und [[Future]]s (FDAX) auf den DAX an.
+
+== Berechnung ==
+[[Datei:Deutsche-boerse-parkett-ffm005.jpg|mini|DAX-Kurstafel in der [[Frankfurter Wertpapierbörse]] (2008)]]
+
+Der Index basiert seit dem 21. Juni 1999 auf den Kursen des elektronischen Handelssystems [[Xetra]]. Seine Berechnung beginnt seit Januar 2016 börsentäglich ab 9:06 Uhr [[MEZ]]/[[MESZ]]. Wenn zu diesem Zeitpunkt für einzelne Aktien noch keine Eröffnungskurse vorliegen, werden die jeweiligen Schlusskurse des vorangegangenen Handelstags herangezogen.<ref name=":0" /> Die Berechnung endet mit den Kursen der Xetra-[[Schlussauktion]], die um 17:30 Uhr beginnt und 5 bis 15 Minuten dauern kann. Bis zum 31. Dezember 2005 wurde der DAX so im 15-Sekunden-Takt aktualisiert, seit 1. Januar 2006 jede Sekunde.
+
+Zur Berechnung, die auf der [[Preisindex#Laspeyres-Index|Indexformel]] von [[Étienne Laspeyres]] basiert, werden die Aktienkurse der ausgewählten börsennotierten Gesellschaften nach ihrer [[Marktkapitalisierung]] gewichtet. Dabei werden nur die Aktien in [[Streubesitz]] berücksichtigt. Ist das Kapital einer Gesellschaft in mehrere Aktienarten unterteilt (z.&nbsp;B. in [[Stammaktie]]n und [[Vorzugsaktie]]n), wird die Aktienart mit der höheren Liquidität herangezogen. Dabei werden auch Sonderfälle berücksichtigt, z.&nbsp;B. die 2011/2012 zum Umtausch gehandelten Aktien der Deutschen Börse AG.
+
+Für Zeiten außerhalb des Xetra-Handels (vor Handelsbeginn und nach der Schlussauktion) berechnet die Deutsche Börse AG von 8:00 Uhr bis 9:00 Uhr und von 17:30 Uhr bis 20:00 Uhr den [[LDAX]] (auch L-DAX, L/E-DAX) auf Basis der Aktienkurse an der [[Börse Frankfurt]], die entsprechend längere Handelszeiten hat.<ref>{{Internetquelle |url=https://www.dax-indices.com/de/web/dax-indices/index-aktualisierung-details?articleId=616714771 |titel=Kassamarkt eröffnet ab Juni schon um 8 Uhr |hrsg=Deutsche Börse AG |datum=2011-05-31 |abruf=2017-12-07}}</ref> Außerdem wird von 8:00 Uhr bis 9:00 Uhr und von 17:30 Uhr bis 22:15 Uhr der [[XDAX]] (auch X-DAX) auf Basis an der Terminbörse [[Eurex]] gehandelter [[DAX-Future]]s berechnet.<ref>{{Internetquelle |url=https://www.dax-indices.com/index-details?isin=DE000A0C4CA0 |titel=X-DAX® (TR) EUR |hrsg=Deutsche Börse AG |abruf=2017-12-03}}</ref>
+
+== Unternehmen im DAX ==
+=== Auswahlkriterium ===
+Seit September 2021 qualifizieren sich Unternehmen für eine Aufnahme in den DAX mit nur noch einem Hauptkriterium. Als Mitbegründung für die Änderung wird u.&nbsp;a. der [[Wirecard]]-Skandal ([[3. Untersuchungsausschuss der 19. Wahlperiode des Deutschen Bundestages|Wirecard-Untersuchungsausschuss]]) angegeben. Die Free-Float-Marktkapitalisierung (deutsch [[Marktkapitalisierung]] aus [[Streubesitz]]) wird auf jährlicher Basis im März und September zum jeweils letzten [[Handelstag]] des Monats, aus den zwanzig vorhergehenden Handelstagen mittels dem durchschnittlichen volumengewichteten Durchschnittspreis (VWAP) ermittelt, und dient als einziges Auswahlkriterium für eine Aufnahme in den DAX.<ref>{{Internetquelle |url=https://deutsche-boerse.com/dbg-de/media/deutsche-boerse-spotlights/spotlight/DAX-Index-Benchmark-und-Barometer-f-r-die-deutsche-Wirtschaft-148654 |titel=Gruppe Deutsche Börse – DAX-Index – Benchmark und Barometer für die deutsche Wirtschaft |abruf=2021-10-13}}</ref><ref>{{Internetquelle |url=https://www.merkur.de/wirtschaft/dax-40-30-boerse-reform-kandidaten-mitglieder-deutsche-frankfurt-aenderungen-airbus-zalando-symrise-delivery-hero-zr-90110387.html |titel=Der neue Dax 40: Die wichtigsten Änderungen – welche Unternehmen die besten Aufstiegschancen haben |datum=2021-09-20 |abruf=2021-10-13}}</ref>
+
+Eine Anpassung des DAX findet neben März und September zum Ende der verbleibenden Quartalsmonate jeweils über die vier, bereits vor September 2021 bestehenden Regeln statt, welche nach dem Inkrafttreten des neuen Auswahlkriterium wie folgt aussehen:
+
+'''Fast-Exit'''
+: Sollte sich ein Unternehmen aus dem Index im Kriterium der Marktkapitalisierung auf Rang 61 oder schlechter im DAX, Rang 111 oder schlechter im MDAX, Rang 181 oder schlechter im SDAX oder Rang 46 oder schlechter im TecDAX befinden, wird es aus dem Index genommen. Ein Unternehmen, das nicht im Index enthalten ist und im Rahmen der Marktkapitalisierung mindestens Rang 47 im DAX, Rang 97 im MDAX, Rang 167 im SDAX oder Rang 35 im TecDAX belegt, ersetzt jenes Unternehmen im Index.
+
+'''Fast-Entry'''
+: Sollte sich ein Unternehmen, das nicht im Index enthalten ist, im Kriterium der Marktkapitalisierung auf Rang 33 oder besser im DAX, Rang 83 oder besser im MDAX, Rang 153 oder besser im SDAX oder Rang 25 oder besser im TecDAX befinden, wird es neu in den Index aufgenommen. Jener Wert, der einen Rang hinter Rang 47 im DAX, Rang 97 im MDAX, Rang 167 im SDAX oder Rang 35 im TecDAX aufweist, scheidet aus dem Index aus.
+
+'''Regular-Exit'''
+: Potenziell für eine Indexaufnahme qualifiziert sich ein Unternehmen, wenn es sich auf einem besseren Rang, als Rang 53 im DAX, Rang 103 im MDAX, Rang 179 im SDAX oder Rang 41 im TecDAX befindet. Wenn ein Wert, der nicht im Index enthalten ist, existiert, der mindestens Rang 47 im DAX, Rang 97 im MDAX, Rang 167 im SDAX oder Rang 35 im TecDAX erreicht hat, wird ein Wechsel durchgeführt.
+
+'''Regular-Entry'''
+: Wenn ein Unternehmen sich mindestens auf Rang 40 im DAX, Rang 90 im MDAX, Rang 160 im SDAX oder Rang 30 im TecDAX befindet, kann es neu in den Index aufgenommen werden. Sollte ein Index-Wert existieren, der Rang 47 im DAX, Rang 97 im MDAX, Rang 167 im SDAX oder Rang 35 im TecDAX belegt, wird ein Wechsel durchgeführt.<ref>{{Internetquelle |url=https://deutsche-boerse.com/dbg-de/media/deutsche-boerse-spotlights/spotlight/DAX-Index-Benchmark-und-Barometer-f-r-die-deutsche-Wirtschaft-148654 |titel=Gruppe Deutsche Börse – DAX-Index – Benchmark und Barometer für die deutsche Wirtschaft |abruf=2021-10-13}}</ref>
+
+=== Indexgewichtung ===
+Die [[Indexgewichtung]] für die Werte im DAX erfolgt entsprechend ihrer [[Marktkapitalisierung#Wirtschaftliche Aspekte|Streubesitz-Marktkapitalisierung]]. Maßgeblich ist also nicht der gesamte [[Marktkapitalisierung|Börsenwert]] oder das gesamte Kapital eines Unternehmens, sondern nur der Wert der frei handelbaren Aktien (englisch {{lang|en|''free float''}}) der im DAX vertretenen [[Aktie#Aktiengattungen|Aktiengattung]]. Festbesitz, das ist der Besitz von Großaktionären, die 5 % oder mehr dieser Aktien halten, bleibt für die Gewichtung unberücksichtigt. Zum Festbesitz zählen auch [[eigene Aktie]]n, die das herausgebende Unternehmen selbst hält, unabhängig von der Höhe des Anteils. Seit 2006 gibt es eine Kappungsgrenze: Bis 2023 durften einzelne Titel ein Maximalgewicht von 10 % haben. Nach dem Abschied des „Schwergewichts“ [[Linde AG]] aus dem DAX wurde die Grenze im Jahr 2024 auf 15 % angehoben.<ref>{{Internetquelle |url=https://www.tagesschau.de/wirtschaft/finanzen/dax-kappungsgrenze-linde-100.html |autor=Bianca von der Au |titel=DAX-Kappungsgrenze wird angehoben |werk=[[tagesschau.de]] |datum=2023-11-23 |sprache=de |abruf=2025-02-15}}</ref> Weil danach auch die [[SAP]]-Aktie diese Kappungsgrenze überschritt und die Deutsche Börse den Weggang von SAP verhindern möchte, wird die Auflage eines DAX 2.0 ohne Kappungsgrenzen erwogen.<ref name="börszeit2025">{{Internetquelle |url=https://www.boersen-zeitung.de/kapitalmaerkte/deutsche-boerse-legt-dax-2-0-ohne-kappungsgrenze-auf |autor=Werner Rüppel |titel=Deutsche Börse legt Dax 2.0 ohne Kappungsgrenze auf |hrsg=[[Börsen-Zeitung]] |datum=2025-02-10 |sprache=de |abruf=2025-02-15}}</ref> Trotzdem bleibt das Problem aktiv gemanagter Fonds, die den DAX abbilden wollen, dass sie nach der europäischen Fondsrichtlinie [[OGAW-Richtlinie|Ucits]] maximal 10 % in eine Aktie investieren dürfen. Auch für [[Börsengehandelter Fonds|ETF]]s gibt es eine Grenze von 20 %.<ref name="börszeit2025" />
+
+Aufgrund von Änderungen beim Aktienbesitz, aber vor allem aufgrund von Kursveränderungen ändert sich die tatsächliche Streubesitz-Marktkapitalisierung fortwährend. Die Gewichtung wird dabei bei jeder sekündlichen Neuberechnung des DAX auf Basis der aktuellen Kurse ebenfalls neu berechnet. Änderungen des Streubesitz-Anteils werden dagegen von der Deutschen Börse nur zu den vierteljährlichen Anpassungsterminen erfasst und fließen erst dann in die Gewichtung ein. Dies führte zu Situationen, in denen sich ein Aktienkurs in Echtzeit einem veränderten Freefloat anpasst, dem aber in der Gewichtung erst zeitverzögert entgegenwirkend Rechnung getragen wird. Auf [[#Short Squeeze der VW-Aktie 2008|Kapriolen]] der Volkswagen Stammaktie hin führte die Deutsche Börse im November 2008 zusätzliche Regeln ein, um derartigen extremen Verzerrungen entgegenzuwirken. Ein Wert kann demnach zwischen Anpassungsterminen aus dem Index genommen werden, falls seine Gewichtung 10 % überschreitet und die historische [[Volatilität|30-Tages-Volatilität]] des Aktienkurses 250 % übersteigt.<ref>{{Internetquelle |url=https://deutsche-boerse.com/dbg-de/investor-relations/mitteilungen-und-services/media-releases/Deutsche-B-rse-erg-nzt-Leitfaden-f-r-Aktienindizes-610660 |titel=Deutsche Börse ergänzt Leitfaden für Aktienindizes |werk=Deutsche-Boerse.com |datum=2008-10-31 |sprache=de |abruf=2025-10-18}}</ref>
+
+=== Zusammensetzung ===
+Die Tabelle zeigt alle Unternehmen im DAX und deren Indexgewicht – basierend auf der [[Streubesitz]]-[[Marktkapitalisierung]] – von der letzten manuellen Anpassung (Stand: 22.&nbsp;Juni 2026).<!--veraltet:--><ref>{{Internetquelle |url=https://stoxx.com/index/DAX/ |autor=Heiko Behrendt |titel=Zusammensetzung DAX September 2025 |werk=stoxx.com |datum=2025-09-22 |sprache=de |abruf=2025-09-22}}</ref>
+
+{| class="wikitable sortable" id="Zusammensetzung"
+|-
+! Name
+!Symbol!! Branche !!class="unsortable"| Logo !! [[Indexgewichtung|Indexgewicht]] in % !! (Letzte) Aufnahme !! Sitz (Ort) !! Sitz (Land)
+|-
+| [[Adidas]]
+|ADS|| Sportartikel || style="text-align:center" | [[Datei:Adidas-group-logo-fr.svg|120x40px]] ||style="text-align:center"| 2,500 || {{DatumZelle|1998-06-22|style=text-align:center}} || [[Herzogenaurach]]|| {{Bayern}}
+|-
+| [[Airbus]]
+|AIR|| Luftfahrt, Raumfahrt, Rüstung || style="text-align:center" | [[Datei:Airbus Logo 2017.svg|120x40px]] ||style="text-align:center"| 6,079 || {{DatumZelle|2021-09-20|style=text-align:center}} || [[Leiden (Stadt)|Leiden]]|| {{Niederlande}}
+|-
+| [[Allianz SE|Allianz]]
+|ALV|| Versicherungen ||style="text-align:center"| [[Datei:Allianz.svg|120x40px]] ||style="text-align:center"| 8,411 || {{DatumZelle|1988-07-01|style=text-align:center}} || [[München]]|| {{Bayern}}
+|-
+| [[BASF]]
+|BAS|| Chemie ||style="text-align:center"| [[Datei:BASF-Logo bw.svg|120x40px]] ||style="text-align:center"| 2,794 || {{DatumZelle|1988-07-01|style=text-align:center}} || [[Ludwigshafen am Rhein]]|| {{Rheinland-Pfalz}}
+|-
+| [[Bayer AG|Bayer]]
+|BAYN|| Chemie, Pharma || style="text-align:center" | [[Datei:Logo Bayer.svg|120x40px]] ||style="text-align:center"| 1,466 || {{DatumZelle|1988-07-01|style=text-align:center}} || [[Leverkusen]]|| {{Nordrhein-Westfalen}}
+|-
+| [[Beiersdorf AG|Beiersdorf]]
+|BEI|| Konsumgüter (Produktion) || style="text-align:center" | [[Datei:Beiersdorf Logo.svg|120x40px]] ||style="text-align:center"| 0,743 || {{DatumZelle|2022-06-20|style=text-align:center}} || [[Hamburg]]||{{Hamburg}}
+|-
+| [[BMW]]
+|BMW|| Automobil (Produktion) || style="text-align:center" | [[Datei:Logo BMW Group 2021.svg|120x40px]] ||style="text-align:center"| 1,463 || {{DatumZelle|1988-07-01|style=text-align:center}} || München|| {{Bayern}}
+|-
+| [[Brenntag]]
+|BNR|| Chemie (Handel)|| style="text-align:center" | [[Datei:Brenntag Logo 2022.svg|120x40px]] ||style="text-align:center"| 0,484 || {{DatumZelle|2021-09-20|style=text-align:center}} || [[Essen]]|| {{Nordrhein-Westfalen}}
+|-
+|[[Commerzbank]]
+|CBK || Banken || style="text-align:center" | [[Datei:Commerzbank (2009).svg|120x120px]]|| style="text-align:center" | 1,497 ||{{DatumZelle|2023-02-27|style=text-align:center}} ||[[Frankfurt am Main]] ||{{Hessen}}
+|-
+| [[Continental AG|Continental]]
+|CON|| Automobil (Zulieferer) || style="text-align:center" | [[Datei:Continental AG logo.svg|120x40px]] ||style="text-align:center"| 0,469 || {{DatumZelle|2012-09-24|style=text-align:center}} || [[Hannover]]|| {{Niedersachsen}}
+|-
+| [[Daimler Truck]]
+|DTG|| Nutzfahrzeuge (Produktion) || style="text-align:center" | [[Datei:Daimler Truck Logo.svg|120x40px]] ||style="text-align:center"| 1,299 || {{DatumZelle|2022-03-21|style=text-align:center}} || [[Stuttgart]]|| {{Baden-Württemberg}}
+|-
+| [[Deutsche Bank]]
+|DBK|| Banken ||style="text-align:center"| [[Datei:Deutsche Bank logo without wordmark.svg|120x40px]] ||style="text-align:center"| 2,755 || {{DatumZelle|1988-07-01|style=text-align:center}} || Frankfurt am Main|| {{Hessen}}
+|-
+| [[Deutsche Börse]]
+|DB1|| Börsen ||style="text-align:center"| [[Datei:Deutsche Börse Group Logo.svg|120x40px]] ||style="text-align:center"| 3,119 || {{DatumZelle|2002-12-23|style=text-align:center}} || Frankfurt am Main|| {{Hessen}}
+|-
+| [[Deutsche Telekom]]
+|DTE|| Telekommunikation ||style="text-align:center"| [[Datei:Deutsche Telekom 2022.svg|120x40px]] ||style="text-align:center"| 7,494 || {{DatumZelle|1996-11-18|style=text-align:center}} || Bonn|| {{Nordrhein-Westfalen}}
+|-
+| [[DHL AG|DHL]]
+|DHL|| Logistik ||style="text-align:center"| [[Datei:DHL Group 06.2023.svg|120x40px]] ||style="text-align:center"| 2,528 || {{DatumZelle|2001-03-19|style=text-align:center}} || [[Bonn]]|| {{Nordrhein-Westfalen}}
+|-
+| [[E.ON]]
+|EOAN|| Energie (Versorgung) || style="text-align:center" | [[Datei:Logo E.ON.svg|120x40px]] ||style="text-align:center"| 1,829 || {{DatumZelle|2000-06-19|style=text-align:center}}<sup>1</sup>|| Essen|| {{Nordrhein-Westfalen}}
+|-
+| [[Fresenius (Unternehmen)|Fresenius]]
+|FRE|| Medizintechnik, Kliniken || style="text-align:center" | [[Datei:Fresenius Logo.svg|120x40px]] ||style="text-align:center"| 1,019 || {{DatumZelle|2009-03-23|style=text-align:center}} || [[Bad Homburg vor der Höhe]]|| {{Hessen}}
+|-
+| [[Fresenius Medical Care]]
+|FME|| Medizintechnik || style="text-align:center" | [[Datei:Fresenius Medical Care 20xx logo.svg|120x40px]] ||style="text-align:center"| 0,555|| {{DatumZelle|2024-12-27|style=text-align:center}} || [[Hof (Saale)|Hof]]|| {{Bayern}}
+|-
+| [[GEA Group]]
+|G1A|| Maschinenbau || style="text-align:center" | [[Datei:GEA Logo 2022.svg|100x40px]]|| style="text-align:center"| || {{DatumZelle|2025-09-22|style=text-align:center}} || [[Düsseldorf]]|| {{Nordrhein-Westfalen}}
+|-
+| [[Hannover Rück]]
+|HNR1|| Versicherungen || style="text-align:center" | [[Datei:Hannover RE Logo 2024.svg|120x40px]]|| style="text-align:center" | 1,011 || {{DatumZelle|2022-03-21|style=text-align:center}} || [[Hannover]]|| {{Niedersachsen}}
+|-
+| [[Heidelberg Materials]]
+|HEI|| Baustoffe || style="text-align:center" | [[Datei:HeidelbergCement 2022 logo.svg|120x40px]]|| style="text-align:center" | 1,474 || {{DatumZelle|2010-06-21|style=text-align:center}} || [[Heidelberg]]|| {{Baden-Württemberg}}
+|-
+| [[Henkel (Unternehmen)|Henkel]]
+|HEN3|| Konsumgüter, Chemie || style="text-align:center" | [[Datei:Henkel-Logo.svg|120x40px]]|| style="text-align:center" | 0,754 || {{DatumZelle|1988-07-01|style=text-align:center}} || [[Düsseldorf]]|| {{Nordrhein-Westfalen}}
+|-
+| [[Hochtief]]
+|HOT|| Bau || style="text-align:center" | [[Datei:Hochtief-Logo.svg|120x40px]]|| style="text-align:center" | || {{DatumZelle|2026-06-22|style=text-align:center}} || Essen|| {{Nordrhein-Westfalen}}
+|-
+| [[Infineon]]
+|IFX|| Halbleiter || style="text-align:center" | [[Datei:Infineon-Logo.svg|120x40px]]|| style="text-align:center" | 2,691 || {{DatumZelle|2009-09-21|style=text-align:center}} || [[Neubiberg]]|| {{Bayern}}
+|-
+| [[Mercedes-Benz Group]]
+|MBG|| Automobil (Produktion) || style="text-align:center" | [[Datei:Mercedes-Benz Group black.svg|120x40px]]|| style="text-align:center" | 2,506 || {{DatumZelle|1998-12-21|style=text-align:center}}<sup>1</sup>|| [[Stuttgart]]|| {{Baden-Württemberg}}
+|-
+| [[Merck KGaA|Merck]]
+|MRK|| Chemie, Pharma || style="text-align:center" | [[Datei:Logo Merck KGaA 2015.svg|120x40px]]|| style="text-align:center" | 1,053 || {{DatumZelle|2007-06-18|style=text-align:center}} || [[Darmstadt]]|| {{Hessen}}
+|-
+|[[MTU Aero Engines]]
+|MTX|| Luftfahrt || style="text-align:center" | [[Datei:MTU Aero Engines Logo.svg|82x82px]]|| style="text-align:center" | 1,135 || {{DatumZelle|2019-09-23|style=text-align:center}} || München||{{DE-BY}}
+|-
+| [[Münchener Rück]]
+|MUV2|| Versicherungen || style="text-align:center" | [[Datei:Münchener Rück logo.svg|120x40px]]|| style="text-align:center" | 4,810 || {{DatumZelle|1996-09-23|style=text-align:center}} || München|| {{Bayern}}
+|-
+| [[Qiagen]]
+|QIA|| Biotechnologie || style="text-align:center" | [[Datei:Qiagen Logo.svg|120x40px]]|| style="text-align:center" | 0,493 || {{DatumZelle|2021-09-20|style=text-align:center}} || [[Venlo]]|| {{Niederlande}}
+|-
+| [[Rheinmetall]]
+|RHM|| Wehrtechnik, Automobil (Zulieferer) || [[Datei:Rheinmetall Logo 2021.svg|120x40px]]|| style="text-align:center" | 3,523 || {{DatumZelle|2023-03-20|style=text-align:center}} || [[Düsseldorf]]|| {{Nordrhein-Westfalen}}
+|-
+| [[RWE]]
+|RWE|| Energie (Versorgung) || style="text-align:center" | [[Datei:RWE Logo 2020.svg|120x40px]]|| style="text-align:center" | 1,345 || {{DatumZelle|1988-07-01|style=text-align:center}} || Essen|| {{Nordrhein-Westfalen}}
+|-
+| [[SAP]]
+|SAP|| Software || style="text-align:center" | [[Datei:SAP 2011 logo.svg|120x40px]]|| style="text-align:center" | 13,956 || {{DatumZelle|1995-09-18|style=text-align:center}} || [[Walldorf]]|| {{Baden-Württemberg}}
+|-
+| [[Scout24 SE|Scout24]]
+|G24|| Online-Marktplätze|| align="center" style="text-align:center" | [[Datei:Scout24 Logo 2020.svg|100x40px]]|| style="text-align:center" | || {{DatumZelle|2025-09-22|style=text-align:center}} || München || {{Bayern}}
+|-
+| [[Siemens]]
+|SIE|| Elektrotechnik || style="text-align:center" | [[Datei:Siemens-logo.svg|120x40px]]|| style="text-align:center" | 10,667 || {{DatumZelle|1988-07-01|style=text-align:center}} || [[Berlin]] und München|| {{Berlin}} und {{Bayern}}
+|-
+|[[Siemens Energy]]
+|ENR|| Elektrotechnik, Energietechnik || style="text-align:center" | [[Datei:Siemens Energy logo.svg|120x40px]]|| style="text-align:center" | 2,539 || {{DatumZelle|2022-09-19|style=text-align:center}} || München || {{Bayern}}
+|-
+| [[Siemens Healthineers]]
+|SHL|| Medizintechnik || style="text-align:center" | [[Datei:Siemens Healthineers logo.svg|120x40px]]|| style="text-align:center" | 0,892 || {{DatumZelle|2021-09-20|style=text-align:center}} || [[Erlangen]]|| {{Bayern}}
+|-
+| [[Symrise]]
+|SY1|| Lebensmittel, Chemie, Kosmetik, Konsumgüter, Duftstoffe, Aromen || style="text-align:center" | [[Datei:Symrise wordmark logo.svg|120x40px]]|| style="text-align:center" | 0,714 || {{DatumZelle|2021-09-20|style=text-align:center}} || [[Holzminden]]|| {{Niedersachsen}}
+|-
+| [[Volkswagen AG|Volkswagen]]
+|VOW3|| Automobil (Produktion) || style="text-align:center" | [[Datei:Volkswagen Group Logo 2023 zweizeilig.svg|120x40px]]|| style="text-align:center" | 1,297 || {{DatumZelle|1988-07-01|style=text-align:center}} || [[Wolfsburg]]|| {{Niedersachsen}}
+|-
+| [[Vonovia]]
+|VNA|| Immobilien || style="text-align:center" | [[Datei:Vonovia Logo.svg|120x40px]]|| style="text-align:center" | 1,106 || {{DatumZelle|2015-09-21|style=text-align:center}} || [[Bochum]]|| {{Nordrhein-Westfalen}}
+|-
+| [[Zalando]]
+|ZAL|| Versandhandel (Mode) || style="text-align:center" | [[Datei:Zalando Logo 2024.svg|120x40px]]|| style="text-align:center" | 0,456 || {{DatumZelle|2021-09-20|style=text-align:center}} || Berlin|| {{Berlin}}
+|}
+
+1) Die Mercedes-Benz Group und E.ON waren durch ihre Vorgängerunternehmen seit dem 1.&nbsp;Juli 1988 im DAX vertreten.
+
+=== Kurse und Marktkapitalisierungen ===
+Nachfolgend sind für alle Unternehmen im DAX die nach Handelsschluss am 5.&nbsp;August 2026 resultierenden Aktienkurse und Marktkapitalisierungen aufgelistet.<ref>{{Internetquelle |url=https://www.finanzen.net/index/dax/marktkapitalisierung |titel=DAX 40 Marktkapitalisierung |werk=finanzen.net |sprache=de |abruf=2026-08-05 |archiv-url=https://web.archive.org/web/20260805220109/https://www.finanzen.net/index/dax/marktkapitalisierung}}</ref>
+{| class="wikitable sortable" style="text-align:right"
+|-
+! Aktiengesellschaft !! Kurs<br />[€] !! [[Marktkapitalisierung]]<br />[Mio. €]
+|-
+| style="text-align:left" | Siemens <!--DE0007236101--> || 285,95 <!--17:35 05.08.2026--> || 202.837,98
+|-
+| style="text-align:left" | SAP <!--DE0007164600--> || 169,26 <!--17:39 05.08.2026--> || 177.238,64
+|-
+| style="text-align:left" | Airbus <!--NL0000235190--> || 215,05 <!--17:35 05.08.2026--> || 153.548,54
+|-
+| style="text-align:left" | Allianz <!--DE0008404005--> || 436,60 <!--17:39 05.08.2026--> || 153.528,85
+|-
+| style="text-align:left" | Deutsche Telekom <!--DE0005557508--> || 27,42 <!--17:39 05.08.2026--> || 125.257,65
+|-
+| style="text-align:left" | Siemens Energy <!--DE000ENER6Y0--> || 150,86 <!--17:36 05.08.2026--> || 117.704,41
+|-
+| style="text-align:left" | Infineon <!--DE0006231004--> || 60,08 <!--17:36 05.08.2026--> || 74.655,60
+|-
+| style="text-align:left" | Münchener Rückversicherungs-Gesellschaft <!--DE0008430026--> || 515,00 <!--17:35 05.08.2026--> || 60.025,56
+|-
+| style="text-align:left" | DHL Group (ex Deutsche Post) <!--DE0005552004--> || 55,58 <!--17:35 05.08.2026--> || 59.920,90
+|-
+| style="text-align:left" | Merck <!--DE0006599905--> || 145,00 <!--17:35 05.08.2026--> || 57.765,91
+|-
+| style="text-align:left" | Deutsche Bank <!--DE0005140008--> || 32,83 <!--17:39 05.08.2026--> || 56.425,53
+|-
+| style="text-align:left" | Rheinmetall <!--DE0007030009--> || 1200,60 <!--17:35 05.08.2026--> || 51.131,03
+|-
+| style="text-align:left" | E.ON <!--DE000ENAG999--> || 18,79 <!--17:35 05.08.2026--> || 46.365,12
+|-
+| style="text-align:left" | Deutsche Börse <!--DE0005810055--> || 269,00 <!--17:35 05.08.2026--> || 44.897,20
+|-
+| style="text-align:left" | Bayer <!--DE000BAY0017--> || 49,22 <!--17:37 05.08.2026--> || 43.176,38
+|-
+| style="text-align:left" | Mercedes-Benz Group (ex Daimler) <!--DE0007100000--> || 47,26 <!--17:39 05.08.2026--> || 42.814,66
+|-
+| style="text-align:left" | RWE <!--DE0007037129--> || 55,28 <!--17:35 05.08.2026--> || 41.496,14
+|-
+| style="text-align:left" | BASF <!--DE000BASF111--> || 50,70 <!--17:35 05.08.2026--> || 41.063,73
+|-
+| style="text-align:left" | Siemens Healthineers <!--DE000SHL1006--> || 39,24 <!--17:36 05.08.2026--> || 40.826,02
+|-
+| style="text-align:left" | Commerzbank <!--DE000CBK1001--> || 39,35 <!--17:39 05.08.2026--> || 40.750,25
+|-
+| style="text-align:left" | Volkswagen (VW) vz. <!--DE0007664039--> || 76,08 <!--17:35 05.08.2026--> || 36.102,56
+|-
+| style="text-align:left" | Daimler Truck <!--DE000DTR0CK8--> || 48,12 <!--17:38 05.08.2026--> || 35.359,69
+|-
+| style="text-align:left" | BMW <!--DE0005190003--> || 59,10 <!--17:35 05.08.2026--> || 33.838,22
+|-
+| style="text-align:left" | HOCHTIEF <!--DE0006070006--> || 449,80 <!--17:35 05.08.2026--> || 31.343,23
+|-
+| style="text-align:left" | Hannover Rück <!--DE0008402215--> || 249,00 <!--17:35 05.08.2026--> || 28.206,51
+|-
+| style="text-align:left" | Henkel vz. <!--DE0006048432--> || 76,54 <!--17:35 05.08.2026--> || 27.648,20
+|-
+| style="text-align:left" | adidas <!--DE000A1EWWW0--> || 163,00 <!--17:35 05.08.2026--> || 26.908,73
+|-
+| style="text-align:left" | Heidelberg Materials <!--DE0006047004--> || 163,00 <!--17:35 05.08.2026--> || 26.374,64
+|-
+| style="text-align:left" | Fresenius <!--DE0005785604--> || 46,65 <!--17:35 05.08.2026--> || 23.519,08
+|-
+| style="text-align:left" | MTU Aero Engines <!--DE000A0D9PT0--> || 377,00 <!--17:39 05.08.2026--> || 18.565,59
+|-
+| style="text-align:left" | Vonovia <!--DE000A1ML7J1--> || 21,14 <!--17:37 05.08.2026--> || 17.461,39
+|-
+| style="text-align:left" | Beiersdorf <!--DE0005200000--> || 82,20 <!--17:35 05.08.2026--> || 15.994,37
+|-
+| style="text-align:left" | Continental <!--DE0005439004--> || 68,58 <!--17:35 05.08.2026--> || 13.498,44
+|-
+| style="text-align:left" | Symrise <!--DE000SYM9999--> || 91,46 <!--17:35 05.08.2026--> || 11.425,75
+|-
+| style="text-align:left" | Fresenius Medical Care (FMC) St. <!--DE0005785802--> || 41,31 <!--17:35 05.08.2026--> || 11.134,29
+|-
+| style="text-align:left" | GEA <!--DE0006602006--> || 64,50 <!--17:35 05.08.2026--> || 9.558,67
+|-
+| style="text-align:left" | Brenntag <!--DE000A1DAHH0--> || 63,06 <!--17:35 05.08.2026--> || 8.360,18
+|-
+| style="text-align:left" | QIAGEN <!--NL0015002SN0--> || 36,37 <!--17:37 05.08.2026--> || 7.049,11
+|-
+| style="text-align:left" | Zalando <!--DE000ZAL1111--> || 24,46 <!--17:36 05.08.2026--> || 6.630,86
+|-
+| style="text-align:left" | Scout24 <!--DE000A12DM80--> || 76,40 <!--17:35 05.08.2026--> || 4.894,07
+|- class="sortbottom"
+| || ||
+|- class="sortbottom"
+| ''Summe'' || || 2.025.303,68
+|}
+
+=== Zusammensetzungshistorie ===
+Seit der Einführung des DAX am 1. Juli 1988 wurden zahlreiche Anpassungen an seiner Zusammensetzung vorgenommen. Ursprünglich waren folgende 30&nbsp;Werte Bestandteil des Index:
+{| style="width:100%; margin:auto;"
+|-
+|style="width:33%; vertical-align:top;"|
+* [[Allianz SE|Allianz]] *
+* [[BASF]] *
+* [[Bayer AG|Bayer]] *
+* [[Bayerische Hypotheken- und Wechsel-Bank]]
+* [[Bayerische Vereinsbank]]
+* [[BMW]] *
+* [[Commerzbank]]
+* [[Continental AG|Continental]]
+* [[Daimler-Benz]] (*)
+* [[Degussa]]
+|style="width:33%; vertical-align:top;"|
+* [[Deutsche Bank]] *
+* [[Babcock Borsig#Die weitere Expansion (1975–1999)|Deutsche Babcock]]
+* [[Deutsche Lufthansa]]
+* [[Dresdner Bank]]
+* [[Feldmühle Nobel]]
+* [[Henkel (Unternehmen)|Henkel]] *
+* [[Hoechst]]
+* [[Karstadt]]
+* [[Kaufhof]]
+* [[Linde plc|Linde]]
+|style="width:33%; vertical-align:top;"|
+* [[MAN]]
+* [[Mannesmann]]
+* [[Nixdorf Computer]]
+* [[RWE]] *
+* [[Schering AG|Schering]] (*)
+* [[Siemens]] *
+* [[Thyssen AG|Thyssen]]
+* [[VEBA]] (*)
+* [[VIAG]] (*)
+* [[Volkswagen AG|Volkswagen]] *
+|}
+Die mit * gekennzeichneten Unternehmen sind bis heute ununterbrochen im DAX vertreten; die mit (*) gekennzeichneten Aktiengesellschaften sind durch Nachfolgeunternehmen bis heute ununterbrochen im DAX vertreten.
+
+Ausgehend von dieser anfänglichen Zusammensetzung wurden folgende Veränderungen vorgenommen:<ref name="Historie">{{Internetquelle |url=https://www.dax-indices.com/document/Resources/Guides/Historical_Index_Compositions.pdf#page=3 |titel=Historical Index Compositions of the Equity- and Strategy Indices (Version 10.1): DAX Index Composition |werk=dax-indices.com |hrsg=STOXX Ltd. |seiten=3–4 |datum=2020-03 |format=PDF; 676&nbsp;KB |sprache=en |abruf=2024-09-01 |offline=1 |archiv-url=https://web.archive.org/web/20190811175707/https://www.dax-indices.com/document/Resources/Guides/Historical_Index_Compositions.pdf#page=3 |archiv-datum=2019-08-11}}</ref>
+
+{{Tabellenstile}}
+{| class="wikitable tabelle-kopf-fixiert"
+! Datum !! Ausgeschiedene<br /> Unternehmen !! Aufgenommene<br /> Unternehmen !! Ursache / ''Anmerkung''
+|-
+|rowspan="2"|03.09.1990
+|Feldmühle Nobel
+|[[Metallgesellschaft]]
+|Übernahme von Feldmühle Nobel durch [[Stora Enso]]
+|-
+|Nixdorf
+|[[Preussag]] ''(heute [[TUI (Touristikunternehmen)|TUI]])''
+|[[Nixdorf Computer|Nixdorf]] geht in [[Siemens Nixdorf]] auf
+|-
+|18.09.1995
+|Deutsche Babcock
+|[[SAP AG|SAP]]
+|Höhere Marktkapitalisierung von SAP
+|-
+|22.07.1996
+|Kaufhof
+|[[Metro Group|Metro]]
+|Zusammenschluss von Kaufhof und Metro Cash & Carry
+|-
+|23.09.1996
+|Continental
+|[[Münchener Rück]]
+|Abstieg in den MDAX wegen zu geringer Marktkapitalisierung<ref>{{Internetquelle |url=https://www.welt.de/print-welt/article650530/Conti-und-MG-bedauern-Abstieg-in-den-MDax.html |autor=<!--n/a--> |titel=Conti und MG bedauern Abstieg in den MDax |werk=[[Welt Online]] |datum=1996-07-18 |sprache=de |abruf=2013-06-28}}</ref>
+|-
+|18.11.1996
+|Metallgesellschaft
+|[[Deutsche Telekom]]
+|Börsengang der Telekom
+|-
+|rowspan="2"|22.06.1998
+|Bayerische&nbsp;Hypotheken-<br /> und&nbsp;Wechselbank
+|[[adidas]]
+|rowspan="2"|Zusammenschluss von Vereinsbank und Hypobank zur Bayerischen Hypo- und Vereinsbank
+|-
+|Bayerische Vereinsbank
+|[[Unicredit Bank|Bayerische Hypo- und Vereinsbank]]
+|-
+|21.12.1998
+|Daimler-Benz
+|DaimlerChrysler<br /> ''(heute [[Mercedes-Benz Group]])''
+|Zusammenschluss von Daimler-Benz mit [[Chrysler]]
+|-
+|22.03.1999
+|Degussa
+|Degussa-Hüls<br /> ''(heute [[Evonik Degussa]])''
+|Verschmelzung der Degussa AG auf die [[Hüls AG]] und Umbenennung in Degussa-Hüls AG
+|-
+|25.03.1999
+|Thyssen
+|[[Thyssenkrupp]]
+|Zusammenschluss von Thyssen und [[Friedrich Krupp AG|Krupp]]
+|-
+|20.09.1999
+|Hoechst
+|[[Fresenius Medical Care|Fresenius&nbsp;Medical&nbsp;Care]]
+|Zusammenschluss von Hoechst und [[Rhône-Poulenc]] zu [[Aventis]]
+|-
+|14.02.2000
+|Mannesmann
+|[[Epcos]]
+|Übernahme von Mannesmann durch [[Vodafone]]
+|-
+|rowspan="2"|19.06.2000
+|Veba
+|[[E.ON]]
+|rowspan="2"|Zusammenschluss von Veba und Viag zu E.ON
+|-
+|VIAG
+|[[Infineon]]
+|-
+|18.12.2000
+|Degussa-Hüls
+|[[Degussa]]
+|Verschmelzung der Degussa-Hüls AG und der SKW Trostberg AG auf die neue Degussa AG
+|-
+|19.03.2001
+|KarstadtQuelle
+|[[Deutsche Post AG|Deutsche Post]]
+|Börsengang der Deutschen Post
+|-
+|23.07.2001
+|Dresdner Bank
+|[[MLP AG|MLP Vz.]]
+|Übernahme der Dresdner Bank durch die Allianz
+|-
+|23.09.2002
+|Degussa
+|[[Altana]]
+|Zu geringe Marktkapitalisierung der Degussa AG nach weitgehender Annahme des Übernahmeangebots durch die [[RAG AG]]
+|-
+|23.12.2002
+|Epcos
+|[[Deutsche Börse]]
+|Fast-Exit von Epcos, da Epcos bei der Marktkapitalisierung nur Rang 52 belegt<ref>{{Webarchiv |url=http://deutsche-boerse.com/dbg/dispatch/de/notescontent/dbg_nav/press/10_Latest_Press_Releases/10_All/INTEGRATE/mr_pressreleases?notesDoc=92B7DA7B354D09EAC12573D5004E4579&newstitle=deutscheboerseabdem23.dezember&location=press |text=Deutsche Börse ab dem 23. Dezember im DAX |wayback=20140409023216}} Deutsche Börse, Pressemitteilung, 12. November 2002.</ref>
+|-
+|22.09.2003
+|MLP
+|[[Continental AG|Continental]]
+|Regular-Exit von MLP, da MLP sowohl beim Handelsumsatz als auch bei der Marktkapitalisierung nicht mehr die DAX-Kriterien erfüllte; ''Continental ist das erste Unternehmen, dem die Wiederaufnahme in den DAX gelingt''
+|-
+|31.01.2005
+|
+|[[Lanxess]]
+|rowspan="2"| Lanxess wird von Bayer abgespalten. Um Verzerrungen in der DAX-Berechnung zu vermeiden, umfasste der DAX am 31. Januar 2005 erstmals 31 Werte. Mit dem Schlusskurs von Lanxess wurde die Gewichtung von Bayer zum 1. Februar 2005 neu berechnet und Lanxess wurde wieder aus dem DAX genommen.
+|-
+|01.02.2005
+|Lanxess
+|
+|-
+|19.12.2005
+|Bayerische Hypo- und Vereinsbank
+|[[Hypo Real Estate]]
+|Übernahme der Bayerischen Hypo- und Vereinsbank durch die [[Unicredit]]
+|-
+|18.09.2006
+|Schering
+|[[Postbank]]
+|Übernahme von Schering durch Bayer
+|-
+|18.06.2007
+|Altana
+|[[Merck KGaA|Merck]]
+|Nach dem Verkauf der Pharmasparte an [[Nycomed]], zu geringe Marktkapitalisierung von Altana<ref>[https://www.faz.net/aktuell/finanzen/aktien/aktienindizes-merck-ersetzt-altana-im-dax-1434619.html ''Merck ersetzt Altana im DAX''.] [[Frankfurter Allgemeine Zeitung|FAZ]].net</ref>
+|-
+|22.09.2008
+|TUI
+|[[K+S]]
+|Fast-Entry von K+S, niedrige Marktkapitalisierung von TUI<ref>{{Webarchiv |url=http://deutsche-boerse.com/dbg/dispatch/de/notescontent/dbg_nav/press/10_Latest_Press_Releases/INTEGRATE/mr_pressreleases?notesDoc=B34593A00B1F173CC12574B900704103&newstitle=k+sersetzttuiindax&location=press |text=''K+S ersetzt TUI in DAX''. |wayback=20131020013702}} Deutsche Börse, Pressemitteilung, 3. September 2008.</ref>
+|-
+|rowspan="2"|22.12.2008
+|Continental
+|[[Beiersdorf AG|Beiersdorf]]
+|Fast-Exit von Continental durch geringe Freefloat-Marktkapitalisierung nach der Akquisition durch die [[Schaeffler-Gruppe]]
+|-
+|Hypo Real Estate
+|[[Salzgitter AG|Salzgitter]]
+|Fast-Exit von Hypo Real Estate durch geringe Freefloat-Marktkapitalisierung nach der Teilakquisition durch den US-Investor [[J. Christopher Flowers]] sowie herbe Verluste im Rahmen der [[Finanzkrise ab 2007]]
+|-
+|rowspan="2"|23.03.2009
+|Deutsche Postbank
+|[[Fresenius (Unternehmen)|Fresenius]]
+|Höhere Marktkapitalisierung
+|-
+|Infineon
+|[[Hannover Rück]]
+|Höhere Marktkapitalisierung
+|-
+|21.09.2009
+|Hannover Rück
+|[[Infineon]]
+|Regular-Exit der Hannover Rück, da sie beim Handelsumsatz nicht mehr die DAX-Kriterien erfüllte<ref>{{Webarchiv |url=http://deutsche-boerse.com/dbg/dispatch/de/notescontent/dbg_nav/press/10_Latest_Press_Releases/10_All/INTEGRATE/mr_pressreleases?notesDoc=0D2B183E86E936D0C1257626006DDF88&newstitle=infineonwirdindaxaufgenommen&location=press |text=''Infineon wird in DAX aufgenommen'' |wayback=20131020013015}}, Pressemitteilung der [[Deutsche Börse|Deutsche Börse AG]] vom 3. September 2009, abgerufen am 3. September 2009.</ref>; ''Infineon wurde am 21. September 2009 als zweites Unternehmen erneut in den DAX aufgenommen''
+|-
+|23.12.2009
+|Volkswagen Stammaktien
+|[[Volkswagen AG|Volkswagen]] Vorzugsaktien
+|Streubesitz unter 10 % gesunken<ref>{{Webarchiv |url=http://www.ftd.de/unternehmen/industrie/autoindustrie/:indexumstellung-vw-staemme-fliegen-aus-dem-dax/50052153.html |text=''Indexumstellung: VW-Stämme fliegen aus dem Dax'' |wayback=20100202054532}}, [[Financial Times Deutschland]], 18. Dezember 2009.</ref>
+|-
+|21.06.2010
+|Salzgitter
+|[[HeidelbergCement]]
+|HeidelbergCement mit über 50 % Kursgewinn seit 2009; Salzgitter AG mit über 10 % Kursverlust, während der DAX 30&nbsp;Prozent gewann<ref>{{Internetquelle |titel=Dax-Neuordnung: Teure Einkäufe für Indexfonds |url=https://www.wiwo.de/finanzen/dax-neuordnung-teure-einkaeufe-fuer-indexfonds/5655102.html |hrsg=[[Wirtschaftswoche]] |datum=2010-06-21 |sprache=de |abruf=2024-09-01 |offline=1 |archiv-url=https://web.archive.org/web/20131020041958/http://www.wiwo.de/finanzen/dax-neuordnung-teure-einkaeufe-fuer-indexfonds/5655102.html |archiv-datum=2013-10-20 |werk=wiwo.de}}</ref>
+|-
+|rowspan="2"|24.09.2012
+|[[MAN]]
+|[[Continental AG|Continental]]
+|rowspan="2"|MAN: Streubesitz zu stark gesunken; Metro: niedrige Marktkapitalisierung<ref>{{Cite web | title=Continental kehrt wie erwartet wieder in den Dax zurück | url=http://www.boersennews.de/nachrichten/top-news/continental-kehrt-wie-erwartet-wieder-in-den-dax-zurueck/546895/ | publisher=börsennews.de | date=2012-09-06 | access-date=2013-06-28 | offline=1 | archive-url=https://web.archive.org/web/20131020074608/http://www.boersennews.de/nachrichten/top-news/continental-kehrt-wie-erwartet-wieder-in-den-dax-zurueck/546895/ | archive-date=2013-10-20}}</ref>
+|-
+|[[Metro Group|Metro]]
+|[[Lanxess]]
+|-
+|08.07.2013
+|
+|[[Osram]]
+|rowspan="2"| Osram wird von Siemens abgespalten. Um Verzerrungen in der DAX-Berechnung zu vermeiden, umfasste der DAX am 8. Juli 2013 zum zweiten Mal 31 Werte. Mit dem Schlusskurs von Osram wurde die Gewichtung von Siemens zum 9. Juli 2013 neu berechnet und Osram wurde wieder aus dem DAX genommen.
+|-
+|09.07.2013
+|Osram
+|
+|-
+|21.09.2015
+|Lanxess
+|[[Vonovia]]
+| Höhere Marktkapitalisierung
+|-
+|21.03.2016
+|K+S
+|[[ProSiebenSat.1 Media]]
+| Fast-Exit von K+S, da Marktkapitalisierung zu stark gesunken
+|-
+|12.09.2016
+|
+|[[Uniper]]
+|rowspan="2"| Uniper wird von E.ON abgespalten. Um Verzerrungen in der DAX-Berechnung zu vermeiden, umfasste der DAX am 12. September 2016 zum dritten Mal 31 Werte. Mit dem Schlusskurs von Uniper wurde die Gewichtung von E.ON zum 13. September 2016 neu berechnet und Uniper wurde wieder aus dem DAX genommen.
+|-
+|13.09.2016
+|Uniper
+|
+|-
+|25.10.2017
+|Linde AG
+|Linde plc
+|Im DAX wurde die Aktie der Linde AG zunächst ersetzt durch die Aktie „Linde AG z. Umtausch eingereichte Aktie“ und nach Aktientausch durch die Linde plc.
+|-
+|19.03.2018
+|ProSiebenSat.1 Media
+|[[Covestro]]
+|Fast-Entry von Covestro, niedrige Marktkapitalisierung von ProSiebenSat1. Media<ref>[https://www.dax-indices.com/document/News/2018/March/Covestro%20ersetzt%20ProSiebenSat.1%20Media%20im%20DAX-Index.pdf Pressemitteilung.] (PDF) Deutsche Börse, 5. März 2018</ref>
+|-
+|24.09.2018
+|Commerzbank
+|[[Wirecard]]
+|Höhere Marktkapitalisierung<ref>{{Internetquelle |url=https://www.boerse-online.de/nachrichten/aktien/dax-ab-montag-mit-neuer-zusammensetzung-wirecard-aktie-ersetzt-commerzbank-1027553384 |titel=Dax ab Montag mit neuer Zusammensetzung: Wirecard-Aktie ersetzt Commerzbank |hrsg=BÖRSE ONLINE |datum=2018-09-21 |sprache=en |abruf=2018-09-24}}</ref>
+|-
+|23.09.2019
+|[[Thyssenkrupp]]
+|[[MTU Aero Engines]]
+|Höhere Marktkapitalisierung<ref>{{Internetquelle |url=https://www.handelsblatt.com/finanzen/anlagestrategie/trends/indexumstellung-thyssen-krupp-fliegt-aus-dem-dax-mtu-steigt-auf/24982106.html |titel=Indexumstellung: Thyssen-Krupp fliegt aus dem Dax – MTU steigt auf |sprache=de |abruf=2019-09-05}}</ref>
+|-
+|22.06.2020
+|[[Lufthansa]]
+|[[Deutsche Wohnen]]
+|Höhere Marktkapitalisierung und sinkender Streubesitz<ref>{{Internetquelle |url=https://www.zeit.de/wirtschaft/unternehmen/2020-06/boerse-lufthansa-deutsche-wohnen-dax-mdax |titel=Lufthansa verliert Platz im Dax, Deutsche Wohnen steigt auf |werk=Zeit Online |datum=2020-06-04 |sprache=de |abruf=2020-06-05}}</ref>
+|-
+|24.08.2020
+|[[Wirecard]]
+|[[Delivery Hero]]
+|Insolvenz von Wirecard<ref>{{Internetquelle |url=https://www.tagesschau.de/wirtschaft/dax-delivery-hero-101.html |titel=Delivery Hero steigt in den Dax auf |werk=tagesschau.de |sprache=de |abruf=2020-12-16}}</ref>
+|-
+|28.09.2020
+|
+|[[Siemens Energy]]
+|rowspan="2"| Siemens Energy wird von Siemens abgespalten. Um Verzerrungen in der DAX-Berechnung zu vermeiden, umfasste der DAX am 28. September 2020 zum vierten Mal 31 Werte. Mit dem Schlusskurs von Siemens Energy wurde die Gewichtung von Siemens zum 29. September 2020 neu berechnet und Siemens Energy wurde wieder aus dem DAX genommen.
+|-
+|29.09.2020
+|Siemens Energy
+|-
+|22.03.2021
+|Beiersdorf
+|Siemens Energy
+|Höhere Marktkapitalisierung
+|-
+|16.09.2021
+|
+|[[Vitesco Technologies|Vitesco]]
+| rowspan="2" |[[Vitesco Technologies|Vitesco]] wird von [[Continental AG|Continental]] abgespalten. Um Verzerrungen in der DAX-Berechnung zu vermeiden, umfasste der DAX am 16. September 2021 zum fünften Mal 31 Werte. Mit dem Schlusskurs von Vitesco wurde die Gewichtung von Continental zum 17. September 2021 neu berechnet und Vitesco wurde wieder aus dem DAX genommen.
+|-
+|17.09.2021
+|Vitesco
+|
+|-
+| rowspan="10" |20.09.2021
+|
+|[[Airbus]]
+| rowspan="10" |Erweiterung des DAX auf 40 Werte<ref>{{Internetquelle |url=https://www.manager-magazin.de/finanzen/boerse/dax-erweiterung-was-sie-ueber-die-zehn-neuen-im-dax-wissen-muessen-a-e240d561-130f-4b43-96b9-7a4d7ef7aa09 |autor= |titel=Leitindex: Was Sie über die zehn neuen Mitglieder im Dax 40 wissen sollten |werk=manager-magazin.de |datum=2021-09-04 |sprache=de |abruf=2021-09-04}}</ref>
+|-
+|
+|[[Brenntag]]
+|-
+|
+|[[HelloFresh]]
+|-
+|
+|[[Porsche Automobil Holding]]
+|-
+|
+|[[Puma (Sportartikelhersteller)|Puma]]
+|-
+|
+|[[Qiagen]]
+|-
+|
+|[[Sartorius (Unternehmen)|Sartorius]]
+|-
+|
+|[[Siemens Healthineers]]
+|-
+|
+|[[Symrise]]
+|-
+|
+|[[Zalando]]
+|-
+|29.10.2021
+|Deutsche Wohnen
+|Beiersdorf
+|Deutsche Wohnen: Streubesitz unter 10 % gesunken<ref>{{Internetquelle |url=https://www.t-online.de/-/91039546 |titel=Nivea-Hersteller Beiersdorf ist wieder im Dax |sprache=de |abruf=2021-10-27}}</ref>
+|-
+|10.12.2021
+|
+|[[Daimler Truck|Daimler Truck Holding]]
+| rowspan="2" |[[Daimler Truck|Daimler Truck Holding]] wird von [[Daimler AG]] abgespalten. Um Verzerrungen in der DAX-Berechnung zu vermeiden, umfasste der DAX am 10. Dezember 2021 zum ersten Mal 41 Werte. Mit dem Schlusskurs von Daimler Truck wurde die Gewichtung von Daimler zum 13. Dezember 2021 neu berechnet und Daimler Truck wurde wieder aus dem DAX genommen.
+|-
+|13.12.2021
+|Daimler Truck Holding
+|
+|-
+| rowspan="2" |21.03.2022
+|Beiersdorf
+|Daimler Truck Holding
+| rowspan="2" |<ref>{{Internetquelle |url=https://www.boerse-frankfurt.de/nachrichten/820f6599-2274-40e9-adad-bbfceb713fc9 |titel=INDEX-MONITOR: Daimler Truck und Hannover Rück kommen wie erwartet in den Dax |sprache=de |abruf=2022-03-04|archiv-url=https://web.archive.org/web/20220304212411/https://www.boerse-frankfurt.de/nachrichten/820f6599-2274-40e9-adad-bbfceb713fc9}}</ref>
+|-
+|Siemens Energy
+|Hannover Rück
+|-
+|20.06.2022
+|Delivery Hero
+|Beiersdorf
+|Beiersdorf: Fast Entry<ref>{{Internetquelle |url=https://www.dax-indices.com/document/News/2022/June/Index_Update_Composition_Changes_in_DAX_Selection_Indices_DE_20220603.pdf |titel=Ergebnis der regulären Überprüfung der DAX-Auswahlindizes |sprache=de |abruf=2022-06-24}}</ref>
+|-
+|19.09.2022
+|HelloFresh
+|Siemens Energy
+|HelloFresh: 35 % Kursverlust über die letzten 3 Monate, bei nur 13 % Kursverlust des DAX.<ref>{{Internetquelle |url=https://www.handelsblatt.com/finanzen/anlagestrategie/trends/indexwechsel-siemens-energy-ersetzt-hellofresh-im-dax/28659014.html |autor=Andrea Cünnen |titel=Indexwechsel: Siemens Energy ersetzt Hellofresh im Dax |werk=Handelsblatt.com |datum=2022-09-05 |sprache=de |abruf=2022-09-06}}</ref>
+|-
+|19.12.2022
+|Puma
+|[[Porsche AG]]
+|Börsengang von Porsche<ref>{{Internetquelle |url=https://www.tagesschau.de/wirtschaft/finanzen/dax-porsche-puma-indexveraenderungen-aktie-boersenwert-deutsche-boerse-boersengang-volkswagen-101.html |titel=Neue Zusammensetzung des DAX: Porsche AG ersetzt Puma |werk=tagesschau.de |datum= |sprache=de |abruf=2022-12-16}}</ref>
+|-
+|27.02.2023
+|[[Linde plc]]
+|Commerzbank
+|Linde: Delisting der Stammaktien von der Frankfurter Wertpapierbörse<ref>{{Internetquelle |url=https://deutsche-boerse.com/dbg-de/media/pressemitteilungen/Information-bez-glich-der-L-schung-von-Linde-aus-dem-DAX-3403814 |titel=Gruppe Deutsche Börse – Information bezüglich der Löschung von Linde aus dem DAX |sprache=de |abruf=2023-02-06}}</ref><ref>{{Internetquelle |url=https://deutsche-boerse.com/dbg-de/media/pressemitteilungen/Nachr-cker-f-r-Linde-in-DAX-und-STOXX-Indizes-3422600 |titel=Gruppe Deutsche Börse – Nachrücker für Linde in DAX und STOXX Indizes |sprache=de |abruf=2023-02-17}}</ref>
+|-
+|20.03.2023
+|Fresenius Medical Care
+|[[Rheinmetall]]
+|Rheinmetall: Fast Entry<ref>{{Internetquelle |url=https://www.n-tv.de/wirtschaft/Rheinmetall-rueckt-in-den-DAX-auf-article23996819.html |titel=Rheinmetall rückt in den DAX auf |werk=[[n-tv]] |datum=2023-03-19 |sprache=de |abruf=2023-03-20}}</ref>
+|-
+|27.12.2024
+|Covestro
+|Fresenius Medical Care
+|Covestro: Streubesitz unter 10 % gesunken<ref>{{Internetquelle |url=https://www.tagesschau.de/wirtschaft/unternehmen/covestro-ubernahme-dax-fmc-100.html |titel=Covestro fliegt aus dem DAX – FMC rückt nach |werk=tagesschau.de |datum=2024-12-20 |sprache=de |abruf=2024-12-20}}</ref>
+|-
+| rowspan="2" |22.09.2025
+|Porsche AG
+|[[GEA Group]]
+| rowspan="2" |<ref>{{Internetquelle |url=https://stoxx.com/stoxx-announces-scheduled-adjustments-to-dax-blue-chip-indices-sep-3-2025/ |titel=STOXX announces scheduled adjustments to DAX Blue-Chip indices (Sep. 3, 2025) |werk=STOXX.com |datum=2025-09-03 |sprache=en |abruf=2025-09-04}}</ref><ref>{{Internetquelle |url=https://www.manager-magazin.de/unternehmen/porsche-fliegt-aus-dem-dax-a-a7f5af76-4f0b-44f8-bbc2-3f30cc496997 |titel=Porsche fliegt aus dem Dax |werk=manager-magazin.de |datum=2025-09-03 |sprache=de |abruf=2025-09-03}}</ref>
+|-
+|Sartorius
+|[[Scout24 SE|Scout24]]
+|-
+|22.06.2026
+|Porsche Automobil Holding
+|[[Hochtief]]
+|<ref>{{Internetquelle |url=https://www.tagesschau.de/wirtschaft/finanzen/dax-mdax-hochtief-porsche-se-100.html |titel=Essener Baukonzern: Hochtief steigt in den DAX auf |werk=tagesschau.de |datum=2026-06-22 |sprache=de |abruf=2026-06-22}}</ref>
+|}
+
+== Historische Kursentwicklung ==
+=== Rückrechnung ===
+Der DAX wird von der [[Deutsche Börse|Deutschen Börse]] seit dem 1. Juli 1988 berechnet und startete bei 1163,52 Punkten. Die Indexbasis liegt bei 1000 Punkten per 31. Dezember 1987. Da Investoren nicht nur an der aktuellen Performance des Deutschen Aktienindexes Interesse haben, sondern auch an der historischen, wurde dieser 1988 von [[Frank Mella]], damals Redakteur bei der [[Börsen-Zeitung]] und Erfinder des DAX,<ref>{{Internetquelle |url=https://www.boersen-zeitung.de/personen/frank-mella-der-vater-des-dax-wird-75 |autor=Werner Rüppel |titel=Frank Mella, der Vater des Dax, wird 75 |werk=Börsen-Zeitung |datum=2024-12-03 |sprache=de |abruf=2024-12-04}}</ref> auf täglicher Basis exemplarisch bis 1959 zurückgerechnet.
+
+Mella verkettete den DAX am 30. Dezember 1987 mit den 30 Aktienwerten im Index der [[Börsen-Zeitung]] ([[BZ-Index]]), der wiederum aus einer Verknüpfung mit den 24 Werten im [[Hardy-Index]] des [[Bankhaus Hardy & Co.|Bankhauses Hardy & Co.]] zum 1. April 1981 hervorgegangen ist und bis zum 28. September 1959 zurückreicht. Anders als im DAX und im BZ-Index berücksichtigte der Hardy-Index keine Dividenden. Hardy- und BZ-Index wurden viermal am Tag (um 12:00 Uhr, 12:30 Uhr, 13:00 Uhr und 13:30 Uhr) ermittelt. Die von Mella erzeugte Zeitreihe wird von der Deutschen Börse als offizielle [[Rückrechnung]] des DAX verwendet.
+
+Längerfristige Rückrechnungen des deutschen Aktienindex stützen sich vor allem auf den Index des [[Statistisches Bundesamt|Statistischen Bundesamtes]], von dem bis 1948 zurückreichende monatliche Kurse zur Verfügung stehen, den [[Aktienindex des Statistischen Reichsamtes]], der von 1922 bis 1943 ermittelt wurde und den Index des [[Deutsches Institut für Wirtschaftsforschung|Institutes für Konjunkturforschung]], deren Zeitreihen bis in das Jahr 1840 zurückgehen.<ref name="HUB">Richard Stehle, Christian Wulff, Yvett Richter: [https://www.wertpapier-forum.de/applications/core/interface/file/attachment.php?id=63019 ''Die Rendite deutscher Blue-chip-Aktien in der Nachkriegszeit – Rückberechnung des DAX für die Jahre 1948 bis 1954.'']</ref><ref>Humboldt-Universität zu Berlin: [https://edoc.hu-berlin.de/series/sfb-373-papers/1996-7/PDF/7.pdf Rückberechnung des DAX für die Jahre 1955 bis 1987] (PDF; 129&nbsp;kB)</ref>
+
+=== Indexentwicklung ===
+Am 20. Juni 1985 schloss der DAX rechnerisch mit 1007,18 Punkten erstmals über der Marke von 1000 Punkten. Am 19.&nbsp;Oktober 1987 verbuchte der Index einen Tagesverlust von 9,39&nbsp;Prozent. Grund war der [[Schwarzer Montag|Schwarze Montag]] an der [[New York Stock Exchange]], als der Wert des [[Dow Jones Industrial Average]] um 22,6&nbsp;Prozent einbrach. Am Montag, dem 16.&nbsp;Oktober 1989, erlitt der DAX den größten Tagesabsturz seiner Geschichte. Er brach um 12,81&nbsp;Prozent ein. Am Freitag zuvor war in den USA die Finanzierung der Fluggesellschaft [[United Airlines|UAL]] gescheitert. Am 19.&nbsp;August 1991 verbuchte der DAX einen Tagesverlust von 9,40&nbsp;Prozent. Es war eine Reaktion auf den später gescheiterten Putsch gegen den [[Sowjetunion|sowjetischen]] Präsidenten [[Michail Sergejewitsch Gorbatschow|Michail Gorbatschow]].
+
+Am 20. März 1998 schloss der Index mit 5001,55 Punkten zum ersten Mal über der Marke von 5000 Punkten. Am 7.&nbsp;März 2000 erreichte der DAX mit 8136,16 Punkten im Handelsverlauf und mit 8064,97 Punkten auf Schlusskursbasis seine bis dahin höchsten Werte. Diese wurden erst mehr als sieben Jahre später, im Sommer 2007, übertroffen. Nach dem Platzen der [[Spekulationsblase]] im Technologiesektor ([[Dotcom-Blase]]) sank der DAX bis zum 12.&nbsp;März 2003 auf einen Schlussstand von 2202,96 Punkten. Tiefer schloss der Index letztmals am 24.&nbsp;November 1995. Das war ein Rückgang um 72,7&nbsp;Prozent gegenüber seinem Höchststand vom 7.&nbsp;März 2000.
+
+Der 12. März 2003 markiert den Wendepunkt der Talfahrt. Die Erkenntnis, dass der [[Irakkrieg]] nicht zu vermeiden war, beendete die Unsicherheit der Investoren bezüglich der weltpolitischen und -wirtschaftlichen Lage. Der DAX startete nach oben und gewann bereits vor Kriegsbeginn 20 %.<ref>{{Internetquelle |url=https://www.handelsblatt.com/archiv/aktien-sind-nach-drei-verlustjahren-wieder-die-grossen-gewinner-der-irak-krieg-beendet-die-lange-baisse-seite-2/2294904-2.html |autor=Ulf Sommer |titel=Der Irak-Krieg beendet die lange Baisse |werk=Handelsblatt.com |datum=2003-12-23 |sprache=de |abruf=2020-12-02 |offline=1 |archiv-url=https://web.archive.org/web/20230731071305/https://www.handelsblatt.com/archiv/aktien-sind-nach-drei-verlustjahren-wieder-die-grossen-gewinner-der-irak-krieg-beendet-die-lange-baisse-seite-2/2294904-2.html |archiv-datum=2023-07-31}}</ref> Im Juli 2007 wurden neue Höchststände erreicht; bester Wert waren 8151,57&nbsp;Punkte am 13.&nbsp;Juli 2007.
+
+Im Dezember 2007 waren erstmals die 30 größten deutschen börsennotierten Konzerne mehrheitlich im Besitz ausländischer Investoren. Gegenüber 2005 war ihr Anteil um 20 auf nunmehr 53&nbsp;Prozent gestiegen.<ref>{{Internetquelle |url=https://www.handelsblatt.com/unternehmen/industrie/dax-30-konzerne-gehoeren-mehrheitlich-auslaendern-deutsche-firmen-in-fremder-hand/2906102.html |autor=Ulf Sommer |titel=Deutsche Firmen in fremder Hand |werk=Handelsblatt.com |datum=2007-12-17 |sprache=de |abruf=2019-06-12}}</ref>
+
+Im Verlauf der internationalen [[Finanzkrise ab 2007|Finanzkrise]], die im Sommer 2007 in der US-Immobilienkrise ihren Ursprung hatte, begann der DAX wieder zu sinken. Ab Herbst 2008 wirkte sich die Krise zunehmend auf die Realwirtschaft aus. Infolgedessen brachen die Aktienkurse weltweit ein. Am 9.&nbsp;Oktober 2008 schloss der DAX mit 4887,00 Punkten erstmals seit dem 4.&nbsp;November 2005 unter der Grenze von 5000 Punkten. Am 13.&nbsp;Oktober 2008 erlebte der DAX mit 11,40&nbsp;Prozent den größten Tagesgewinn seiner Geschichte.<ref>[https://www.spiegel.de/wirtschaft/0,1518,583905,00.html ''Dax schafft größtes Tagesplus seiner Geschichte.''] In: [[Spiegel Online]], 13.&nbsp;Oktober 2008.</ref> Zwei Wochen später, am 28.&nbsp;Oktober 2008, beendete der Index den Handel 11,28&nbsp;Prozent höher als zum Vortagsschluss. Es war eine Reaktion auf die Rettungspläne der [[Bundesregierung (Vereinigte Staaten)|US-Regierung]] für die US-amerikanische Finanzbranche. Einen neuen Tiefststand erzielte der Index am 6.&nbsp;März 2009, als er den Handel mit 3666,41 Punkten beendete. Seit dem Allzeithoch vom 13.&nbsp;Juli 2007 entspricht das einem Rückgang um 54,8&nbsp;Prozent. Der 6.&nbsp;März 2009 bedeutete das Ende der Talfahrt. Ab dem Frühjahr 2009 war der DAX wieder auf dem Weg nach oben. Bis zum 2.&nbsp;Mai 2011 stieg er um 105,3&nbsp;Prozent auf einen Schlussstand von 7527,64 Punkten.
+
+Die Abschwächung der globalen Konjunktur und die Verschärfung der [[Eurokrise]] ließen den deutschen Leitindex erneut einbrechen. Am 12.&nbsp;September 2011 beendete der DAX den Handel bei 5072,33 Punkten. Der Verlust seit dem Höchststand am 2.&nbsp;Mai 2011 betrug 32,6&nbsp;Prozent. Die Ankündigungen neuer Anleihekaufprogramme der [[Europäische Zentralbank|Europäischen Zentralbank]]<ref>[https://www.spiegel.de/wirtschaft/unternehmen/draghi-ezb-will-wieder-staatsanleihen-kaufen-und-euro-retten-a-846608.html ''Aufkauf von Staatsanleihen: Anleger bejubeln Draghis Euro-Versprechen.''] In: ''Spiegel Online,'' 26.&nbsp;Juli 2012.</ref><ref>[https://www.spiegel.de/wirtschaft/ezb-chef-mario-draghi-kuendigt-anleihenankaufprogramm-an-a-854293.html ''EZB-Ratssitzung: Draghi kündigt unbegrenzte Anleihekäufe an.''] In: ''Spiegel Online,'' 6.&nbsp;September 2012.</ref> und der [[Federal Reserve System|US-Notenbank]]<ref>[https://www.spiegel.de/wirtschaft/soziales/us-notenbank-chef-ben-bernanke-will-amerikas-wirtschaft-stuetzen-a-855726.html ''Fed-Chef: Bernanke setzt auf die große Geldflut.''] In: ''Spiegel Online,'' 13.&nbsp;September 2012.</ref><ref>[https://www.spiegel.de/wirtschaft/unternehmen/us-anleihekaufprogramm-federal-reserve-wirft-notenpresse-an-a-872603.html ''Anleihekauf: US-Notenbank startet neues Konjunkturprogramm.''] In: ''Spiegel Online,'' 12.&nbsp;Dezember 2012.</ref> in grundsätzlich unbegrenztem Umfang führten anschließend wieder zu einer Erholung der Kurse am Aktienmarkt. Die monetären Impulse spielten eine größere Rolle bei der Kursbildung als die weltweite Wirtschaftsabkühlung und die Lage der Unternehmen. Im Mai 2013 konnten die Höchststände vom Juli 2007 erstmals übertroffen werden: Am 22.&nbsp;Mai 2013 schloss der Index erstmals in seiner Geschichte über 8500 bei 8530,89 Punkten und damit um 68,18&nbsp;Prozent höher als beim letzten Tiefpunkt am 12.&nbsp;September 2011. Nach einem Rücksetzer in den Sommermonaten erreichte er ab September 2013 immer neue Allzeithochs auf Schlusskursbasis. Am 29.&nbsp;Oktober 2013 schloss der DAX erstmals in seiner Geschichte über 9000 bei 9022,04 Punkten. Die Marke von 9500 Punkten wurde zwei Monate später, am 27.&nbsp;Dezember 2013 mit einem Schlusskurs von 9589,39 Punkten durchbrochen.
+
+Am 5. Juni 2014 um 14:32 Uhr sprang der Index im Handelsverlauf erstmals über 10.000 Punkte.<ref name="Yahoo1">Yahoo: [https://de.finance.yahoo.com/q/hp?s=^GDAXI Historische Kurse des DAX.]</ref> Zwei Handelstage später, am Pfingstmontag, dem 9.&nbsp;Juni 2014, erzielte der DAX erstmals einen fünfstelligen Stand (nämlich 10.008,63 Punkte) auch auf Schlusskursbasis. In Folge der Bekanntgabe der EZB, wegen einer sehr niedrigen [[Inflation]] bzw. drohenden [[Deflation]], Anleihenkäufe von monatlich 60 Mrd. Euro bis September 2016 durchzuführen, erreichte der Index am 22.&nbsp;Januar 2015 ein neues Allzeithoch von 10.454,05 Punkten auf Schlusskursbasis. Bereits am Folgetag sprang der DAX im Handelsverlauf auf einen weiteren neuen Höchstwert von 10.702,84 Punkten. Rund zwei Drittel der DAX-Aktien befanden sich 2014 im ausländischen Besitz.<ref>{{Internetquelle |url=https://www.handelsblatt.com/finanzen/maerkte/boerse-inside/bundesbank-bericht-dax-grossteils-in-auslaendischer-hand/10736536.html |titel=Bundesbank-Bericht – Dax großteils in ausländischer Hand |werk=Handelsblatt.com |datum=2014-09-22 |sprache=de |abruf=2019-06-12}}</ref> Am 19.&nbsp;Februar 2015 schloss der DAX erstmals in seiner Geschichte über 11.000 Punkten, bei 11.001,94 Punkten auf Schlusskursbasis. In den folgenden drei Wochen erzielte der DAX fast täglich neue Allzeithochs und schloss am 16.&nbsp;März 2015 erstmals über 12.000 Punkten, bei 12.167,72 Punkten zum Handelsschluss.
+
+Gleichzeitig löste der DAX (gerechnet ohne Dividenden) im Handelsverlauf dieses Tages den 15&nbsp;Jahre alten Höchststand des Kursindex (6266,15 Punkte am 7.&nbsp;März 2000) ab, indem er zwischenzeitlich auf 6266,76 Punkte stieg. Auf Schlusskursbasis übertraf der Kursindex den Stand aus dem Jahr 2000 am 10.&nbsp;April 2015 mit einem Wert von 6331,39 Punkten.
+
+Am 12. März 2020 gab es mit 1277,55 Zählern den punktemäßig höchsten Tagesverlust. Auslöser war die Angst vor den [[Wirtschaftskrise 2020–2021|wirtschaftlichen Folgen]] der [[COVID-19-Pandemie]]. Mit insgesamt über 40 Prozent Kursverfall binnen Monatsfrist erlebten Anleger den historisch größten Rückgang des DAX innerhalb solch kurzer Zeit.<ref>{{Internetquelle |url=https://www.morgenpost.de/wirtschaft/article229087467/Corona-Krise-Soll-man-jetzt-schon-wieder-Aktien-kaufen.html |autor=Steffen Preißler |titel=Aktien kaufen trotz Corona? Was Anleger jetzt wissen müssen |werk=Morgenpost.de |datum=2020-05-10 |sprache=de |abruf=2020-05-25}}</ref><ref>{{Internetquelle |url=https://www.fr.de/wirtschaft/corona-krise-wirtschaft-konjunktur-rezession-deutschland-frankreich-italien-zr-13589715.html |autor=Steffen Herrmann, Tim Vincent Dicke, Marcel Richters, Astrid Theil |titel=Wirtschaft in der Corona-Krise: Tui baut 8000 Stellen ab |zitat=Die Verluste seit Beginn des Börsen-Crash im Februar summieren sich mittlerweile auf über 5100 Dax-Punkte oder fast 40 Prozent. |werk=FR.de (Frankfurter Rundschau) |datum=2020-05-15 |sprache=de |abruf=2020-05-25 |offline=1 |archiv-url=https://web.archive.org/web/20200524020107/https://www.fr.de/wirtschaft/corona-krise-wirtschaft-konjunktur-rezession-deutschland-frankreich-italien-zr-13589715.html}}</ref><ref>{{Internetquelle |url=https://www.finanznachrichten.de/nachrichten-2020-05/49554618-die-groessten-verlierer-der-corona-krise-und-milliardenwette-auf-fallende-wirecard-kurse-top-media-extended-245.htm |titel=Die größten Verlierer der Corona-Krise und Milliardenwette auf fallende Wirecard-Kurse (Top Media Extended) |werk=Finanznachrichten.de |datum=2020-05-04 |sprache=de |abruf=2020-05-24}}</ref>
+
+Am 3. Dezember 2024 um 9:25 Uhr kurz nach Handelseröffnung erreichte der DAX erstmals einen Stand von über 20.000 Punkten.
+
+=== Short Squeeze der VW-Aktie 2008 ===
+Zu Schwankungen besonderer Art kam es Ende Oktober 2008, als die [[Porsche Automobil Holding]] versuchte, den wesentlich größeren Volkswagen-Konzern zu übernehmen.<ref>{{Internetquelle |url=https://www.handelsblatt.com/unternehmen/industrie/uebernahmeschlacht-um-vw-ermittlungen-gegen-porsche-aufsichtsraete-eingeleitet/7768202.html |autor=<!--td/rtr--> |titel=Übernahmeschlacht um VW: Ermittlungen gegen Porsche-Aufsichtsräte eingeleitet |werk=[[Handelsblatt]].com |datum=2013-02-11 |sprache=de |abruf=2013-06-28 |offline=1 |archiv-url=https://web.archive.org/web/20130603092314/https://www.handelsblatt.com/unternehmen/industrie/uebernahmeschlacht-um-vw-ermittlungen-gegen-porsche-aufsichtsraete-eingeleitet/7768202.html}}</ref> Porsche war im Oktober 2008 durch Zukäufe und [[Derivat (Wirtschaft)|Derivatgeschäfte]] im Besitz von etwa 42,6 % der [[Stammaktie]]n und hatte über [[Kaufoption]]en Anspruch auf weitere 31,5 %.<ref>{{Internetquelle |url=http://www.handelsblatt.com/meinung/kolumnen/vw-porsche-die-vw-aktie-eine-lachnummer/3043896.html |autor=John Foley |titel=VW/Porsche: Die VW-Aktie, eine Lachnummer |werk=[[Handelsblatt]].com |datum=2008-10-26 |sprache=de |abruf=2013-06-28 |offline=1 |archiv-url=https://web.archive.org/web/20131020054153/http://www.handelsblatt.com/meinung/kolumnen/vw-porsche-die-vw-aktie-eine-lachnummer/3043896.html}}</ref><ref>{{Internetquelle |url=https://www.handelsblatt.com/unternehmen/industrie/konzern-profitiert-von-chaos-bei-vw-aktie-porsche-besaenftigt-die-maerkte-seite-all/3044588-all.html |autor=Markus Hennes |titel=Konzern profitiert von Chaos bei VW-Aktie: Porsche besänftigt die Märkte |werk=[[Handelsblatt]].com |datum=2008-10-29 |sprache=de |abruf=2013-06-28 |offline=1 |archiv-url=https://web.archive.org/web/20131020054320/https://www.handelsblatt.com/unternehmen/industrie/konzern-profitiert-von-chaos-bei-vw-aktie-porsche-besaenftigt-die-maerkte-seite-all/3044588-all.html}}</ref>
+
+Als Porsche dies vier Tage vor der Veröffentlichung des Quartalergebnisses von VW bekannt gab, kam es in den Folgetagen zu einem heftigen [[Short Squeeze]]. Einige Marktteilnehmer (darunter auch [[Hedgefonds]]) hatten die VW-Aktien [[leerverkauf]]t und mussten sich nun wieder eindecken. Nachdem Porsche etwa 75 % und das [[Land Niedersachsen]] weitere 20 % der Aktien hielten ([[VW-Gesetz]]), verblieben nur noch knapp 6 % an [[Streubesitz]]. Durch dieses knappe Angebot und die zusätzlich erhöhte Nachfrage der Leerverkäufer schnellte die VW-Aktie bis zum 28.&nbsp;Oktober 2008 zeitweise auf über 1.000 €.<ref>{{Internetquelle |url=https://www.handelsblatt.com/meinung/kolumnen/vw-aktie-porsche-erwischt-spekulanten-auf-dem-falschen-fuss/3043772.html |autor=Antony Currie, Una Galani |titel=VW-Aktie: Porsche erwischt Spekulanten auf dem falschen Fuß |werk=[[Handelsblatt]].com |datum=2008-10-28 |sprache=de |abruf=2013-06-28 |offline=1 |archiv-url=https://web.archive.org/web/20131020054236/https://www.handelsblatt.com/meinung/kolumnen/vw-aktie-porsche-erwischt-spekulanten-auf-dem-falschen-fuss/3043772.html}}</ref> Damit übertraf sie kurzzeitig die gesamte [[Marktkapitalisierung]] des zu dieser Zeit weltgrößten Unternehmens [[ExxonMobil]].
+
+Durch diesen außerordentlichen Preisanstieg erhöhte sich die Gewichtung der Aktie im DAX von ursprünglich 5,88 % im September auf 27,22 % zu Handelsschluss am 28.&nbsp;Oktober 2008.<ref>{{Internetquelle |url=https://deutsche-boerse.com/dbag/dispatch/de/notescontent/gdb_navigation/info_center/20_Statistics/30_Weighting_Related_Values/INTEGRATE/statistic?notesDoc=Kennzahlen+DAX&expand=1.1 |titel=Gewichtungen + Kennzahlen |hrsg=Gruppe Deutsche Börse |sprache=de |abruf=2013-06-28 |offline=1 |archiv-url=https://web.archive.org/web/20090620232959/http://deutsche-boerse.com/dbag/dispatch/de/notescontent/gdb_navigation/info_center/20_Statistics/30_Weighting_Related_Values/INTEGRATE/statistic?notesDoc=Kennzahlen+DAX&expand=1.1 |archiv-datum=2009-06-20}}</ref> An diesem Tag kündigte [[STOXX Ltd.|Dow Jones & Company]] bereits an, den Free-Float-Faktor der VW-Stammaktie in seinen Indizes zum freitäglichen Handelsbeginn hin von 49,63 auf 37,32&nbsp;Prozent herabzusenken.<ref>Communiqué: {{Webarchiv |url=http://www.stoxx.com/download/news/2008/stoxxnews_20081028c.pdf |text=''STOXX Ltd. To Adjust Volkswagen’s Free-Float Factor In The Dow Jones STOXX Indexes.'' |wayback=20130927045534}} (PDF; 48&nbsp;kB)</ref> Die Deutsche Börse handelte zum Stichtag 3.&nbsp;November 2008, indem sie eine außerordentliche DAX-Indexneugewichtung vornahm und dabei die Gewichtung der Volkswagenaktie im DAX auf zehn Prozent kappte.<ref>{{Internetquelle |url=http://deutsche-boerse.com/INTERNET/MR/mr_presse.nsf/maincontent/FBC308516A591080C12574F000795B04?Opendocument&lang=de |titel=Deutsche Börse nimmt außerordentliche DAX-Indexneugewichtung vor |hrsg=Deutsche Börse AG |datum=2008-10-28 |archiv-url=https://web.archive.org/web/20150316152012/http://deutsche-boerse.com/INTERNET/MR/mr_presse.nsf/maincontent/FBC308516A591080C12574F000795B04?Opendocument&lang=de |archiv-datum=2015-03-16 |offline=1 |abruf=2015-01-27}}</ref>
+
+=== Höchststände ===
+Die Übersicht zeigt die Allzeithöchststände des DAX als Performanceindex (mit Dividenden) und als Kursindex (ohne Dividenden).<ref name="YahooDAX">{{Internetquelle |url=https://de.finance.yahoo.com/quote/%5EGDAXI/history/ |titel=DAX Historische Daten |werk=Yahoo Finanzen |abruf=2026-08-28}}</ref><ref name="YahooDAXK">{{Internetquelle |url=https://de.finance.yahoo.com/quote/%5EGDAXIP/history/ |titel=DAX Kursindex Historische Daten |werk=Yahoo Finanzen |abruf=2026-08-28}}</ref>
+
+{| class="wikitable"
+! Index !! Punkte !! Datum
+|-
+| Performanceindex im Handelsverlauf || 26.618,74 || Freitag, 28.&nbsp;August&nbsp;2026
+|-
+| Performanceindex auf Schlusskursbasis || 26.569,99 || Freitag, 28.&nbsp;August&nbsp;2026
+|-
+| Kursindex im Handelsverlauf || 9.715,88 || Freitag, 28.&nbsp;August&nbsp;2026
+|-
+| Kursindex auf Schlusskursbasis || 9.698,09 || Freitag, 28.&nbsp;August&nbsp;2026
+|}
+
+=== Etappen ===
+Die Tabelle zeigt das erstmalige Überschreiten der jeweils nächsten 1000-Punkte-Marke auf Schlusskursbasis des bis 1959 zurückgerechneten DAX.<ref name="WUW">[http://statmath.wu-wien.ac.at/~hauser/LVs/DATEN/Finanzmaerkte/dax.txt DAX-Performanceindex 1959–2007 (täglich).] Wirtschaftsuniversität Wien</ref><ref name="DAXindices">{{Internetquelle |url=https://www.dax-indices.com/de/web/dax-indices/index-details?isin=DE0008469008 |titel=DAX Digital – DAX® (TR) EUR |werk=dax-indices.com |abruf=2021-01-07}}</ref>
+
+[[Datei:DAX.png|mini|DAX 1959–2015 (bis 31. März 1981 nur Kursindex)]]
+[[Datei:DAX versus DAXK.png|mini|DAX-Performanceindex (blau) versus DAX-Kursindex (rot) 1987–2012]]
+
+{| class="wikitable" style="text-align:right;"
+! erster<br /> Schlussstand<br /> über !! Schlussstand<br /> in Punkten !! Datum
+|-
+| 1.000 || 1.007,18 || 20. Juni 1985
+|-
+| 2.000 || 2.005,01 || 8. Oktober 1993
+|-
+| 3.000 || 3.001,37 || 17. Januar 1997
+|-
+| 4.000 || 4.006,40 || 8. Juli 1997
+|-
+| 5.000 || 5.001,55 || 20. März 1998
+|-
+| 6.000 || 6.013,14 || 8. Juli 1998
+|-
+| 7.000 || 7.173,22 || 14. Januar 2000
+|-
+| 8.000 || 8.064,97 || 7. März 2000
+|-
+| 9.000 || 9.022,04 || 29. Oktober 2013
+|-
+| 10.000 || 10.008,63 || 9. Juni 2014
+|-
+| 11.000 || 11.001,94 || 19. Februar 2015
+|-
+| 12.000 || 12.167,72 || 16. März 2015
+|-
+| 13.000 || 13.003,70 || 16. Oktober 2017
+|-
+| 14.000 || 14.049,53 || 8. Januar 2021
+|-
+| 15.000 || 15.008,61 || 30. März 2021
+|-
+| 16.000 || 16.029,65 || 4. November 2021
+|-
+| 17.000 || 17.033,24 || 6. Februar 2024
+|-
+| 18.000 || 18.015,13 || 20. März 2024
+|-
+| 19.000 || 19.002,38 || 19. September 2024
+|-
+| 20.000 || 20.016,75 || 3. Dezember 2024
+|-
+| 21.000 || 21.042,00 || 21. Januar 2025
+|-
+| 22.000 || 22.037,83 || 11. Februar 2025
+|-
+| 23.000 || 23.147,02 || 3. März 2025
+|-
+| 24.000 || 24.036,11 || 20. Mai 2025
+|-
+| 25.000 || 25.122,26 || 7. Januar 2026
+|-
+| 26.000 || 26.001,31 || 3. August 2026
+|}
+
+=== Höchste Tagesgewinne ===
+Die Tabelle zeigt die prozentual höchsten Tagesgewinne des von 2022 bis 1959 zurückgerechneten DAX.<ref name="WUW" /><ref name="DAXindices" />
+
+{| class="wikitable sortable" style="text-align:right;"
+! Rang !! Datum !! Schlussstand<br /> in Punkten !! Veränderung<br /> in Punkten !! Veränderung<br /> in % !! Ursache / ''Anmerkung''
+|-
+| 1 || {{DatumZelle|2008-10-13}} || 5.062,45 || +518,14 || +11,40 ||style="text-align:left"| Spekulationen zu Ankündigungen eines umfangreichen Rettungspaketes im Zuge der [[Große Rezession|Rezession ab 2007]]<ref>{{Internetquelle |url=https://www.n-tv.de/wirtschaft/Rekordlaune-des-Dax-verdorben-article414708.html |titel=Rekordlaune des Dax verdorben |werk=n-tv |sprache=de |abruf=2020-06-05}}</ref>
+|-
+| 2 || {{DatumZelle|1962-05-30}} || 399,60 || +45,19 || +11,31 ||style="text-align:left"| Kurserholung nach dem Kurseinbruch an der New Yorker Börse vom 29. Mai 1962<ref>{{Literatur |Autor=Richard Nowak |Titel=Der Finanzmarkt New York: Eine ökonomische Analyse des objektivierten Geld- und Kapitalmarktes in den USA |Verlag=Springer-Verlag |Datum=2013 |ISBN=978-3-322-96301-7 |Online=https://books.google.de/books?id=lzabBgAAQBAJ&pg=PA91&lpg=PA91&dq=Mai+1962+b%C3%B6rse&source=bl&ots=lZReqZ2CYB&sig=ACfU3U3XWi4j6JYl2SsiGiyKQp-RVPlU-Q&hl=de&sa=X&ved=2ahUKEwjq4dfBpurpAhUiPewKHbDbCn0Q6AEwCHoECAkQAQ#v=onepage&q=Mai%201962%20b%C3%B6rse&f=false |Abruf=2020-06-05}}</ref>
+|-
+| 3 || {{DatumZelle|2008-10-28}} || 4.823,45 || +488,81 || +11,28 ||style="text-align:left"| [[#Short Squeeze der VW-Aktie 2008|Short Squeeze der VW-Aktie]]<ref>{{Internetquelle |url=https://www.boerse.de/boersenwissen/boersengeschichte/Kurskapriolen-der-VW-Aktie-2008--45 |titel=Kurskapriolen der VW-Aktie |sprache=de |abruf=2020-06-05}}</ref>
+|-
+| 4 || {{DatumZelle|2020-03-24}} || 9.700,57 || +959,42 || +10,98 ||style="text-align:left"| Spekulationen um Hilfspakete im Verlauf der [[COVID-19-Pandemie]]<ref>{{Internetquelle |url=https://www.n-tv.de/wirtschaft/der_boersen_tag/Der-Boersen-Tag-am-Dienstag-24-Maerz-2020-article21663900.html |titel=17:44 Dax schießt durch die Decke |werk=n-tv |sprache=de |abruf=2020-06-05}}</ref>
+|-
+| 5 || {{DatumZelle|2008-11-24}} || 4.554,33 || +426,93 || +10,34 ||style="text-align:left"| Rettung der angeschlagenen Citigroup durch Kapitalspritze der US-Regierung<ref>{{Literatur |Titel=US-Regierung rettet Citigroup |Sammelwerk=Die Zeit |Ort=Hamburg |Datum=2009-03-03 |ISSN=0044-2070 |Online=https://www.zeit.de/online/2008/48/us-regierung-citigroup |Abruf=2024-02-16}}</ref>
+|-
+| 6 || {{DatumZelle|1970-05-29}} || 485,85 || +41,25 || +9,28 ||style="text-align:left"| Kurserholung nach Kurseinbrüchen an der Weltbörse<ref>{{Literatur |Autor=Will Tremper |Titel=Das Tall-Komplott: Roman |Verlag=FISCHER Digital |Datum=2016 |ISBN=978-3-10-561324-5 |Online=https://books.google.de/books?id=_QpIDQAAQBAJ&pg=PT330&lpg=PT330&dq=29.+Mai+1970+b%C3%B6rse&source=bl&ots=c4SBT97IYZ&sig=ACfU3U0_4IpPL-8zGZ0GW5N46oiAfJMzPA&hl=de&sa=X&ved=2ahUKEwiWlZ_rp-rpAhXNzKQKHbO6AgsQ6AEwAXoECAkQAQ#v=onepage&q=29.%20Mai%201970%20b%C3%B6rse&f=false |Abruf=2020-06-05}}</ref>
+|-
+| 7 || {{DatumZelle|2022-03-09}} || 13.847,93 || +1.016,66 || +7,92 ||style="text-align:left"| Kurserholung nach Kurseinbrüchen wegen des [[Russischer Überfall auf die Ukraine 2022|russischen Überfalls auf die Ukraine]]<ref>{{Internetquelle |url=https://www.handelsblatt.com/finanzen/maerkte/marktberichte/dax-aktuell-fulminante-baerenmarktrally-dax-schliesst-mehr-als-1000-punkte-hoeher-neun-aktien-mit-zweistelligem-plus/28142788.html |autor=Jürgen Röder |titel=Fulminante Bärenmarktrally: Dax schließt mehr als 1000 Punkte höher – Neun Aktien mit zweistelligem Plus |werk=Handelsblatt |sprache=de |abruf=2022-03-09}}</ref>
+|-
+| 8 || {{DatumZelle|2002-07-29}} || 3.859,78 || +280,78 || +7,85 ||style="text-align:left"| Spekulationen im Zuge der geplatzten [[Dotcom-Blase]]<ref>{{Internetquelle |url=https://www.finanzen.net/top_ranking/top_ranking_detail.asp |titel=Platz 13: DAX, 29. Juli 2002 – Die besten Börsentage aller Zeiten {{!}} Top-Ranking |sprache=de |abruf=2020-06-05 |offline=1 |archiv-url=https://web.archive.org/web/20211220165147/https://www.finanzen.net/top_ranking/top_ranking_detail.asp |archiv-datum=2021-12-20 |archiv-bot=2024-11-21 03:41:37 InternetArchiveBot }}</ref>
+|-
+| 9 || {{DatumZelle|2008-12-08}} || 4.715,88 || +334,41 || +7,63 ||style="text-align:left"| Beschluss des [[Glühlampe#Umweltaspekte und Verbote|Glühlampenverbots]] in der EU<ref>{{Internetquelle |url=http://ec.europa.eu/energy/efficiency/ecodesign/doc/committee/2008_12_08_technical_briefing_household_lamps.pdf |titel=Phasing out incandescent bulbs in the EU, Technical briefing |hrsg=Europäische Kommission |datum=<!--n/a--> |sprache=en |format=PDF |abruf=2024-06-01<!--aus Webarchiv--> |offline=1 |archiv-url=https://web.archive.org/web/20110410002554/http://ec.europa.eu/energy/efficiency/ecodesign/doc/committee/2008_12_08_technical_briefing_household_lamps.pdf |archiv-datum=2011-04-10}}</ref>
+|-
+| 10 || {{DatumZelle|1991-01-17}} || 1.422,67 || +99,99 || +7,56 ||style="text-align:left"| Reaktion auf den Beginn des [[Zweiter Golfkrieg#Luftkrieg|Luftkriegs]] der USA im Zuge des [[Zweiter Golfkrieg|zweiten Golfkriegs]]<ref>{{Internetquelle |url=https://www.finanzen.net/top_ranking/top_ranking_detail.asp |titel=Die besten Börsentage aller Zeiten {{!}} Top-Ranking |sprache=de |abruf=2020-06-05 |offline=1 |archiv-url=https://web.archive.org/web/20211220165147/https://www.finanzen.net/top_ranking/top_ranking_detail.asp |archiv-datum=2021-12-20 |archiv-bot=2024-11-21 03:41:37 InternetArchiveBot }}</ref>
+|}
+
+=== Höchste Tagesverluste ===
+Die Tabelle zeigt die prozentual höchsten Tagesverluste des von 2022 bis 1959 zurückgerechneten DAX.<ref name="WUW" /><ref name="DAXindices" />
+
+{| class="wikitable sortable" style="text-align:right;"
+! Rang !! Datum !! Schlussstand<br /> in Punkten !! Veränderung<br /> in Punkten !! Veränderung<br /> in % !! Ursache / ''Anmerkung''
+|-
+| 1 || {{DatumZelle|1989-10-16}} || 1.385,72 || −203,62 || −12,81 ||style="text-align:left"| Reaktion auf Gerüchte über eine geplatzte [[Fusion (Wirtschaft)|Fusion]] der Fluggesellschaft [[United Airlines]]<ref>{{Internetquelle |url=https://www.faz.net/aktuell/finanzen/aktien/oktober-1989-erster-und-groesster-crash-des-dax-12969171.html |autor=Martin Hock |titel=16. Oktober 1989: Der erste und größte Crash des Dax’ |werk=FAZ.net |datum=2014-06-05 |sprache=de |abruf=2020-06-05}}</ref><ref>{{Internetquelle |url=https://www.finanzen.net/top_ranking/top_ranking_detail.asp?inRanking=88 |titel=Die größten Kurseinbrüche des DAX – Platz 1: 16. Oktober 1989 |zitat=Den mit Abstand deutlichste<!--sic!--> Kursrückgang mussten die Börsianer am 16. Oktober 1989 hinnehmen. Durch Probleme bei der US-Fluglinie United Airlines und den damit einhergehenden Kursverlust beim amerikanischen Leitindex wurde der DAX an einem einzigen Tag um rund 13% nach unten gezogen. |werk=finanzen.net |sprache=de |abruf=2020-06-05}}</ref>
+|-
+| 2 || {{DatumZelle|2020-03-12}} || 9.161,13 || −1.277,55 || −12,24 ||style="text-align:left"| ''Corona-Crash'', befürchtete globale Ausbreitung des Krankheitserregers [[SARS-CoV-2]], siehe [[COVID-19-Pandemie]]
+|-
+| 3 || {{DatumZelle|1991-08-19}} || 1.497,93 || −155,44 || −9,40 ||style="text-align:left"| Reaktion auf den [[Putschversuch in der Sowjetunion 1991|Putschversuch in der Sowjetunion]] gegen [[Michail Sergejewitsch Gorbatschow|Michail Gorbatschow]]
+|-
+| 4 || {{DatumZelle|1987-10-19}} || 1.321,61 || −136,94 || −9,39 ||style="text-align:left"| [[Schwarzer Montag]]
+|-
+| 5 || {{DatumZelle|2001-09-11}} || 4.273,53 || −396,60 || −8,49 ||style="text-align:left"| Reaktion auf die [[Terroranschläge am 11. September 2001]] in den [[USA]]
+|-
+| 6 || {{DatumZelle|2020-03-09}} || 10.625,02 || −916,85 || −7,94 ||style="text-align:left"| ''Corona-Crash'', befürchtete globale Ausbreitung des Krankheitserregers [[SARS-CoV-2]], siehe [[COVID-19-Pandemie]]
+|-
+| 7 || {{DatumZelle|1997-10-28}} || 3.614,92 || −308,31 || −7,86 ||style="text-align:left"| Zuspitzung der [[Asienkrise]]
+|-
+| 8 || {{DatumZelle|1998-10-02}} || 3.918,94 || −332,14 || −7,81 ||style="text-align:left"| Auswirkungen der [[Russlandkrise]]
+|-
+| 9 || {{DatumZelle|1987-10-26}} || 1.193,31 || −99,36 || −7,69 ||style="text-align:left"| Auswirkungen vom [[Schwarzer Montag|Schwarzen Montag]]
+|-
+| 10 || {{DatumZelle|1962-05-29}} || 354,41 || −27,56 || −7,22 ||style="text-align:left"| Kurseinbruch an der [[New York Stock Exchange|Wall Street]]<ref>{{Literatur |Titel=Vor 50 Jahren: Die Schlagzeile vom 30. Mai 1962 |Sammelwerk=Die Welt |Datum=2012-05-30 |Online=https://www.welt.de/print/die_welt/wirtschaft/article106390023/Die-Schlagzeile-vom-30-Mai-1962.html |Abruf=2020-06-05}}</ref>
+|}
+
+=== Jährliche Entwicklung ===
+Der DAX wurde bis 1981 als Performanceindex (mit Dividenden) und bis 1948 als Kursindex (ohne Dividenden) zurückgerechnet. Die Zeitreihe basiert auf einer Verkettung des DAX mit dem BZ-Index (1981–1986), dem Hardy-Index (1959–1980) und dem Aktienindex des Statistischen Bundesamtes (1948–1958). Frühere Daten stammen von Professor Richard Stehle, Institut für Bank-, Börsen- und Versicherungswesen, [[Humboldt-Universität zu Berlin]]. Stehle hat die [[Aktienrendite]] derjenigen Unternehmen berechnet, die im DAX-Performanceindex enthalten gewesen wären, wenn es das Börsenbarometer bereits ab 1937 gegeben hätte.<ref name="HUB" /><ref>Richard Stehle, Christian Wulff, Yvett Richter: ''Die Rendite deutscher Blue-Chip-Aktien in der Nachkriegszeit – Rückberechnung des DAX für die Jahre 1948 bis 1954.'' Humboldt-Universität zu Berlin, 1998.</ref>
+
+Das beste Jahr in der Geschichte des DAX war rechnerisch 1949 mit einem Gewinn von 152,13&nbsp;Prozent, gefolgt von 1951 mit einem Plus von 115,41&nbsp;Prozent und 1954 mit einem Gewinn von 82,59&nbsp;Prozent. Das schlechteste Jahr war 1948 mit einem Verlust von 87,35&nbsp;Prozent, gefolgt von 2002 mit einem Minus von 43,94&nbsp;Prozent und 2008 mit einem Verlust von 40,37&nbsp;Prozent. Der Zeitraum von 1948 bis 1954 ist geprägt von der [[Währungsreform 1948 (Westdeutschland)|Währungsreform]] und dem [[Wirtschaftswunder]], der Zeitraum seit 2000 vom Platzen der [[Dotcom-Blase]] und den Auswirkungen der [[Finanzkrise ab 2007]].
+
+Die Tabelle zeigt die jährliche Entwicklung des bis 1937 zurückgerechneten deutschen Aktienindex DAX.<ref>Börse.de: {{Webarchiv |url=http://tool.boerse.de/DAX-Indizes-846900-kurshistorie/ |text=DAX-Performanceindex 1950–2010 |wayback=20101019034637}}</ref><ref name="DAX">Deutsche Bundesbank: [https://www.bundesbank.de/Navigation/DE/Statistiken/Zeitreihen_Datenbanken/Makrooekonomische_Zeitreihen/its_details_value_node.html?tsId=BBK01.WU3141 DAX-Performanceindex ab 1959 (monatlich)]</ref><ref>Richard Stehle: [https://www.bundesnetzagentur.de/cae/servlet/contentblob/194320/publicationFile/9936/Gutachten ''Später erstellte Rückrechnungen 1938 bis 1954.''] In: ''Wissenschaftliches Gutachten zur Ermittlung des kalkulatorischen Zinssatzes, der den spezifischen Risiken des Breitbandausbaus Rechnung trägt.'' Humboldt-Universität zu Berlin, 2010, S. 183</ref><ref>{{Internetquelle |url=https://www.dax-indices.com/de/web/dax-indices/index-details?isin=DE0008469008 |titel=DAX Digital {{!}} DAX® (TR) EUR |abruf=2019-01-05}}</ref>
+
+{|
+| valign="top" |
+{| class="wikitable sortable" style="text-align:right;"
+! Jahr !! Schlussstand<br /> in Punkten !! Veränderung<br /> in Punkten !! Veränderung<br /> in %
+|-
+| 1937 || 56,89 || ||
+|-
+| 1938 || 55,47 || −1,42 || −2,50
+|-
+| 1939 || 63,01 || 7,54 || 13,59
+|-
+| 1940 || 84,69 || 21,68 || 34,41
+|-
+| 1941 || 91,72 || 7,03 || 8,30
+|-
+| 1942 || 102,54 || 10,82 || 11,80
+|-
+| 1943 || 106,95 || 4,41 || 4,30
+|-
+| 1944 || 110,37 || 3,42 || 3,20
+|-
+| 1945 || 89,84 || −20,53 || −18,60
+|-
+| 1946 || 89,39 || −0,45 || −0,50
+|-
+| 1947 || 102,18 || 12,79 || 14,31
+|-
+| 1948 || 12,93 || −89,25 || −87,35
+|-
+| 1949 || 32,60 || 19,67 || 152,13
+|-
+| 1950 || 30,18 || −2,42 || −7,42
+|-
+| 1951 || 65,01 || 34,83 || 115,41
+|-
+| 1952 || 59,75 || −5,26 || −8,09
+|-
+| 1953 || 74,09 || 14,34 || 24,00
+|-
+| 1954 || 135,28 || 61,19 || 82,59
+|-
+| 1955 || 148,81 || 13,53 || 10,00
+|-
+| 1956 || 137,80 || −11,01 || −7,40
+|-
+| 1957 || 144,97 || 7,17 || 5,20
+|-
+| 1958 || 232,23 || 87,26 || 60,19
+|-
+| 1959 || 417,79 || 185,56 || 79,90
+|-
+| 1960 || 534,09 || 116,30 || 27,84
+|-
+| 1961 || 489,79 || −44,30 || −8,29
+|-
+| 1962 || 386,32 || −103,47 || −21,13
+|-
+| 1963 || 438,95 || 52,63 || 13,62
+|-
+| 1964 || 477,89 || 38,94 || 8,87
+|-
+| 1965 || 422,36 || −55,53 || −11,62
+|-
+|1966
+|333,36
+|−89,00
+|−21,07
+|-
+|}
+| valign="top" |
+{| class="wikitable sortable" style="text-align:right;"
+! Jahr !! Schlussstand<br />in Punkten !! Veränderung<br />in Punkten !! Veränderung<br />in %
+|-
+| 1967 || 503,22 || 169,86 || 50,95
+|-
+| 1968 || 555,62 || 52,40 || 10,41
+|-
+| 1969 || 622,38 || 66,76 || 12,02
+|-
+| 1970 || 443,86 || −178,52 || −28,68
+|-
+| 1971 || 473,46 || 29,60 || 6,67
+|-
+| 1972 || 536,36 || 62,90 || 13,29
+|-
+| 1973 || 403,88 || −132,48 || −24,70
+|-
+| 1974 || 401,79 || −2,09 || −0,52
+|-
+| 1975 || 563,25 || 161,46 || 40,19
+|-
+| 1976 || 509,02 || −54,23 || −9,63
+|-
+| 1977 || 549,34 || 40,32 || 7,92
+|-
+| 1978 || 575,15 || 25,81 || 4,70
+|-
+| 1979 || 497,79 || −77,36 || −13,45
+|-
+| 1980 || 480,92 || −16,87 || −3,39
+|-
+| 1981 || 490,39 || 9,47 || 1,97
+|-
+| 1982 || 552,77 || 62,38 || 12,72
+|-
+| 1983 || 773,95 || 221,18 || 40,01
+|-
+| 1984 || 820,91 || 46,96 || 6,07
+|-
+| 1985 || 1.366,23 || 545,32 || 66,43
+|-
+| 1986 || 1.432,25 || 66,02 || 4,83
+|-
+| 1987 || 1.000,00 || −432,25 || −30,18
+|-
+| 1988 || 1.327,87 || 327,87 || 32,79
+|-
+| 1989 || 1.790,37 || 462,50 || 34,83
+|-
+| 1990 || 1.398,23 || −392,14 || −21,90
+|-
+| 1991 || 1.577,98 || 179,75 || 12,86
+|-
+| 1992 || 1.545,05 || −32,93 || −2,09
+|-
+| 1993 || 2.266,68 || 721,63 || 46,71
+|-
+| 1994 || 2.106,58 || −160,10 || −7,06
+|-
+|1995
+|2.253,88
+|147,30
+|6,99
+|-
+|1996
+|2.888,69
+|634,81
+|28,17
+|-
+|}
+| valign="top" |
+{| class="wikitable sortable" style="text-align:right;"
+! Jahr !! Schlussstand<br />in Punkten !! Veränderung<br />in Punkten !! Veränderung<br />in %
+|-
+| 1997 || 4.249,69 || 1.361,00 || 47,11
+|-
+| 1998 || 5.002,39 || 752,70 || 17,71
+|-
+| 1999 || 6.958,14 || 1.955,75 || 39,10
+|-
+| 2000 || 6.433,61 || −524,53 || −7,54
+|-
+| 2001 || 5.160,10 || −1.273,51 || −19,79
+|-
+| 2002 || 2.892,63 || −2.267,47 || −43,94
+|-
+| 2003 || 3.965,16 || 1.072,53 || 37,08
+|-
+| 2004 || 4.256,08 || 290,92 || 7,34
+|-
+| 2005 || 5.408,26 || 1.152,18 || 27,07
+|-
+| 2006 || 6.596,92 || 1.188,66 || 21,98
+|-
+| 2007 || 8.067,32 || 1.470,40 || 22,29
+|-
+| 2008 || 4.810,20 || −3.257,12 || −40,37
+|-
+| 2009 || 5.957,43 || 1.147,23 || 23,85
+|-
+| 2010 || 6.914,19 || 956,76 || 16,06
+|-
+| 2011 || 5.898,35 || −1.015,84 || −14,69
+|-
+| 2012 || 7.612,39 || 1.714,04 || 29,06
+|-
+| 2013 || 9.552,16 || 1.939,77 || 24,77
+|-
+| 2014 || 9.805,55 || 253,39 || 2,65
+|-
+| 2015 || 10.743,01 || 937,46 || 9,56
+|-
+| 2016 || 11.481,06 || 738,05 || 6,87
+|-
+| 2017 || 12.917,64 || 1.436,58 || 12,51
+|-
+| 2018 || 10.558,96 || −2.358,68 || −18,26
+|-
+| 2019 || 13.249,01 || 2.690,05 || 25,48
+|-
+| 2020 || 13.718,78 || 469,77 || 3,55
+|-
+| 2021 || 15.884,86 || 2.166,08 || 15,79
+|-
+| 2022 || 13.923,59 || −1.961,27 || −12,35
+|-
+| 2023 || 16.751,64 || 2.828,05 || 20,31
+|-
+|2024
+|19.909,14
+|3.157,50
+|18,85
+|-
+|2025
+|24.490,41
+|4.581,27
+|23,01
+|}
+|}
+
+== Kritik ==
+Der Fernseh-Nachrichtensender [[n-tv]] kritisierte im Juli 2018, dass die Berechnung des DAX im Vergleich zu anderen Indizes, wie z.&nbsp;B. dem [[FTSE 100 Index|FTSE 100]] oder dem [[S&P 500]], zu einer Verzerrung führt. Er beschränke sich auf nur wenige Unternehmen und klammere damit einen großen Teil der übrigen deutschen Aktiengesellschaften aus. Der Performance-Index sei unrealistisch, denn er bezieht auch ausgeschüttete Dividenden mit ein, was zu einer erheblichen Differenz gegenüber dem Kursindex führt.<ref>{{Internetquelle |url=https://www.teleboerse.de/Deutschlands-Leitindex-fuehrt-in-die-Irre-article20506207.html |autor=Max Borowski |titel=30 Jahre Dax: Deutschlands Leitindex führt in die Irre |werk=teleboerse.de |datum=2018-07-01 |sprache=de |abruf=2019-04-05}}</ref>
+
+{{Anker|Kappungsgrenze}} Kritik gibt es auch an der Kappungsgrenze, die 2006 eingeführt wurde und die Gewichtung einzelner Papiere begrenzt. Während die [[Börsen-Zeitung]] anlässlich des Ausstiegs von [[Linde plc]] aus dem DAX die Kappungsgrenze kritisiert,<ref>{{Internetquelle |url=https://www.boersen-zeitung.de/unternehmen-branchen/dax-kappungsgrenze-verscheucht-linde-cdadbb3a-5455-11ed-b6a5-02c486565f4e |titel=Dax-Kappungsgrenze verscheucht Linde |werk=Börsen-Zeitung |datum=2022-10-25 |sprache=de |abruf=2022-12-09}}</ref> bewertet der Vorstandsvorsitzende der [[Schutzgemeinschaft der Kapitalanleger]], Daniel Bauer, die Kappungsgrenze als sinnvoll, um eine einseitige Gewichtung zu vermeiden.<ref>{{Internetquelle |url=https://www.youtube.com/watch?v=HC9CX2_klWo |titel=Linde Aktie: Das deutsche Delisting – Motive, Bewertung, Auswirkung {{!}} SdK Talk |werk=YouTube |abruf=2022-12-09}}</ref> In diesem Zusammenhang wurde auch das mögliche Unterlaufen der Kappungsgrenze durch DAX-Konzerne aus dem Automobilsektor genannt, die ihre Sparten als Papiere listen lassen. So könnten stark nachgefragte Papiere der [[Volkswagen AG]], der [[Porsche|Porsche AG]] und der [[Porsche Automobil Holding]] zu einer Gewichtung des [[Volkswagen]]-Konzerns von 30 % im DAX führen, wo dem Konzern allein sonst nur 10 % Maximalgewichtung möglich wären. Ein ähnliches Szenario ist mit der [[Mercedes-Benz Group]] und der [[Daimler Truck|Daimler Truck Holding AG]] denkbar.
+{| class="wikitable"
+|+Umgehung der Kappungsgrenze durch Unternehmensgruppen und gegenseitige Beteiligungen
+!Gruppe
+!Sektor
+!Unternehmen im DAX
+|-
+|Volkswagen
+|Automobil (Produktion)
+|[[Volkswagen AG|Volkswagen]], [[Porsche|Porsche AG]], [[Porsche Automobil Holding|Porsche SE]]
+|-
+|Mercedes Benz
+|Automobil (Produktion)
+|[[Mercedes-Benz Group]], [[Daimler Truck]]
+|-
+|Siemens
+|Elektrotechnik, Energietechnik
+|[[Siemens]], [[Siemens Energy|Siemens Energy¹]], [[Siemens Healthineers]], [[Infineon|Infineon²]]
+|}
+¹ signifikante Minderheitsbeteiligung von 35 %
+
+² über eine Tochtergesellschaft
+
+Die Deutsche Börse kündigte im November 2023 an, die Kappungsgrenze für den deutschen Leitindex im Frühjahr 2024 auf 15 % anzuheben.<ref>{{Internetquelle |url=https://www.tagesschau.de/wirtschaft/finanzen/dax-kappungsgrenze-linde-100.html |autor=Bianca von der Au |titel=Deutsche Börse hebt nach Linde-Abgang DAX-Kappungsgrenze an |werk=Tagesschau.de |datum=2023-11-23 |sprache=de |abruf=2023-11-23}}</ref> Dies wurde zum Handelstag am 18.&nbsp;März 2024 umgesetzt.<ref>{{Internetquelle |url=https://www.boersen-zeitung.de/meinung-analyse/sap-ist-jetzt-noch-wichtiger-fuer-den-dax |autor=Werner Rüppel |titel=SAP ist jetzt noch wichtiger für den Dax |werk=Börsen-Zeitung |datum=2024-03-15 |sprache=de |abruf=2024-12-04}}</ref> Bereits im Oktober 2024 überschritt mit der Aktie der [[SAP]] erneut ein Papier die Kappungsgrenze.<ref>{{Internetquelle |url=https://www.swrfernsehen.de/marktcheck/sap-zu-wertvoll-gross-fuer-dax-boerse-gewichtung-softwarekonzern-aktie-gewinner-100.html |autor=Petra Thiele, Christian Hauck |titel=Erhöhung der Kappungsgrenze umstritten – Luxusproblem mit Folgen: SAP zu wertvoll für die Deutsche Börse? |werk=SWR Aktuell Online |datum=2024-10-25 |sprache=de |abruf=2024-12-04}}</ref><ref>{{Internetquelle |url=https://deutsche-wirtschafts-nachrichten.de/712015/neue-dax-kappungsgrenze-was-ist-das-und-warum-ist-die-sap-aktie-davon-betroffen |autor=Markus Gentner |titel=Neue DAX-Kappungsgrenze: Was ist das und warum ist die SAP-Aktie davon betroffen? |werk=Deutsche Wirtschaftsnachrichten |datum=2024-10-21 |sprache=de |abruf=2024-12-04}}</ref><ref>{{Internetquelle |url=https://stoxx.com/dax-a-trading-impact-analysis-of-the-15-stock-cap/ |autor=<!--n/a--> |titel=DAX: A trading impact analysis of the 15% stock cap |hrsg=STOXX Ltd. |datum=2024-11-06 |sprache=en |abruf=2024-12-04}}</ref>
+
+== Siehe auch ==
+
+* [[Liste von Aktienindizes]]
+
+== Weblinks ==
+{{Commonscat|DAX (Stock market index)|DAX|audio=1|video=1}}
+{{Wiktionary}}
+* [https://www.boerse-frankfurt.de/index/dax?mic=XETR Offizielle Website der Deutschen Börse zum DAX]
+* Frank Mella: [https://www.frank-mella.de/wie-der-dax-entstandt/ ''Wie der DAX entstand'']
+* [https://www.dax-indices.com/document/News/2019/June/Equity_L_9_2_4_d.pdf ''Leitfaden zu den Aktienindizes der Deutsche Börse AG.''] Version 9.2.4. (PDF, 1,5 MB). In: ''dax-indices.com''. 26. Juni 2019.
+* {{Webarchiv |url=http://lehre.wiwi.hu-berlin.de/Professuren/bwl/bb/aktien/DatenReihen |text=Datenreihen, Renditen DAX nominal und real, Prof. Stehle seit 1948 |wayback=20100630114332}}
+* [https://www.bundesbank.de/Navigation/DE/Statistiken/Zeitreihen_Datenbanken/Makrooekonomische_Zeitreihen/its_details_value_node.html?tsId=BBK01.WU3141&listId=www_s140_mb05 Deutsche Bundesbank: Der zurückberechnete DAX seit 1959] (monatliche Entwicklung)
+
+== Literatur ==
+[[Urban Bacher]], Kirsten Wüst: CAC-40 und DAX 40: Frankreich und Deutschland im Wettbewerb ihrer Aktienmärkte – Eine Untersuchung von Rendite und Risiko, in: Zeitschrift für das gesamte Kreditwesen 4/2025, S. 196–200.<ref>{{Internetquelle |url=https://www.kreditwesen.de/kreditwesen/themenschwerpunkte/aufsaetze/frankreich-deutschland-wettbewerb-ihrer-aktienmaer-id101112.html |titel=Frankreich und Deutschland im Wettbewerb ihrer Aktienmärkte |abruf=2025-09-28}}</ref>
+
+Urban Bacher, Kirsten Wüst: Deutschland gegen Holland – Untersuchung von Rendite und Risiko von AEX und DAX, in: Zeitschrift für das gesamte Kreditwesen 13/2021, S. 661–665.
+
+== Einzelnachweise ==
+<references />
+
+{{Navigationsleiste DAX-Unternehmen}}
+
+{{Normdaten|TYP=s|GND=4266832-3}}
+
+[[Kategorie:Aktienindex (Deutschland)]]
+[[Kategorie:Aktienindex (Deutsche Börse AG)]]
+[[Kategorie:Abkürzung]]
+[[Kategorie:Unternehmen im DAX]]

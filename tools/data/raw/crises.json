@@ -1,0 +1,238 @@
+{
+  "crises": [
+    {
+      "id": "oil_crisis_1973",
+      "name": "1973-74 Oil Crisis & Stagflation Onset",
+      "start": "1973-01",
+      "end": "1974-12",
+      "worldDrawdownPct": -45.0,
+      "worldDrawdownApprox": true,
+      "mostAffected": ["uk", "us", "jp", "de"],
+      "beats": [
+        { "at": "1973-10", "fact": "OAPEC declares an oil embargo against the US and other backers of Israel after the Yom Kippur War; crude prices quadruple from about $3 to $12 per barrel" },
+        { "at": "1974-01", "fact": "Dow falls below 900 as the embargo bites; US inflation runs above 10% and the 1973-75 recession deepens" },
+        { "at": "1974-08", "fact": "Nixon resigns over Watergate (Aug 8), accelerating the slide; the Dow drops from about 800 toward 650 within a month" },
+        { "at": "1974-12", "fact": "Dow bottoms at 577.60 (Dec 6), down 45% from its January 1973 peak; UK stocks fall even further" }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/1973%E2%80%931974_stock_market_crash",
+        "https://www.federalreservehistory.org/essays/oil-shock-of-1973-74",
+        "https://www.forbes.com/sites/briandomitrovic/2024/12/06/fifty-years-ago-today-the-stock-market-bottomed"
+      ]
+    },
+    {
+      "id": "volcker_shock_1979",
+      "name": "Second Oil Shock & Volcker Tightening",
+      "start": "1979-01",
+      "end": "1982-08",
+      "worldDrawdownPct": -25.0,
+      "worldDrawdownApprox": true,
+      "mostAffected": ["us", "uk", "mx", "br"],
+      "beats": [
+        { "at": "1979-01", "fact": "Iranian revolution halts oil exports; the second oil shock roughly doubles crude prices and US inflation surges past 11%" },
+        { "at": "1979-10", "fact": "Volcker's 'Saturday night special' (Oct 6): the Fed lifts its discount rate to 12% and shifts to money-supply targeting, letting rates spike toward 20%" },
+        { "at": "1980-03", "fact": "Silver Thursday (Mar 27): the Hunt brothers miss margin calls as silver collapses, panicking commodity markets; gold had hit a record $850 on Jan 21" },
+        { "at": "1982-08", "fact": "Mexico suspends debt payments (Aug 12), igniting the Latin American debt crisis; the same week the Dow bottoms at 776.91 before a new bull market" }
+      ],
+      "sources": [
+        "https://www.federalreservehistory.org/essays/anti-inflation-measures",
+        "https://www.frbsf.org/research-and-insights/publications/economic-letter/2004/12/october-6-1979",
+        "https://marottaonmoney.com/volkers-bear-the-bear-market-of-1982",
+        "https://en.wikipedia.org/wiki/Latin_American_debt_crisis"
+      ]
+    },
+    {
+      "id": "black_monday_1987",
+      "name": "Black Monday 1987",
+      "start": "1987-08",
+      "end": "1987-10",
+      "worldDrawdownPct": -30.0,
+      "worldDrawdownApprox": true,
+      "mostAffected": ["us", "hk", "uk", "au"],
+      "beats": [
+        { "at": "1987-10", "fact": "Black Monday (Oct 19): the Dow plunges 22.6% in one day, still the worst ever, with an estimated $1.7 trillion of global equity value erased" },
+        { "at": "1987-10", "fact": "Hong Kong's exchange shuts for four days; on reopening (Oct 26) the Hang Seng crashes 33%" },
+        { "at": "1987-10", "fact": "Dow rebounds a record 10.2% on Oct 21 as the Fed under Greenspan pledges liquidity support" },
+        { "at": "1987-10", "fact": "Reagan names the Brady Commission (Oct 27) to investigate; its report leads to market-wide circuit breakers in 1988" }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Black_Monday_(1987)"
+      ]
+    },
+    {
+      "id": "japan_bubble_1990",
+      "name": "Japan Bubble Burst & Lost Decade",
+      "start": "1989-12",
+      "end": "1992-08",
+      "worldDrawdownPct": -20.0,
+      "worldDrawdownApprox": true,
+      "mostAffected": ["jp", "fi", "se", "us"],
+      "beats": [
+        { "at": "1989-12", "fact": "Nikkei 225 closes at its all-time high of 38,915.87 (Dec 29) at the top of the Heisei bubble, with record Tokyo land prices" },
+        { "at": "1990-01", "fact": "New-year selling kicks off the slide; Japan curbs real-estate lending and the Nikkei ends 1990 down 39%" },
+        { "at": "1990-08", "fact": "Iraq invades Kuwait (Aug 2), doubling oil prices and deepening the world bear market; the Bank of Japan lifts its discount rate to 6% (Aug 30)" },
+        { "at": "1992-08", "fact": "Nikkei bottoms near 14,309, down 63% from the peak; bad loans cascade into the 'lost decade' - the index only bottoms near 7,600 in 2003" }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Japanese_asset_price_bubble",
+        "https://www.cnbc.com/2023/06/27/japan-stocks-are-roaring-back-this-rally-may-be-different-from-1990.html"
+      ]
+    },
+    {
+      "id": "asian_crisis_1997",
+      "name": "Asian Financial Crisis",
+      "start": "1997-07",
+      "end": "1998-08",
+      "worldDrawdownPct": -15.0,
+      "worldDrawdownApprox": true,
+      "mostAffected": ["th", "id", "kr", "hk"],
+      "beats": [
+        { "at": "1997-07", "fact": "Thailand floats the baht (Jul 2); it loses about 20% at once and contagion hits the Philippines, Malaysia and Indonesia" },
+        { "at": "1997-10", "fact": "Hang Seng drops 23% in four days (Oct 20-23); the Dow falls 554 points (Oct 27), triggering its first-ever circuit-breaker halt" },
+        { "at": "1997-12", "fact": "Korea signs a record $58bn IMF rescue (Dec 3) as its reserves nearly run dry; major chaebol collapse" },
+        { "at": "1998-01", "fact": "Indonesia's rupiah crumbles from about 2,400 to roughly 16,000 per dollar; food riots follow and Suharto resigns in May 1998" }
+      ],
+      "sources": [
+        "https://www.federalreservehistory.org/essays/asian-financial-crisis",
+        "https://en.wikipedia.org/wiki/1997_Asian_financial_crisis",
+        "https://www.imf.org/external/pubs/nft/seminar/2002/korean",
+        "https://www.sec.gov/news/studies/tradrep.htm"
+      ]
+    },
+    {
+      "id": "russia_ltem_1998",
+      "name": "Russia Default & LTCM Collapse",
+      "start": "1998-07",
+      "end": "1998-10",
+      "worldDrawdownPct": -19.0,
+      "worldDrawdownApprox": true,
+      "mostAffected": ["ru", "us", "br", "id"],
+      "beats": [
+        { "at": "1998-08", "fact": "Russia devalues the ruble, defaults on domestic GKO debt and declares a 90-day foreign-debt moratorium (Aug 17); the ruble loses most of its value within weeks" },
+        { "at": "1998-09", "fact": "The New York Fed brokers a $3.6bn private rescue of hedge fund LTCM (Sep 23) after its leveraged convergence trades implode" },
+        { "at": "1998-09", "fact": "The Fed cuts rates (Sep 29) but equities keep sliding; the S&P 500 bottoms Oct 8 about 19% below its July peak" },
+        { "at": "1998-10", "fact": "Surprise inter-meeting Fed cut (Oct 15) sparks a powerful rally; Brazil's real devaluation in Jan 1999 caps the EM panic" }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/1998_Russian_financial_crisis",
+        "https://en.wikipedia.org/wiki/Long-Term_Capital_Management",
+        "https://www.federalreservehistory.org/essays/ltcm-near-failure"
+      ]
+    },
+    {
+      "id": "dotcom_bust_2000",
+      "name": "Dot-com Bust",
+      "start": "2000-03",
+      "end": "2002-10",
+      "worldDrawdownPct": -49.0,
+      "worldDrawdownApprox": true,
+      "mostAffected": ["us", "de", "fi", "gb"],
+      "beats": [
+        { "at": "2000-03", "fact": "Nasdaq peaks at 5,048.62 (Mar 10) after a five-year 600% run; dot-com IPO valuations reach absurd extremes" },
+        { "at": "2000-04", "fact": "Nasdaq plunges 25% in one week (Apr 10-14) as the Microsoft antitrust ruling and vanishing earnings burst the mania" },
+        { "at": "2001-12", "fact": "Enron files for bankruptcy (Dec 2), then the largest in US history, after accounting fraud; WorldCom follows with an even bigger filing in Jul 2002" },
+        { "at": "2002-10", "fact": "Nasdaq bottoms at 1,114.11 (Oct 9), down 78% from its peak and wiping out roughly $5 trillion of market value" }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Dot-com_bubble",
+        "https://www.goldmansachs.com/our-firm/history/moments/2000-dot-com-bubble"
+      ]
+    },
+    {
+      "id": "gfc_2008",
+      "name": "Global Financial Crisis",
+      "start": "2007-10",
+      "end": "2009-03",
+      "worldDrawdownPct": -57.5,
+      "worldDrawdownApprox": true,
+      "mostAffected": ["us", "uk", "de", "ie"],
+      "beats": [
+        { "at": "2007-08", "fact": "BNP Paribas freezes three funds (Aug 9) as subprime valuations evaporate; interbank lending seizes up" },
+        { "at": "2008-03", "fact": "Bear Stearns nears collapse and is sold to JPMorgan in a Fed-backed fire sale (Mar 16)" },
+        { "at": "2008-09", "fact": "Lehman files the largest bankruptcy in US history (Sep 15); AIG is rescued the next day; the House rejects TARP (Sep 29) and the Dow falls 777 points" },
+        { "at": "2009-03", "fact": "S&P 500 bottoms at 676.53 (Mar 9), down 57% from its Oct 2007 peak; the Fed ramps up QE and a new bull market begins" }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/United_States_bear_market_of_2007%E2%80%932009",
+        "https://www.bny.com/investments/master-copy/en/news-and-insights/articles/market-behaviour-during-historical-bouts-of-volatility.html"
+      ]
+    },
+    {
+      "id": "eurozone_crisis_2010",
+      "name": "Eurozone Debt Crisis",
+      "start": "2009-11",
+      "end": "2012-09",
+      "worldDrawdownPct": -19.5,
+      "worldDrawdownApprox": true,
+      "mostAffected": ["gr", "ie", "pt", "it"],
+      "beats": [
+        { "at": "2009-11", "fact": "Greece's new government reveals a budget deficit far larger than reported (revised toward 13% of GDP); rating downgrades follow" },
+        { "at": "2010-05", "fact": "First Greek bailout: eurozone and IMF agree EUR 110bn (May 2); the EFSF is created; the May 6 'flash crash' hits US markets" },
+        { "at": "2011-11", "fact": "Italian 10-year yields top 7%; Berlusconi resigns (Nov 12) as technocratic governments take over in Rome and Athens" },
+        { "at": "2012-07", "fact": "Draghi pledges to do 'whatever it takes' (Jul 26) after Greece's record sovereign debt restructuring (Mar); the OMT programme announced in Sep caps the crisis" }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Eurozone_crisis",
+        "https://www.bbc.com/news/business-13856580"
+      ]
+    },
+    {
+      "id": "em_tightening_2018",
+      "name": "EM Selloff & Fed Tightening (Turkish Lira Crisis)",
+      "start": "2018-02",
+      "end": "2018-12",
+      "worldDrawdownPct": -14.0,
+      "worldDrawdownApprox": true,
+      "mostAffected": ["tr", "ar", "ru", "cn"],
+      "beats": [
+        { "at": "2018-04", "fact": "US sanctions on Rusal sink the ruble; Argentina's peso collapse forces 40% interest rates and a $50bn IMF standby in June" },
+        { "at": "2018-08", "fact": "Trump doubles metals tariffs on Turkey (Aug 10); the lira plunges about 25% in days toward 7.2/USD, rattling European banks" },
+        { "at": "2018-10", "fact": "Fed's third hike of the year (Sep 26) plus 3.2% 10-year Treasury yields; the MSCI EM index is down roughly 25% from its January peak" },
+        { "at": "2018-12", "fact": "Fourth Fed hike; the S&P 500 falls 9.2% in December, worst since 1931, bottoming Dec 24 nearly 20% below its September peak" }
+      ],
+      "sources": [
+        "https://www.msci.com/research-and-insights/blog-post/are-argentina-and-turkey-just-the-first-dominoes-to-fall",
+        "https://www.cnbc.com/2018/08/31/argentine-peso-and-turkish-lira-crash-pressuring-emerging-currencies.html",
+        "https://www.ft.com/content/f0214d3a-9ea6-11e8-85da-eeb7a9ce36e4"
+      ]
+    },
+    {
+      "id": "covid_crash_2020",
+      "name": "COVID-19 Crash & Recovery",
+      "start": "2020-02",
+      "end": "2020-03",
+      "worldDrawdownPct": -33.9,
+      "worldDrawdownApprox": true,
+      "mostAffected": ["us", "fr", "in", "br"],
+      "beats": [
+        { "at": "2020-02", "fact": "COVID-19 supply shock ends the longest US bull market; the S&P 500 peaks Feb 19 and suffers its fastest-ever 10% correction" },
+        { "at": "2020-03", "fact": "OPEC+ talks collapse (Mar 6) and Saudi Arabia starts a price war; oil crashes about 25% on Mar 9, tripping the first of four circuit breakers" },
+        { "at": "2020-03", "fact": "Fed cuts to zero and launches $700bn QE (Mar 15); S&P bottoms at 2,237.40 (Mar 23), down 33.9% in 23 sessions; the $2.2tn CARES Act follows (Mar 27)" },
+        { "at": "2020-08", "fact": "S&P 500 reclaims its February record (Aug 18) after about 126 trading days - the shortest bear market on record" }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/2020_stock_market_crash"
+      ]
+    },
+    {
+      "id": "rate_shock_2022",
+      "name": "2022 Rate-Shock Bear Market",
+      "start": "2022-01",
+      "end": "2022-10",
+      "worldDrawdownPct": -25.0,
+      "worldDrawdownApprox": true,
+      "mostAffected": ["us", "de", "uk", "cn"],
+      "beats": [
+        { "at": "2022-02", "fact": "Russia invades Ukraine (Feb 24); Brent spikes past $120 and global inflation jumps again" },
+        { "at": "2022-03", "fact": "The Fed begins its fastest hiking cycle since the 1980s (Mar 16), later adding 75bp moves; US CPI peaks at 9.1% in June" },
+        { "at": "2022-09", "fact": "UK 'mini-budget' (Sep 23) triggers a gilt meltdown and LDI pension fire sales; sterling hits a record low and the Bank of England emergency-buys gilts (Sep 28)" },
+        { "at": "2022-10", "fact": "S&P 500 bottoms at 3,577.03 (Oct 12), down 25.4%; the Nasdaq is off more than 35% and global bonds suffer their worst year in decades" }
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/2022_stock_market_decline",
+        "https://www.chicagofed.org/publications/chicago-fed-letter/2023/480",
+        "https://www.hartfordfunds.com/practice-management/client-conversations/managing-volatility/bear-markets.html"
+      ]
+    }
+  ]
+}

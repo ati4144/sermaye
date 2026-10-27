@@ -1,0 +1,789 @@
+{
+  "markets": {
+    "us": {
+      "indexName": "S&P 500 (1950-1956 predecessor S&P composite backfill)",
+      "returnBasis": "price",
+      "series": [
+        {
+          "year": 1950,
+          "ret": 21.7,
+          "approx": true
+        },
+        {
+          "year": 1951,
+          "ret": 16.3,
+          "approx": true
+        },
+        {
+          "year": 1952,
+          "ret": 11.8,
+          "approx": true
+        },
+        {
+          "year": 1953,
+          "ret": -6.6,
+          "approx": true
+        },
+        {
+          "year": 1954,
+          "ret": 45,
+          "approx": true
+        },
+        {
+          "year": 1955,
+          "ret": 26.4,
+          "approx": true
+        },
+        {
+          "year": 1956,
+          "ret": 2.6,
+          "approx": true
+        },
+        {
+          "year": 1957,
+          "ret": -14.3,
+          "approx": false
+        },
+        {
+          "year": 1958,
+          "ret": 38.1,
+          "approx": false
+        },
+        {
+          "year": 1959,
+          "ret": 8.5,
+          "approx": false
+        },
+        {
+          "year": 1960,
+          "ret": -3,
+          "approx": false
+        },
+        {
+          "year": 1961,
+          "ret": 23.1,
+          "approx": false
+        },
+        {
+          "year": 1962,
+          "ret": -11.8,
+          "approx": false
+        },
+        {
+          "year": 1963,
+          "ret": 18.9,
+          "approx": false
+        },
+        {
+          "year": 1964,
+          "ret": 13,
+          "approx": false
+        },
+        {
+          "year": 1965,
+          "ret": 9.1,
+          "approx": false
+        },
+        {
+          "year": 1966,
+          "ret": -13.1,
+          "approx": false
+        },
+        {
+          "year": 1967,
+          "ret": 20.1,
+          "approx": false
+        },
+        {
+          "year": 1968,
+          "ret": 7.7,
+          "approx": false
+        },
+        {
+          "year": 1969,
+          "ret": -11.4,
+          "approx": false
+        },
+        {
+          "year": 1970,
+          "ret": 0.1,
+          "approx": false
+        },
+        {
+          "year": 1971,
+          "ret": 10.8,
+          "approx": false
+        },
+        {
+          "year": 1972,
+          "ret": 15.6,
+          "approx": false
+        },
+        {
+          "year": 1973,
+          "ret": -17.4,
+          "approx": false
+        },
+        {
+          "year": 1974,
+          "ret": -29.7,
+          "approx": false
+        },
+        {
+          "year": 1975,
+          "ret": 31.5,
+          "approx": false
+        },
+        {
+          "year": 1976,
+          "ret": 19.1,
+          "approx": false
+        },
+        {
+          "year": 1977,
+          "ret": -11.5,
+          "approx": false
+        },
+        {
+          "year": 1978,
+          "ret": 1.1,
+          "approx": false
+        },
+        {
+          "year": 1979,
+          "ret": 12.3,
+          "approx": false
+        },
+        {
+          "year": 1980,
+          "ret": 25.8,
+          "approx": false
+        },
+        {
+          "year": 1981,
+          "ret": -9.7,
+          "approx": false
+        },
+        {
+          "year": 1982,
+          "ret": 14.8,
+          "approx": false
+        },
+        {
+          "year": 1983,
+          "ret": 17.3,
+          "approx": false
+        },
+        {
+          "year": 1984,
+          "ret": 1.4,
+          "approx": false
+        },
+        {
+          "year": 1985,
+          "ret": 26.3,
+          "approx": false
+        },
+        {
+          "year": 1986,
+          "ret": 14.6,
+          "approx": false
+        },
+        {
+          "year": 1987,
+          "ret": 2,
+          "approx": false
+        },
+        {
+          "year": 1988,
+          "ret": 12.4,
+          "approx": false
+        },
+        {
+          "year": 1989,
+          "ret": 27.3,
+          "approx": false
+        },
+        {
+          "year": 1990,
+          "ret": -6.6,
+          "approx": false
+        },
+        {
+          "year": 1991,
+          "ret": 26.3,
+          "approx": false
+        },
+        {
+          "year": 1992,
+          "ret": 4.5,
+          "approx": false
+        },
+        {
+          "year": 1993,
+          "ret": 7.1,
+          "approx": false
+        },
+        {
+          "year": 1994,
+          "ret": -1.5,
+          "approx": false
+        },
+        {
+          "year": 1995,
+          "ret": 34.1,
+          "approx": false
+        },
+        {
+          "year": 1996,
+          "ret": 20.3,
+          "approx": false
+        },
+        {
+          "year": 1997,
+          "ret": 31,
+          "approx": false
+        },
+        {
+          "year": 1998,
+          "ret": 26.7,
+          "approx": false
+        },
+        {
+          "year": 1999,
+          "ret": 19.5,
+          "approx": false
+        },
+        {
+          "year": 2000,
+          "ret": -10.1,
+          "approx": false
+        },
+        {
+          "year": 2001,
+          "ret": -13,
+          "approx": false
+        },
+        {
+          "year": 2002,
+          "ret": -23.4,
+          "approx": false
+        },
+        {
+          "year": 2003,
+          "ret": 26.4,
+          "approx": false
+        },
+        {
+          "year": 2004,
+          "ret": 9,
+          "approx": false
+        },
+        {
+          "year": 2005,
+          "ret": 3,
+          "approx": false
+        },
+        {
+          "year": 2006,
+          "ret": 13.6,
+          "approx": false
+        },
+        {
+          "year": 2007,
+          "ret": 3.5,
+          "approx": false
+        },
+        {
+          "year": 2008,
+          "ret": -38.5,
+          "approx": false
+        },
+        {
+          "year": 2009,
+          "ret": 23.5,
+          "approx": false
+        },
+        {
+          "year": 2010,
+          "ret": 12.8,
+          "approx": false
+        },
+        {
+          "year": 2011,
+          "ret": 0,
+          "approx": false
+        },
+        {
+          "year": 2012,
+          "ret": 13.4,
+          "approx": false
+        },
+        {
+          "year": 2013,
+          "ret": 29.6,
+          "approx": false
+        },
+        {
+          "year": 2014,
+          "ret": 11.4,
+          "approx": false
+        },
+        {
+          "year": 2015,
+          "ret": -0.7,
+          "approx": false
+        },
+        {
+          "year": 2016,
+          "ret": 9.5,
+          "approx": false
+        },
+        {
+          "year": 2017,
+          "ret": 19.4,
+          "approx": false
+        },
+        {
+          "year": 2018,
+          "ret": -6.2,
+          "approx": false
+        },
+        {
+          "year": 2019,
+          "ret": 28.9,
+          "approx": false
+        },
+        {
+          "year": 2020,
+          "ret": 16.3,
+          "approx": false
+        },
+        {
+          "year": 2021,
+          "ret": 26.9,
+          "approx": false
+        },
+        {
+          "year": 2022,
+          "ret": -19.4,
+          "approx": false
+        },
+        {
+          "year": 2023,
+          "ret": 24.2,
+          "approx": false
+        },
+        {
+          "year": 2024,
+          "ret": 23.3,
+          "approx": false
+        },
+        {
+          "year": 2025,
+          "ret": 16.4,
+          "approx": false
+        }
+      ],
+      "typicalAnnualVol": 16.5,
+      "sources": [
+        "https://pages.stern.nyu.edu/~adamodar/pc/datasets/histretSP.xls",
+        "https://finance.yahoo.com/quote/%5EGSPC/",
+        "http://www.econ.yale.edu/~shiller/data/ie_data.xls"
+      ]
+    },
+    "de": {
+      "indexName": "DAX (performance index; 1950-1987 back-calculated composite chain)",
+      "returnBasis": "total",
+      "series": [
+        {
+          "year": 1950,
+          "ret": -7.4,
+          "approx": true
+        },
+        {
+          "year": 1951,
+          "ret": 115.4,
+          "approx": true
+        },
+        {
+          "year": 1952,
+          "ret": -8.1,
+          "approx": true
+        },
+        {
+          "year": 1953,
+          "ret": 24,
+          "approx": true
+        },
+        {
+          "year": 1954,
+          "ret": 82.6,
+          "approx": true
+        },
+        {
+          "year": 1955,
+          "ret": 10,
+          "approx": true
+        },
+        {
+          "year": 1956,
+          "ret": -7.4,
+          "approx": true
+        },
+        {
+          "year": 1957,
+          "ret": 5.2,
+          "approx": true
+        },
+        {
+          "year": 1958,
+          "ret": 60.2,
+          "approx": true
+        },
+        {
+          "year": 1959,
+          "ret": 79.9,
+          "approx": true
+        },
+        {
+          "year": 1960,
+          "ret": 27.8,
+          "approx": true
+        },
+        {
+          "year": 1961,
+          "ret": -8.3,
+          "approx": true
+        },
+        {
+          "year": 1962,
+          "ret": -21.1,
+          "approx": true
+        },
+        {
+          "year": 1963,
+          "ret": 13.6,
+          "approx": true
+        },
+        {
+          "year": 1964,
+          "ret": 8.9,
+          "approx": true
+        },
+        {
+          "year": 1965,
+          "ret": -11.6,
+          "approx": true
+        },
+        {
+          "year": 1966,
+          "ret": -21.1,
+          "approx": true
+        },
+        {
+          "year": 1967,
+          "ret": 51,
+          "approx": true
+        },
+        {
+          "year": 1968,
+          "ret": 10.4,
+          "approx": true
+        },
+        {
+          "year": 1969,
+          "ret": 12,
+          "approx": true
+        },
+        {
+          "year": 1970,
+          "ret": -28.7,
+          "approx": true
+        },
+        {
+          "year": 1971,
+          "ret": 6.7,
+          "approx": true
+        },
+        {
+          "year": 1972,
+          "ret": 13.3,
+          "approx": true
+        },
+        {
+          "year": 1973,
+          "ret": -24.7,
+          "approx": true
+        },
+        {
+          "year": 1974,
+          "ret": -0.5,
+          "approx": true
+        },
+        {
+          "year": 1975,
+          "ret": 40.2,
+          "approx": true
+        },
+        {
+          "year": 1976,
+          "ret": -9.6,
+          "approx": true
+        },
+        {
+          "year": 1977,
+          "ret": 7.9,
+          "approx": true
+        },
+        {
+          "year": 1978,
+          "ret": 4.7,
+          "approx": true
+        },
+        {
+          "year": 1979,
+          "ret": -13.5,
+          "approx": true
+        },
+        {
+          "year": 1980,
+          "ret": -3.4,
+          "approx": true
+        },
+        {
+          "year": 1981,
+          "ret": 2,
+          "approx": true
+        },
+        {
+          "year": 1982,
+          "ret": 12.7,
+          "approx": true
+        },
+        {
+          "year": 1983,
+          "ret": 40,
+          "approx": true
+        },
+        {
+          "year": 1984,
+          "ret": 6.1,
+          "approx": true
+        },
+        {
+          "year": 1985,
+          "ret": 66.4,
+          "approx": true
+        },
+        {
+          "year": 1986,
+          "ret": 4.8,
+          "approx": true
+        },
+        {
+          "year": 1987,
+          "ret": -30.2,
+          "approx": true
+        },
+        {
+          "year": 1988,
+          "ret": 32.8,
+          "approx": false
+        },
+        {
+          "year": 1989,
+          "ret": 34.8,
+          "approx": false
+        },
+        {
+          "year": 1990,
+          "ret": -21.9,
+          "approx": false
+        },
+        {
+          "year": 1991,
+          "ret": 12.9,
+          "approx": false
+        },
+        {
+          "year": 1992,
+          "ret": -2.1,
+          "approx": false
+        },
+        {
+          "year": 1993,
+          "ret": 46.7,
+          "approx": false
+        },
+        {
+          "year": 1994,
+          "ret": -7.1,
+          "approx": false
+        },
+        {
+          "year": 1995,
+          "ret": 7,
+          "approx": false
+        },
+        {
+          "year": 1996,
+          "ret": 28.2,
+          "approx": false
+        },
+        {
+          "year": 1997,
+          "ret": 47.1,
+          "approx": false
+        },
+        {
+          "year": 1998,
+          "ret": 17.7,
+          "approx": false
+        },
+        {
+          "year": 1999,
+          "ret": 39.1,
+          "approx": false
+        },
+        {
+          "year": 2000,
+          "ret": -7.5,
+          "approx": false
+        },
+        {
+          "year": 2001,
+          "ret": -19.8,
+          "approx": false
+        },
+        {
+          "year": 2002,
+          "ret": -43.9,
+          "approx": false
+        },
+        {
+          "year": 2003,
+          "ret": 37.1,
+          "approx": false
+        },
+        {
+          "year": 2004,
+          "ret": 7.3,
+          "approx": false
+        },
+        {
+          "year": 2005,
+          "ret": 27.1,
+          "approx": false
+        },
+        {
+          "year": 2006,
+          "ret": 22,
+          "approx": false
+        },
+        {
+          "year": 2007,
+          "ret": 22.3,
+          "approx": false
+        },
+        {
+          "year": 2008,
+          "ret": -40.4,
+          "approx": false
+        },
+        {
+          "year": 2009,
+          "ret": 23.8,
+          "approx": false
+        },
+        {
+          "year": 2010,
+          "ret": 16.1,
+          "approx": false
+        },
+        {
+          "year": 2011,
+          "ret": -14.7,
+          "approx": false
+        },
+        {
+          "year": 2012,
+          "ret": 29.1,
+          "approx": false
+        },
+        {
+          "year": 2013,
+          "ret": 25.5,
+          "approx": false
+        },
+        {
+          "year": 2014,
+          "ret": 2.7,
+          "approx": false
+        },
+        {
+          "year": 2015,
+          "ret": 9.6,
+          "approx": false
+        },
+        {
+          "year": 2016,
+          "ret": 6.9,
+          "approx": false
+        },
+        {
+          "year": 2017,
+          "ret": 12.5,
+          "approx": false
+        },
+        {
+          "year": 2018,
+          "ret": -18.3,
+          "approx": false
+        },
+        {
+          "year": 2019,
+          "ret": 25.5,
+          "approx": false
+        },
+        {
+          "year": 2020,
+          "ret": 3.5,
+          "approx": false
+        },
+        {
+          "year": 2021,
+          "ret": 15.8,
+          "approx": false
+        },
+        {
+          "year": 2022,
+          "ret": -12.3,
+          "approx": false
+        },
+        {
+          "year": 2023,
+          "ret": 20.3,
+          "approx": false
+        },
+        {
+          "year": 2024,
+          "ret": 18.8,
+          "approx": false
+        },
+        {
+          "year": 2025,
+          "ret": 23,
+          "approx": false
+        }
+      ],
+      "typicalAnnualVol": 27.8,
+      "sources": [
+        "https://de.wikipedia.org/wiki/DAX",
+        "https://www.bundesbank.de/Navigation/DE/Statistiken/Zeitreihen_Datenbanken/Makrooekonomische_Zeitreihen/its_details_value_node.html?tsId=BBK01.WU3141",
+        "http://statmath.wu-wien.ac.at/~hauser/LVs/DATEN/Finanzmaerkte/dax.txt",
+        "https://www.macrohistory.net/database/"
+      ]
+    }
+  }
+}

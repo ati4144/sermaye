@@ -1,0 +1,53 @@
+{
+  "asOf": "2026-10",
+  "topics": {
+    "inflation": {
+      "weight": 0.8,
+      "rationale": "Hot headline, cooling core: US CPI 3.4% y/y (Aug 2026) with +0.4% m/m led by war-driven gasoline, core down to 2.4%; 1-yr expectations up to 3.9% and IMF lifted 2026 global inflation to ~4.7% on a ~41% oil surge, with the Sep CPI print due Oct 14 the market's focal event."
+    },
+    "rates": {
+      "weight": 0.8,
+      "rationale": "Hiking, not cutting: the Fed raised 25bp on 2026-09-16 to 3.75-4.00% (first hike since 2023, 12-0 vote) and markets price December hike risk into the Oct 27-28 FOMC; hawkish Fedspeak (Hammack: restrictive policy 'relatively quickly') and 10-year yields near 2007 highs."
+    },
+    "geopolitics": {
+      "weight": 0.9,
+      "rationale": "War dominates headlines: the 2026 Iran war escalates (US weighing 'major combat operations', partial Strait of Hormuz closure) while Trump's Oct 11 Ukraine energy ceasefire was violated within a day, the Kremlin rejects interim truces, and the EU imposed new sanctions."
+    },
+    "ai_tech": {
+      "weight": 0.8,
+      "rationale": "The AI trade is cracking: a global chip rout on Oct 13 (Broadcom 'casino' remark, Korea -6%, Nasdaq in correction territory, Nvidia ~-11% and Broadcom ~-12% in recent sessions) after ECB dot-com-level valuation warnings, though semis remain up ~62% YTD."
+    },
+    "energy": {
+      "weight": 0.9,
+      "rationale": "Acute stress: Brent topped ~$105 (Oct 8) on Iran-war escalation with the Hormuz partially closed and a global diesel squeeze (UK pump prices at a record ~£2/litre); EIA now sees 2026 Brent averaging ~$98 and the IMF ~$96 (oil +~41% YTD)."
+    },
+    "em_stress": {
+      "weight": 0.5,
+      "rationale": "Regional, not systemic: Brazil's Bovespa hit records with the real firm and Selic cutting, but India's RBI is defending the rupee near 97 (reserves down ~$13bn) as DXY rose ~2% in Sep and the IMF warns oil shocks hit EM inflation roughly twice as hard."
+    },
+    "gold_rally": {
+      "weight": 0.6,
+      "rationale": "Elevated but off the peak: spot gold ~$4,170/oz (Oct 13), ~25% below the January all-time high of ~$5,589 as a hawkish Fed and strong dollar weigh, yet record Chinese imports and war hedging keep a floor under safe-haven demand."
+    }
+  },
+  "sources": [
+    "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+    "https://tradingeconomics.com/united-states/inflation-cpi",
+    "https://www.reuters.com/markets/us/feds-hammack-backs-restrictive-policy-says-better-if-it-comes-relatively-quickly-2026-10-12",
+    "https://www.euronews.com/2026/10/08/oil-prices-are-climbing-on-concerns-about-an-escalating-iran-war",
+    "https://www.reuters.com/business/energy/us-eia-hikes-oil-price-forecasts-again-iran-war-drains-global-stockpile-2026-10-06",
+    "https://finance.yahoo.com/markets/article/goldman-sachs-raises-december-oil-price-target-to-90-citing-significant-risk-from-iran-war-163353812.html",
+    "https://www.imf.org/en/publications/weo",
+    "https://www.reuters.com/world/asia-pacific/imf-chief-warns-energy-shock-growing-debt-ai-risks-threaten-global-growth-2026-10-07",
+    "https://www.theguardian.com/business/2026/oct/13/chip-stocks-broadcom-ai-samsung-shares-cxmt",
+    "https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260817~754a8a4418.en.html",
+    "https://www.reuters.com/world/europe/kremlin-rejects-ukrainian-leaders-idea-60-day-ceasefire-says-it-wants-an-overall-2026-10-12",
+    "https://www.reuters.com/business/energy/ukraine-accuses-russia-violating-trumps-energy-ceasefire-eu-imposes-new-2026-10-12",
+    "https://www.kitco.com/charts/gold",
+    "https://www.reuters.com/business/finance/gold-races-5100-record-peak-safe-haven-demand-2026-01-26",
+    "https://www.cnbc.com/2026/10/12/china-gold-buying-interest-rate-.html",
+    "https://admiralmarkets.com/analytics/traders-blog/usd-inr-rbi-rupee-rescue-october-2026",
+    "https://www.mufgresearch.com/fx/monthly-foreign-exchange-outlook-october-2026",
+    "https://www.riotimesonline.com/brazils-financial-morning-call-for-tuesday-october-13-2026"
+  ]
+}
