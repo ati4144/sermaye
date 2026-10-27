@@ -18,9 +18,12 @@ export { tick, advanceUntilEvent } from './sim';
 export {
   HOME_INFLATION,
   REGIME_TILT,
+  COUNTRY_BASKET,
   annualCpiRate,
   inflationM,
   cpiMult,
+  basketMult,
+  basketMultFor,
   livingClampFor,
 } from './residency';
 export {

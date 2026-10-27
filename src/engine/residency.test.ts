@@ -6,10 +6,14 @@ import { performInheritance } from './life';
 import { assetDriftVol, netWorth, roundCash } from './market';
 import {
   annualCpiRate,
+  basketMult,
+  basketMultFor,
+  COUNTRY_BASKET,
   cpiMult,
   evolveResidency,
   HOME_INFLATION,
   inflationM,
+  livingClampFor,
   REGIME_TILT,
 } from './residency';
 import { tick } from './sim';
@@ -205,17 +209,25 @@ describe('residency layer: zero-draw & parity contracts', () => {
     expect(inert.cash - active.cash).toBeCloseTo(0.62, 8); // fp dust accrues; the flow row is the exact ledger
   });
 
-  it('an empty basket charges nothing extra — the indexed floor is still zero', () => {
-    const { inert, active } = twin(11, 'tr'); // 40%/yr: the hardest case
+  it('an empty basket charges nothing for items — the levy scales by the country basket (v8.1)', () => {
+    const { inert, active } = twin(11, 'tr'); // 40%/yr, price level 0.4× US
     for (const s of [inert, active]) s.expenses!.items = [];
     tick(inert);
     tick(active);
-    expect(active.expenses!.flow[0].items).toBe(0); // 0 × any cpi
-    expect(active.expenses!.flow[0].wealthLevy).toBe(inert.expenses!.flow[0].wealthLevy);
-    expect(active.cash).toBe(inert.cash); // identical month, inflation and all
+    expect(active.expenses!.flow[0].items).toBe(0); // 0 × any cpi × any basket
+    // the wealth term is a LOCAL consumption standard: it scales by the PPP
+    // basket (a tr player's luxury at the same net worth costs 0.4×)
+    expect(active.expenses!.flow[0].wealthLevy).toBeCloseTo(inert.expenses!.flow[0].wealthLevy * 0.4, 8);
+    // the month now legitimately differs — by exactly the PPP levy gap
+    // (the ledger rows carry the exact numbers: worth includes this month's
+    // salary credit, so the levy is 406 vs 162.4, a 243.6 tr saving)
+    expect(inert.cash - active.cash).toBeCloseTo(
+      active.expenses!.flow[0].wealthLevy - inert.expenses!.flow[0].wealthLevy,
+      8,
+    );
   });
 
-  it('the MAX ceiling scales with the CPI', () => {
+  it('the MAX ceiling scales with the CPI and the country basket', () => {
     const orig = { ...balance.LIVING };
     try {
       balance.LIVING.MAX = 400; // small enough for a fresh game's levy to hit it
@@ -225,23 +237,86 @@ describe('residency layer: zero-draw & parity contracts', () => {
       const iTotal = inert.expenses!.flow[0].items + inert.expenses!.flow[0].wealthLevy;
       const aTotal = active.expenses!.flow[0].items + active.expenses!.flow[0].wealthLevy;
       expect(iTotal).toBe(400); // min(400, max(300, 700)) — the cap binds
-      expect(aTotal).toBeCloseTo(400 * 1.033333, 1); // the CAP scaled: 400 × cpi after one tr month
+      // the cap scaled by cpi AND the 0.4× tr basket after one month
+      expect(aTotal).toBeCloseTo(400 * 1.033333 * 0.4, 1);
     } finally {
       Object.assign(balance.LIVING, orig);
     }
   });
 
+  it('the bankruptcy threshold scales with the country basket (v8.1)', () => {
+    // same CPI, different price level: a ~$7.2k post-tick worth is POOR in
+    // the US (10k line) but comfortable in Türkiye (10k × 0.4 = 4k line)
+    const usa = makeGame(13);
+    usa.fate = null;
+    usa.cash = 6_000;
+    usa.residency = { countryId: 'us', cpi: 100, sinceTick: 0 };
+    const tur = clone(usa);
+    tur.residency = { countryId: 'tr', cpi: 100, sinceTick: 0 };
+    tick(usa);
+    tick(tur);
+    expect(usa.lowWealthStreak).toBe(1); // worth ≈ 7.2k < 10k → streak
+    expect(tur.lowWealthStreak).toBe(0); // same worth ≥ 4k → safe
+  });
+
   it('the bankruptcy threshold scales with the CPI', () => {
-    const hot = makeGame(13);
+    // same country, different index: cpi 130 lifts the tr line to 5.2k before
+    // the tick compounds it further; cpi 100's line is ~4k
+    const hot = makeGame(14);
     hot.fate = null;
-    hot.cash = 12_000;
-    hot.residency = { countryId: 'tr', cpi: 130, sinceTick: 0 }; // threshold now 13k
+    hot.cash = 3_800;
+    hot.residency = { countryId: 'tr', cpi: 130, sinceTick: 0 };
     const cold = clone(hot);
-    cold.residency = { countryId: 'us', cpi: 100, sinceTick: 0 }; // threshold 10k
+    cold.residency = { countryId: 'tr', cpi: 100, sinceTick: 0 };
     tick(hot);
     tick(cold);
-    expect(hot.lowWealthStreak).toBe(1); // ~11.3k worth < 13k threshold → streak
-    expect(cold.lowWealthStreak).toBe(0); // same worth, 10k threshold → safe
+    expect(hot.lowWealthStreak).toBe(1); // worth ≈ 5.2k under the compounded ~5.37k line → streak
+    expect(cold.lowWealthStreak).toBe(0); // same worth above the ~4.13k line → safe
+  });
+});
+
+describe('residency layer: purchasing-power parity (v8.1)', () => {
+  it('the basket catalog covers every country, values are (0,1], us is the 1.0 anchor', () => {
+    expect(Object.keys(COUNTRY_BASKET).sort()).toEqual([...COUNTRY_IDS].sort());
+    for (const id of COUNTRY_IDS) {
+      const v = COUNTRY_BASKET[id];
+      expect(v).toBeGreaterThan(0);
+      expect(v).toBeLessThanOrEqual(1);
+    }
+    expect(COUNTRY_BASKET.us).toBe(1);
+  });
+
+  it('basketMult: null → 1, us → 1, tr → 0.4; basketMultFor tolerates junk', () => {
+    const { inert, active } = twin(15, 'tr');
+    expect(basketMult(inert)).toBe(1);
+    expect(basketMult({ ...inert, residency: { countryId: 'us', cpi: 100, sinceTick: 0 } })).toBe(1);
+    expect(basketMult(active)).toBe(0.4);
+    expect(basketMultFor(null)).toBe(1);
+    expect(basketMultFor(undefined)).toBe(1);
+    expect(basketMultFor('narnia')).toBe(1);
+    expect(basketMultFor('tr')).toBe(0.4);
+  });
+
+  it('livingClampFor: one PPP knob on the way out — the whole clamp scales', () => {
+    const { inert, active } = twin(16, 'tr');
+    const a = livingClampFor(active, 300, 100_000);
+    const i = livingClampFor(inert, 300, 100_000);
+    expect(a).toBeCloseTo(i * 0.4, 8); // floor, wealth term AND the cap together
+  });
+
+  it('the default salary buys the same life everywhere; a typed salary enters unscaled', () => {
+    const tr = createNewGame({ seed: 17, name: 'T', homeCountryId: 'tr' });
+    expect(tr.income!.salaryM).toBe(600); // 1500 × 0.4
+    const usa = createNewGame({ seed: 17, name: 'U', homeCountryId: 'us' });
+    expect(usa.income!.salaryM).toBe(1500);
+    const typed = createNewGame({ seed: 17, name: 'X', salaryM: 2_000, homeCountryId: 'tr' });
+    expect(typed.income!.salaryM).toBe(2_000); // the player's own number, FX-path
+    const legacy = makeGame(18);
+    legacy.fate = null;
+    legacy.income = null;
+    legacy.residency = { countryId: 'tr', cpi: 100, sinceTick: 0 };
+    const reinit = applyAction(legacy, { type: 'INIT_INCOME', salaryM: undefined });
+    expect(reinit.income!.salaryM).toBe(600); // INIT default follows the save's basket
   });
 });
 

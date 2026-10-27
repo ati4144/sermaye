@@ -4,6 +4,7 @@ import { ASSETS_CATALOG, ASSET_IDS } from './data/assets';
 import { createExpenses, isLifestyleTier } from './data/expenses';
 import { createRng, nextU32 } from './rng';
 import { netWorth, roundCash, round4 } from './market';
+import { basketMult, basketMultFor } from './residency';
 import { rollFate } from './fate/roll';
 import { applyOpeningBeats, createWorld, packAgenda, REGIME_IDS } from './world';
 import { WORLD_PACK } from './worldpack';
@@ -46,12 +47,18 @@ export interface NewGameOptions {
   homeCountryId?: string | null;
 }
 
-/** v7 income-layer initializer — zero draws, pure initial data. */
-export function createIncome(salaryM: number | undefined): IncomeState {
+/**
+ * v7 income-layer initializer — zero draws, pure initial data. v8.1: an
+ * omitted/invalid salary defaults to SALARY_DEFAULT scaled by the home
+ * country's basket multiplier (the default buys the same life everywhere);
+ * a player-TYPED salary enters unscaled — it is already the player's own
+ * number against the locally-priced basket.
+ */
+export function createIncome(salaryM: number | undefined, basketMult = 1): IncomeState {
   const valid =
     typeof salaryM === 'number' && Number.isFinite(salaryM) && salaryM > 0 && salaryM <= balance.INCOME.SALARY_MAX;
   return {
-    salaryM: valid ? roundCash(salaryM) : balance.INCOME.SALARY_DEFAULT,
+    salaryM: valid ? roundCash(salaryM) : roundCash(balance.INCOME.SALARY_DEFAULT * basketMult),
     employed: true,
     lastReviewTick: 0,
   };
@@ -134,7 +141,7 @@ export function createNewGame(opts: NewGameOptions): GameState {
     // v7 income layer — employed from day one at the opening-question salary
     // (default SALARY_DEFAULT). Legacy saves migrate to income: null (inert
     // until INIT_INCOME); the credit is zero-draw, phase 4a-pre.
-    income: createIncome(opts.salaryM),
+    income: createIncome(opts.salaryM, basketMultFor(opts.homeCountryId)),
     // v8 residency layer — the home country from day one, CPI starting at
     // 100. Legacy saves migrate to residency: null (inert until
     // INIT_RESIDENCY); the whole inflation path is zero-draw.
@@ -463,7 +470,7 @@ export function healIncome(state: GameState): GameState {
 
   const salaryOk =
     typeof inc.salaryM === 'number' && Number.isFinite(inc.salaryM) && inc.salaryM > 0 && inc.salaryM <= balance.INCOME.SALARY_MAX;
-  const salaryM = salaryOk ? roundCash(inc.salaryM) : balance.INCOME.SALARY_DEFAULT;
+  const salaryM = salaryOk ? roundCash(inc.salaryM) : roundCash(balance.INCOME.SALARY_DEFAULT * basketMult(state));
   const employed = typeof inc.employed === 'boolean' ? inc.employed : true;
   const lastReviewTick =
     typeof inc.lastReviewTick === 'number' && Number.isInteger(inc.lastReviewTick) && inc.lastReviewTick >= 0

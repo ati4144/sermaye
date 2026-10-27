@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Pressable, ScrollView, Text, TextInput, View } from 'react-native';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useTranslation } from 'react-i18next';
-import { balance, COUNTRY_IDS, HOME_INFLATION, WORLD_PACK } from '@/engine';
+import { balance, basketMultFor, COUNTRY_IDS, HOME_INFLATION, WORLD_PACK } from '@/engine';
 import { ChoiceButton } from '@/components/ChoiceButton';
 import { FateQuestions } from '@/components/FateQuestions';
 import { COUNTRY_CURRENCY, currencyDef } from '@/lib/currency';
@@ -167,7 +167,11 @@ export default function NewGame() {
         <View style={{ flex: 1, justifyContent: 'center', gap: Spacing.lg }}>
           <View style={{ gap: Spacing.xs }}>
             <Text style={Typography.h2}>{t('ui.income.newGame.title')}</Text>
-            <Text style={Typography.dim}>{t('ui.income.newGame.subtitle')}</Text>
+            <Text style={Typography.dim}>
+              {t('ui.income.newGame.subtitle', {
+                def: formatMoney(balance.INCOME.SALARY_DEFAULT * basketMultFor(homeCountryId)),
+              })}
+            </Text>
           </View>
 
           <TextInput
@@ -190,7 +194,9 @@ export default function NewGame() {
             }}
           />
           <Text style={{ ...Typography.dim, fontSize: 12 }}>
-            {t('ui.income.newGame.hint', { amount: formatMoney(balance.INCOME.SALARY_DEFAULT) })}
+            {t('ui.income.newGame.hint', {
+              amount: formatMoney(balance.INCOME.SALARY_DEFAULT * basketMultFor(homeCountryId)),
+            })}
           </Text>
 
           <View style={{ flexDirection: 'row', gap: Spacing.sm }}>

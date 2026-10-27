@@ -7,6 +7,7 @@ import { applyEffects, logAssetEntry } from './events/apply';
 import { applyFateOption } from './fate/tick';
 import { performInheritance } from './life';
 import { createIncome, migrateState } from './create';
+import { basketMult } from './residency';
 import { createWorld } from './world';
 import {
   assetFeeFor,
@@ -481,7 +482,7 @@ function activateAsset(s: GameState, assetId: string): void {
 function initIncome(s: GameState, salaryM: number | undefined): void {
   requirePlaying(s);
   if (s.income) throw new Error('INCOME_ACTIVE');
-  s.income = createIncome(salaryM);
+  s.income = createIncome(salaryM, basketMult(s));
   s.eventLog.push({
     tick: s.tick,
     uid: `${s.tick}:income_init`,

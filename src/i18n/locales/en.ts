@@ -75,9 +75,9 @@ export default {
     income: {
       newGame: {
         title: 'Your Monthly Income',
-        subtitle: 'Enter your salary — leave it empty to start at $1,500/mo. You can change it any time later.',
+        subtitle: 'Enter your salary — leave it empty to start at the purchasing-power default for your country ({{def}}). You can change it later.',
         inputLabel: 'Salary ({{unit}}/mo)',
-        hint: 'e.g. 1500 — leave empty for {{amount}}',
+        hint: 'leave empty for {{amount}}',
         continue: 'Continue',
       },
       flow: {

@@ -16,7 +16,7 @@ const V7_GOLDEN = '15e97c19'; // 'e7705c77' → v8: version 8 + residency:null k
 // v8 full-state goldens — the residency layer ACTIVE from creation. Pinned
 // by probe, same as every golden above.
 const V8_GOLDEN = '45bafa91'; // default country us, cpi 129.0107 after 120 months
-const V8_GOLDEN_TR = '2ab8644'; // tr: cpi 1060.0144 after 120 months (arc override + catalog blend)
+const V8_GOLDEN_TR = 'a96a0027'; // tr, v8.1 PPP: was 2ab8644 — the 0.4× basket moved the living/levy/threshold path; cpi (1060.0144) unchanged
 
 describe('rng', () => {
   it('produces identical sequences for identical seeds', () => {

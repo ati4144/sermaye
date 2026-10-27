@@ -85,6 +85,38 @@ export function cpiMult(s: GameState): number {
   return s.residency ? s.residency.cpi / 100 : 1;
 }
 
+/**
+ * v8.1 purchasing-power parity — the country's price level vs the US. The
+ * basket, its MAX ceiling, the bankruptcy threshold and the DEFAULT salary
+ * all scale by it (user decision 2026-10-27: "full PPP fix"), so a realistic
+ * local salary measured against a locally-priced basket plays the same game
+ * in every country. A player-TYPED salary never scales: it enters at the FX
+ * rate and meets the locally-priced basket on its own. Approximate 2026
+ * price levels, hand-set like HOME_INFLATION.
+ */
+export const COUNTRY_BASKET: Record<string, number> = {
+  us: 1,
+  de: 0.95,
+  jp: 0.9,
+  uk: 1,
+  cn: 0.45,
+  in: 0.3,
+  ae: 0.75,
+  tr: 0.4,
+  br: 0.45,
+  ng: 0.3,
+};
+
+/** The effective basket multiplier — 1 on every inert path and for the US. */
+export function basketMult(s: GameState): number {
+  return s.residency ? (COUNTRY_BASKET[s.residency.countryId] ?? 1) : 1;
+}
+
+/** Country-id form used before the layer exists (new-game salary default). */
+export function basketMultFor(countryId: string | null | undefined): number {
+  return (countryId && COUNTRY_BASKET[countryId]) || 1;
+}
+
 const round4 = (x: number): number => Math.round(x * 10000) / 10000; // market.ts twin, kept local to avoid a market↔residency import cycle
 
 /**
@@ -108,8 +140,12 @@ export function evolveResidency(s: GameState): void {
  */
 export function livingClampFor(s: GameState, itemsSum: number, worth: number): number {
   const cpi = cpiMult(s);
-  return Math.min(
+  const clamped = Math.min(
     balance.LIVING.MAX * cpi,
     Math.max(itemsSum * cpi, itemsSum * cpi + worth * balance.LIVING.NETWORTH_RATE),
   );
+  // v8.1: one PPP knob on the way out — scales the basket floor, the wealth
+  // term AND the MAX ceiling together. ×1 (US and every inert path) keeps the
+  // exact pre-v8.1 bits.
+  return clamped * basketMult(s);
 }

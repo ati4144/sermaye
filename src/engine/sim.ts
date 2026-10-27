@@ -6,7 +6,7 @@ import { fireMarketEvent, enqueueLifeNotice } from './events/apply';
 import { liveLife } from './life';
 import { triggerFateBeats } from './fate/tick';
 import { evolveMarkets, evolveAssetMarkets, collectAssetIncome, collectDueSales, homeReliefFor, liquidateToRaise, netWorth, roundCash, salaryFor } from './market';
-import { cpiMult, evolveResidency, livingClampFor } from './residency';
+import { basketMult, cpiMult, evolveResidency, livingClampFor } from './residency';
 import { nextFloat } from './rng';
 import { evolveWorld, applyScenarioBeats, eventProb } from './world';
 import type { RngState } from './rng';
@@ -303,9 +303,11 @@ export function tick(s: GameState): void {
 
   // v8: the bankruptcy threshold scales with the cumulative home CPI — being
   // "poor" is CPI-relative (10k of nominal cash in a 40%-inflation country
-  // stops being safe as the index compounds). cpi 1 keeps the exact pre-v8
-  // comparison bits.
-  if (worth < balance.BANKRUPT.THRESHOLD * cpiMult(s)) {
+  // stops being safe as the index compounds). v8.1: it also scales by the
+  // country's price level (a $5k buffer is poor in the US, not in Türkiye
+  // where it buys a US-$12.5k life). cpi 1 and basket 1 keep the exact
+  // pre-v8 comparison bits.
+  if (worth < balance.BANKRUPT.THRESHOLD * cpiMult(s) * basketMult(s)) {
     s.lowWealthStreak += 1;
     if (s.lowWealthStreak >= balance.BANKRUPT.STREAK_MONTHS && s.status === 'PLAYING') {
       s.status = 'GAME_OVER_BANKRUPT';

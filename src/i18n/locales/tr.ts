@@ -75,9 +75,9 @@ export default {
     income: {
       newGame: {
         title: 'Aylık Gelirin',
-        subtitle: 'Maaşını gir — boş bırakırsan 1.500 $/ay ile başlarsın. Sonradan istediğin an değiştirebilirsin.',
+        subtitle: 'Maaşını gir — boş bırakırsan ülkenin alım gücüne göre varsayılanla ({{def}}) başlarsın. Sonradan değiştirebilirsin.',
         inputLabel: 'Maaş ({{unit}}/ay)',
-        hint: 'örn. 1500 — boş bırakırsan {{amount}}',
+        hint: 'boş bırakırsan {{amount}}',
         continue: 'Devam',
       },
       flow: {
