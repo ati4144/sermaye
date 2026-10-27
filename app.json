@@ -2,6 +2,7 @@
   "expo": {
     "name": "Sermaye",
     "slug": "sermaye",
+    "owner": "ati4144",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -40,6 +41,11 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a23e0623-be7f-4b14-9768-72b8b73f9aa0"
+      }
     }
   }
 }
