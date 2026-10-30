@@ -5,6 +5,7 @@ import {
   applyAction,
   createNewGame,
   healAssets,
+  healDeposits,
   healExpenses,
   healHome,
   healIncome,
@@ -54,8 +55,8 @@ function sanitizeSlots(raw: Partial<Record<SlotId, unknown>> | undefined): Recor
   for (const id of SLOTS) {
     const st = raw?.[id] as GameState | undefined;
     if (st && typeof st === 'object' && typeof st.schemaVersion === 'number' && st.schemaVersion <= SCHEMA_VERSION) {
-      out[id] = healResidency(
-        healIncome(healExpenses(healWorld(healAssets(healHome(migrateState(st as GameState)))))),
+      out[id] = healDeposits(
+        healResidency(healIncome(healExpenses(healWorld(healAssets(healHome(migrateState(st as GameState))))))),
       );
     }
   }

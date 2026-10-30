@@ -29,6 +29,7 @@ const clone = <T,>(x: T): T => JSON.parse(JSON.stringify(x));
 function v7Game(seed: number): GameState {
   const v7 = clone(makeGame(seed)) as GameState;
   delete (v7 as Partial<GameState>).residency;
+  delete (v7 as Partial<GameState>).deposits;
   v7.schemaVersion = 7;
   return v7;
 }
@@ -44,13 +45,13 @@ function twin(seed: number, countryId = 'us'): { inert: GameState; active: GameS
 }
 
 describe('residency layer: schema & creation', () => {
-  it('new games carry the layer ACTIVE from creation, keyed LAST at schema 8', () => {
+  it('new games carry the layer ACTIVE from creation at schema 9 (deposits keyed last)', () => {
     const s = makeGame(1);
-    expect(s.schemaVersion).toBe(8);
+    expect(s.schemaVersion).toBe(9);
     expect(s.residency).toEqual({ countryId: 'us', cpi: 100, sinceTick: 0 });
     const keys = Object.keys(s);
-    expect(keys[keys.length - 2]).toBe('income'); // FNV key order: income then residency
-    expect(keys[keys.length - 1]).toBe('residency');
+    expect(keys[keys.length - 2]).toBe('residency'); // FNV key order: residency then deposits
+    expect(keys[keys.length - 1]).toBe('deposits');
   });
 
   it('createNewGame takes the homeCountryId option', () => {
@@ -69,9 +70,10 @@ describe('residency layer: schema & creation', () => {
   it('migrateState stamps v7 saves inert: residency null, replay bit-for-bit, never self-activates', () => {
     const v7 = v7Game(9);
     const m = migrateState(v7);
-    expect(m.schemaVersion).toBe(8);
+    expect(m.schemaVersion).toBe(9);
     expect(m.residency).toBeNull(); // cpi 1 — every inert path is bit-identical pre-v8
-    const v7Plus = { ...clone(v7), schemaVersion: 8, residency: null }; // key order = migrateState's
+    expect(m.deposits).toEqual([]); // v8→v9 step: empty ledger until OPEN_DEPOSIT
+    const v7Plus = { ...clone(v7), schemaVersion: 9, residency: null, deposits: [] }; // key order = migrateState's
     expect(JSON.stringify(m)).toBe(JSON.stringify(v7Plus));
 
     const { final, actions } = runMonths(v7, 24);

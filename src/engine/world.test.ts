@@ -13,10 +13,10 @@ import type { GameState } from './types';
 const clone = <T,>(x: T): T => JSON.parse(JSON.stringify(x));
 
 describe('world layer: schema & creation', () => {
-  it('new games start with the world active at schema v8', () => {
+  it('new games start with the world active at schema v9', () => {
     const s = makeGame(1);
-    expect(SCHEMA_VERSION).toBe(8);
-    expect(s.schemaVersion).toBe(8);
+    expect(SCHEMA_VERSION).toBe(9);
+    expect(s.schemaVersion).toBe(9);
     expect(s.world).not.toBeNull();
     expect(s.world!.regime).toBe('growth');
     expect(s.world!.scenarioId).toBeNull();
@@ -32,15 +32,17 @@ describe('world layer: schema & creation', () => {
     delete (v3 as Partial<typeof v3>).pendingSales;
     delete (v3 as Partial<typeof v3>).income;
     delete (v3 as Partial<typeof v3>).residency;
+    delete (v3 as Partial<typeof v3>).deposits;
     (v3 as { schemaVersion: number }).schemaVersion = 3;
     const m = migrateState(v3);
-    expect(m.schemaVersion).toBe(8);
+    expect(m.schemaVersion).toBe(9);
     expect(m.world).toBeNull();
     expect(m.expenses).toBeNull(); // v4→v5 step: the flat formula keeps running
     expect(m.home).toBeNull(); // v5→v6 step: relief 0, no eve_cikma
     expect(m.pendingSales).toEqual([]);
     expect(m.income).toBeNull(); // v6→v7 step: no salary until INIT_INCOME
     expect(m.residency).toBeNull(); // v7→v8 step: cpi 1 until INIT_RESIDENCY
+    expect(m.deposits).toEqual([]); // v8→v9 step: empty ledger until OPEN_DEPOSIT
     expect(m.assets).toEqual(s.assets);
     expect(m.cash).toBe(s.cash);
   });

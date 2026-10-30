@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { Text, View } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import Animated, { FadeInDown } from 'react-native-reanimated';
-import { activeAssetIds, assetDef, assetPrice, countryDef } from '@/engine';
+import { accruedDepositInterest, activeAssetIds, assetDef, assetPrice, countryDef } from '@/engine';
 import type { GameState } from '@/engine';
 import { marketName } from '@/lib/labels';
 import { formatMoney, formatNumber, formatPct, useCurrencySync } from '@/lib/money';
@@ -106,7 +106,9 @@ export function PortfolioCard({ game }: { game: GameState }) {
   // v6 escrow: locked proceeds total (principal, not P&L). Even a fully
   // listed portfolio keeps the card alive so the player sees the escrow.
   const pendingTotal = game.pendingSales.reduce((a, ps) => a + ps.proceeds, 0);
-  if (rows.length === 0 && pendingTotal === 0) return null;
+  // v9 deposits: principal + accrued — the same netWorth seam, derived here
+  const depositTotal = game.deposits.reduce((a, d) => a + d.principal + accruedDepositInterest(d, game.tick), 0);
+  if (rows.length === 0 && pendingTotal === 0 && depositTotal === 0) return null;
 
   const totalValue = rows.reduce((s, r) => s + r.value, 0);
   const totalCost = rows.reduce((s, r) => s + r.cost, 0);
@@ -143,6 +145,11 @@ export function PortfolioCard({ game }: { game: GameState }) {
       {pendingTotal > 0 ? (
         <Text style={{ ...Typography.dim, fontSize: 13, fontVariant: ['tabular-nums'] }}>
           {t('ui.dashboard.tracker.pending')}: {formatMoney(pendingTotal)}
+        </Text>
+      ) : null}
+      {depositTotal > 0 ? (
+        <Text style={{ ...Typography.dim, fontSize: 13, fontVariant: ['tabular-nums'] }}>
+          {t('ui.dashboard.tracker.deposits')}: {formatMoney(depositTotal)}
         </Text>
       ) : null}
 

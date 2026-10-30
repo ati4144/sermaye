@@ -8,15 +8,17 @@ import type { GameState } from './types';
 
 // v6 full-state goldens (see the Yuva-economy golden tests below). Pinned by
 // running each fixture once and reading the hash — then they are fences.
-const V6_GOLDEN = 'e22685cd'; // '11921228' villa from creation → 'adf87bdb' v7 income:null key → v8: version 8 + residency:null key (shape-only; the cash path is identical)
-const V6_GOLDEN_FLOW = 'cd6e3fe4'; // 'a8dae17f' villa → '2a6f1018' v7 income:null key → v8: version 8 + residency:null key (shape-only)
+const V6_GOLDEN = '1da84d4f'; // '11921228' villa from creation → 'adf87bdb' v7 income:null key → 'e22685cd' v8: version 8 + residency:null key (shape-only) → v9: version 9 + deposits:[] key (shape-only)
+const V6_GOLDEN_FLOW = 'd252d31a'; // 'a8dae17f' villa → '2a6f1018' v7 income:null key → 'cd6e3fe4' v8: version 8 + residency:null key (shape-only) → v9: version 9 + deposits:[] key (shape-only)
 // v7 full-state golden — the income layer ACTIVE from creation (default
 // salary, renter path). Pinned by probe, same as every golden above.
-const V7_GOLDEN = '15e97c19'; // 'e7705c77' → v8: version 8 + residency:null key (shape-only; the cash path is identical)
+const V7_GOLDEN = '2e81a393'; // 'e7705c77' → '15e97c19' v8: version 8 + residency:null key (shape-only) → v9: version 9 + deposits:[] key (shape-only)
 // v8 full-state goldens — the residency layer ACTIVE from creation. Pinned
 // by probe, same as every golden above.
-const V8_GOLDEN = '45bafa91'; // default country us, cpi 129.0107 after 120 months
-const V8_GOLDEN_TR = 'a96a0027'; // tr, v8.1 PPP: was 2ab8644 — the 0.4× basket moved the living/levy/threshold path; cpi (1060.0144) unchanged
+const V8_GOLDEN = 'f8deb445'; // default country us, cpi 129.0107 after 120 months → '45bafa91' v9: version 9 + deposits:[] key (shape-only; the cash path is identical)
+const V8_GOLDEN_TR = 'fc78708d'; // tr, v8.1 PPP: was 2ab8644 — the 0.4× basket moved the living/levy/threshold path → 'a96a0027' v9: version 9 + deposits:[] key (shape-only)
+// v9 full-state golden — the deposit layer in action (two staggered terms).
+const V9_GOLDEN = '12305545'; // OPEN 50k/12mo (rate .06) at t0 + 20k/6mo (rate .05) at t1 → both mature by t13; cash path identical to the inert twin plus the two payouts
 
 describe('rng', () => {
   it('produces identical sequences for identical seeds', () => {
@@ -92,10 +94,11 @@ describe('engine determinism', () => {
     // world: null likewise — no regime float, identity multipliers; expenses:
     // null keeps the flat living-cost formula; home: null keeps relief 0, no
     // marriedTick stamp, no eve_cikma, no escrow; income: null keeps the
-    // salary credit and employment transitions off). Live play normalizes on
-    // entry, so the final state carries exactly seven additions vs v2: the
-    // inert keys "assets":null, "properties":{}, "world":null,
-    // "expenses":null, "home":null, "pendingSales":[], "income":null.
+    // salary credit and employment transitions off; deposits: [] accrues
+    // nothing). Live play normalizes on entry, so the final state carries
+    // exactly eight additions vs v2: the inert keys "assets":null,
+    // "properties":{}, "world":null, "expenses":null, "home":null,
+    // "pendingSales":[], "income":null, "residency":null.
     // Stripping them before hashing must reproduce the v2 state bit-for-bit.
     // This hash must NEVER move: it is the (v2 initial, actionLog)
     // bit-parity contract.
@@ -108,11 +111,11 @@ describe('engine determinism', () => {
     legacy.income = null;
     legacy.residency = null;
     const { final } = runMonths(legacy, 120);
-    // normalization adds exactly nine things to a v2 run: the version bump
-    // and the eight inert keys. Normalize all nine back, then hash: the
+    // normalization adds exactly ten things to a v2 run: the version bump
+    // and the nine inert keys. Normalize all ten back, then hash: the
     // result must be the v2 state bit-for-bit — same draws, same markets,
     // same logs, same cash to the cent.
-    const { assets: _a, properties: _p, world: _w, expenses: _e, home: _h, pendingSales: _ps, income: _i, residency: _r, ...v2Core } = final;
+    const { assets: _a, properties: _p, world: _w, expenses: _e, home: _h, pendingSales: _ps, income: _i, residency: _r, deposits: _d, ...v2Core } = final;
     v2Core.schemaVersion = 2;
     const hash = fnv1a(JSON.stringify(v2Core));
     // seed 12345, 120 months, policy: resolve choices with option 0
@@ -134,7 +137,7 @@ describe('engine determinism', () => {
     v3.income = null;
     v3.residency = null;
     const { final } = runMonths(v3, 120);
-    const { world: _w, expenses: _e, home: _h, pendingSales: _ps, income: _i, residency: _r, ...v3Core } = final;
+    const { world: _w, expenses: _e, home: _h, pendingSales: _ps, income: _i, residency: _r, deposits: _d, ...v3Core } = final;
     v3Core.schemaVersion = 3; // migration bumps to 7 — normalize back for v3 parity
     const hash = fnv1a(JSON.stringify(v3Core));
     // same seed/months/policy with the asset layer active (gold/house/farm/car
@@ -160,7 +163,7 @@ describe('engine determinism', () => {
     v5.income = null;
     v5.residency = null;
     const { final } = runMonths(v5, 120);
-    const { home: _h, pendingSales: _ps, income: _i, residency: _r, ...v5Core } = final;
+    const { home: _h, pendingSales: _ps, income: _i, residency: _r, deposits: _d, ...v5Core } = final;
     v5Core.schemaVersion = 5;
     const hash = fnv1a(JSON.stringify(v5Core));
     // same seed/months/policy with ALL pre-v6 layers active: asset markets
@@ -184,7 +187,7 @@ describe('engine determinism', () => {
     gfc.income = null;
     gfc.residency = null;
     const { final } = runMonths(gfc, 120);
-    const { home: _h, pendingSales: _ps, income: _i, residency: _r, ...v5Core } = final;
+    const { home: _h, pendingSales: _ps, income: _i, residency: _r, deposits: _d, ...v5Core } = final;
     v5Core.schemaVersion = 5;
     const hash = fnv1a(JSON.stringify(v5Core));
     // the scripted crisis arc pins the scenario-only market path: crisis
@@ -205,7 +208,7 @@ describe('engine determinism', () => {
     jp.income = null;
     jp.residency = null;
     const { final } = runMonths(jp, 120);
-    const { home: _h, pendingSales: _ps, income: _i, residency: _r, ...v5Core } = final;
+    const { home: _h, pendingSales: _ps, income: _i, residency: _r, deposits: _d, ...v5Core } = final;
     v5Core.schemaVersion = 5;
     const hash = fnv1a(JSON.stringify(v5Core));
     // the boom→crisis→stagnation lost-decade arc (flips at ticks 8/27) pins a
@@ -305,6 +308,33 @@ describe('engine determinism', () => {
     expect(final.residency?.countryId).toBe('tr');
     expect(final.residency!.cpi).toBeGreaterThan(140); // ×10.6 here: the early arc override (.18) hands off to the .40 catalog rate
     expect(hash).toBe(V8_GOLDEN_TR);
+  });
+
+  it('golden fingerprint (v9 deposit economy): consciously update on deposit changes', () => {
+    // two deposits, staggered terms: 50k/12mo opened at t0 (us catalog rate
+    // .025 + .035 spread = .06 locked), 20k/6mo at t1 (.025 + .025 = .05).
+    // The 6mo matures at tick 7 (interest 20_000 × .05 × 6/12 = 500), the
+    // 12mo at tick 12 (50_000 × .06 × 1 = 3_000) — the flow row's
+    // conditional interest key exists on exactly those two months.
+    let s = applyAction(makeGame(12345), { type: 'OPEN_DEPOSIT', amount: 50_000, termMonths: 12 });
+    expect(s.deposits[0]).toEqual({ uid: '0:0', principal: 50_000, annualRate: 0.06, openedTick: 0, termMonths: 12 });
+    s = applyAction(runMonths(s, 1).final, { type: 'OPEN_DEPOSIT', amount: 20_000, termMonths: 6 });
+    expect(s.deposits[1]).toEqual({ uid: '1:1', principal: 20_000, annualRate: 0.05, openedTick: 1, termMonths: 6 });
+    const { final } = runMonths(s, 12);
+    const hash = fnv1a(JSON.stringify(final));
+    // the full v9 path end-to-end: rate locking, derived accrual inside
+    // netWorth (the levy base consciously grows with accrued interest),
+    // phase-4c maturity credits, the flow interest key, the ledger draining
+    // back to empty. DEPOSITS balance changes, the rate formula or any
+    // deposit shape change moves this hash — update it consciously, never
+    // casually.
+    expect(final.deposits).toEqual([]);
+    expect(final.eventLog.filter((e) => e.eventId === 'deposit_matured').length).toBe(2);
+    const flow = final.expenses?.flow ?? [];
+    const withInterest = flow.filter((f) => f.interest !== undefined);
+    expect(withInterest.length).toBe(2);
+    expect(withInterest.map((f) => f.interest)).toEqual([500, 3000]);
+    expect(hash).toBe(V9_GOLDEN);
   });
 });
 

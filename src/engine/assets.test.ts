@@ -258,18 +258,20 @@ describe('v2 → v3 migration & replay', () => {
     delete (v2 as Partial<GameState>).pendingSales;
     delete (v2 as Partial<GameState>).income;
     delete (v2 as Partial<GameState>).residency;
+    delete (v2 as Partial<GameState>).deposits;
     v2.schemaVersion = 2;
 
     const { final, actions } = runMonths(v2, 24);
     const replayed = replay(v2, actions);
     expect(JSON.stringify(replayed)).toBe(JSON.stringify(final));
-    expect(final.schemaVersion).toBe(8);
+    expect(final.schemaVersion).toBe(9);
     expect(final.assets).toBeNull(); // never self-activates
     expect(final.properties).toEqual({});
     expect(final.world).toBeNull(); // the world layer never self-activates either
     expect(final.expenses).toBeNull(); // the expense layer never self-activates either
     expect(final.home).toBeNull(); // the Yuva layer never self-activates either
     expect(final.pendingSales).toEqual([]); // escrow stays empty without LIST_ASSET
+    expect(final.deposits).toEqual([]); // the deposit layer never self-activates either
     expect(final.income).toBeNull(); // the income layer never self-activates either
     expect(final.residency).toBeNull(); // the residency layer never self-activates either
   });

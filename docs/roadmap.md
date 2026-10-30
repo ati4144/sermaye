@@ -1,12 +1,12 @@
 # Sermaye — Geliştirme Yol Haritası
 
-Oluşturuldu: 2026-10-14 · Proje durumu: **v8, tüm kapılar yeşil** (262/262 vitest, tsc, expo lint, web export, jsdom smoke) · M3 sevk edildi (2026-10-15) · v7 Gelir & Takvim sevk edildi (2026-10-17) · **v8 Vatan & Enflasyon sevk edildi (2026-10-18)**
+Oluşturuldu: 2026-10-14 · Proje durumu: **v9, tüm kapılar yeşil** (297/297 vitest, tsc, expo lint, web export, jsdom smoke) · M3 sevk edildi (2026-10-15) · v7 Gelir & Takvim sevk edildi (2026-10-17) · v8 Vatan & Enflasyon sevk edildi (2026-10-18) · **v9 Vadeli Mevduat sevk edildi (2026-10-30, M5'ten öne çekildi)**
 
 Bu doküman, tasarım dokümanlarındaki (kader/yatirim/dunya) faz planlarını tek bir sıralamaya dizer: her kilometre taşı bir çalışma birimi, belli kabul kriterleriyle.
 
 ---
 
-## 0. Mevcut durum (v8)
+## 0. Mevcut durum (v9)
 
 | Katman | Sürüm | İçerik |
 |---|---|---|
@@ -17,11 +17,12 @@ Bu doküman, tasarım dokümanlarındaki (kader/yatirim/dunya) faz planlarını 
 | Yuva & escrow | v6 | `LIST_ASSET`/`CANCEL_LISTING` (6 ay escrow, proceeds ilanda kilitli), `SET_ROLE` + homeRelief, Yuva kartı, zorunlu satış bildirimi |
 | Gelir & Takvim | v7 | Aylık maaş katmanı (oyun başında sorulur, SET_SALARY ile elle düzenlenir, yıllık zam gözden geçirmesi), sağlık-kapılı işsizlik (histererez 35/50), **sıfır çekiş**; takvim tarihi saf türetme (`gameYearMonth`: panel "Ekim 2026", Geçmiş "Eki 2026") |
 | Vatan & Enflasyon | v8 | Ev ülkesi seçimi (oyun başında sorulur; 10 ülke), ülke CPI kataloğu + senaryo yay üstüne yazımları + rejim eğimi (**sıfır çekiş**), varlık drift'ine nominal enflasyon eki, kümülatif TÜFE ile endeksli yaşam sepeti + eriyen iflas eşiği |
+| Vadeli Mevduat | v9 | 3/6/12 ay vadeli (CPI + vade primi açılışta kilitli, **sıfır çekiş**), türetilmiş faiz (state'te yalnız anapara+oran+vade), faz 4c'te escrow ön-örnekli vade kredisi, erken bozumda faiz yanar, en fazla 4 eşzamanlı |
 | Para birimi | UI | USD/TL/EUR/GBP/JPY/CHF/CNY/INR/AED/BRL/NGN gösterim katmanı (motor USD kalır); ülke seçimi görüntü para birimi varsayılanı, ayarlar override |
 
 **Altın kurallar (her adımda geçerli):**
 1. Legacy golden `1b9d3a91` (v2) **asla kıpırdamaz** — test tam olarak `{assets, properties, world, expenses, home, pendingSales, income, residency}` soyup `schemaVersion→2` normalleştirir.
-2. v3 `5e13babd`, v5 (`adb1362` / `449da977` / `9aefb4a`), v6 (`e22685cd` / `cd6e3fe4`), v7 (`15e97c19`) ve v8 (`45bafa91` / `2ab8644`) yalnızca **bilinçli** denge değişikliğinde hareket eder; commit mesajında nedeni yazılır.
+2. v3 `5e13babd`, v5 (`adb1362` / `449da977` / `9aefb4a`), v6 (`1da84d4f` / `d252d31a`), v7 (`2e81a393`) ve v8 (`f8deb445` / `fc78708d`) yalnızca **bilinçli** denge değişikliğinde hareket eder; commit mesajında nedeni yazılır.
 3. Çekiş bütçesi sözleşmesi (sim.ts docblock) bozulmaz; aksiyon-zamanı rng yoktur.
 4. Her teslimde: vitest + `tsc --noEmit` + `expo lint` + web export + (değişiklik varsa) golden bilinçli bump.
 5. `holdings` paylaşımlı kayıttır (ülkeler + kesirli varlıklar) — UI asla anahtarlarının ülke id'si olduğunu varsaymaz.
@@ -29,6 +30,8 @@ Bu doküman, tasarım dokümanlarındaki (kader/yatirim/dunya) faz planlarını 
 **v7 sevk notu (2026-10-17):** gelir katmanı kullanıcı isteğiyle yola çıktı ("kişinin aylık geliri olmalı" + "hangi tarihte olduğumuz görünmeli"). Katman tamamen **çekişsiz**: maaş kredisi faz 4a-pre'te (levy tabanı `worthBefore` krediden SONRA — bilinçli, sim.ts yorumunda), işsizlik geçişleri faz 3.5'te saf sağlık koşulu + histererez (JOB_LOSS 35 / JOB_RETURN 50), miras varisi yeniden işe alır (maaş hanedanın konumu olarak kalır). Takvim = `gameYearMonth` saf türetmesi (state yazısı yok; çaplar: Güncel Ekim 2026, 1973→Ekim 1973, 2008→Eylül 2008, Japonya→**Aralık 1989** Nikkei zirvesi). UI: oyun başı maaş sorusu → `SET_SALARY` (elle her an), yıllık "Zam Ayı" gözden geçirmesi (render-türetmeli, SET_SALARY imleci damgalar), eski kayıtlarda INIT_INCOME banner'ı, CashflowCard'ta Maaş satırı / dim İşsiz satırı. **Bilinçli golden hareketleri:** v6 çifti `11921228`→`adf87bdb` / `a8dae17f`→`2a6f1018` (yalnızca `"income":null` anahtarı state JSON'una girdi — nakit yolu birebir); v2/v3/v5 beş golden pre-run `income=null` ile **hareketsiz**; yeni v7 tam-durum golden `e7705c77` (maaşlı kiracı yolu, 120 ay). Geçmiş görünürlüğü: `enqueueLifeNotice` (kuyruğa alır VE log yazar — `job_loss`/`job_return`; ACK'in asla log yazmaması desenine çözüm).
 
 **v8 sevk notu (2026-10-18):** vatan katmanı kullanıcı isteğiyle yola çıktı ("oyuna giren kişi hangi ülkede olduğunu seçecek; para birimi buna göre; o ülkenin enflasyonu varlıkları etkilesin"). Kapsam kararı: **varlıklar + yaşam maliyeti** — varlık drift'ine aylık CPI nominal ek olarak girer (`assetDriftVol`'de korunan sonda-ekleme, asla `+0`, rejim çarpanına tabi değil), yaşam **sepeti** kümülatif TÜFE ile endekslenir (`livingClampFor` motor+UI paylaşımlı dikiş — taban VE `LIVING.MAX` tavanı endekslenir; servet vergisi bilinçli olarak endekslenmez çünkü tabanı olan `worth` varlık fiyatları üzerinden zaten kendini endeksler — çifte sayma), iflas eşiği `THRESHOLD × cpiMult` ile erir, maaş **nominal kalır** (v7 zam ayı enflasyon savunması), ülke borsa endeksleri CPI geçirmez. Enflasyon kaynakları: `HOME_INFLATION` ülke kataloğu (tr .40, ng .18, in .055 …) × `REGIME_TILT` (yalnız katalog hızlarına) ?? senaryo yay üstüne yazımları (yay-pencere kapısız: `beatCursor < beats.length` — yoksa 1973 ABD %6,5'i 50. yılda ×25 bileşikler; yay sonunda katalog döner: Volcker sonrası ~.025). Katman **tamamen çekişsiz** — rng'ye hiç dokunulmaz; `cpi: 1` inert yolları IEEE-754 `x*1 === x` ile bayt-birebir. Göç yok: `INIT_RESIDENCY` yalnız eski kayıtların banner'ından (cpi 100'den bugünden başlar — geçmiş yok sayılır). UI: oyun başı ülke adımı (dönemden sonra, maaştan önce; kartta para birimi + `≈%40/yıl` çipi; Devam `setCurrency` varsaylar), panel çipi `Türkiye · TÜFE 148`, CashflowCard tahmininde `Enflasyon ×1,48` dim satırı, Zam Ayı'nda TÜFE ipucu, Geçmiş'te `residency_init`. Para birimi kataloğuna 4 yeni (INR/AED/BRL/NGN — sona eklendi, sıra pinleri durur). **Bilinçli golden hareketleri:** v6 çifti `adf87bdb`→`e22685cd` / `2a6f1018`→`cd6e3fe4` ve v7 `e7705c77`→`15e97c19` (üçü de yalnızca version 8 + `"residency":null` anahtarı — mekanik, nakit yolu birebir); v2/v3/v5 beş golden pre-run `residency=null` ile **hareketsiz**; yeni v8 tam-durum golden'lar `45bafa91` (us kiracı, cpi 129.0107 @120 ay) + `2ab8644` (tr yüksek enflasyon, cpi 1060.0144 — yay üstüne yazımı + katalog karışımı).
+
+**v9 sevk notu (2026-10-30):** vadeli mevduat kullanıcı isteğiyle yola çıktı ("parayı vadeliye yatırma olsun") ve M5'ten öne çekildi (kullanıcı kararı; hisseler için "gerçek aylık seriler" kararı da alındı — M4/v10). Tasarım: **sıfır çekiş** tesisat katmanı — `deposits: DepositState[]` hep-dizi (INIT yok, soruman katmanı değil), oran açılışta `depositRateFor = annualCpiRate + SPREAD_BY_TERM` (%1,5/%2,5/%3,5) olarak **kilitlenir** (senaryo yayı + rejim eğimi bedavaya biner; 1973 us açılışı %10; residency yoksa saf prim), faiz **asla yazılmaz** (`accruedDepositInterest` türetmesi — UI "şu ana kadar" + netWorth aynı dikiş), vade `collectDueDeposits` faz 4c'te `collectDueSales`'ten hemen sonra, açlık çekirdek kontrolünden ÖNCE krediler (escrow kuralı: vadesi dolan mevduat o ayı kurtarır). Akış satırına koşullu `interest?` anahtarı (maaş deseni — öbür aylar bayt-özdeş). Bozma cezası tek kural: anapara döner, **faizin tamamı yanar** ("vade önemli" dersi). Muhafızlar: INVALID_TERM / TOO_SMALL (≥500$) / DEPOSIT_LIMIT (≤4 eşzamanlı) / INSUFFICIENT_CASH / DEPOSIT_NOT_FOUND. Worth-nötrlük: açılış anı netWorth değişmez (nakit→alacak) + hiçbir olay koşulu nakit okumaz → 120 ay rng ikizi birebir. Miras bayt-örnekli (varis vadesi doldurur). UI: Yatırım → Mevduat segmenti + `DepositSheet` (vade çipleri motor oranını gösterir, vade-sonu önizlemesi hipotetik-state), panelde iki-adımlı Boz, PortfolioCard "Vadeli mevduat", CashflowCard "Mevduat faizi" (yalnız vade ayında), Geçmiş'te `deposit_{opened,matured,broken}`. **Bilinçli golden hareketleri:** beş tam-durum golden yalnızca version 9 + `"deposits":[]` anahtarı (mekanik, nakit yolu birebir): v6 `e22685cd`→`1da84d4f` / `cd6e3fe4`→`d252d31a`, v7 `15e97c19`→`2e81a393`, v8 `45bafa91`→`f8deb445` / `a96a0027`→`fc78708d`; v2/v3/v5 beş golden pre-run `deposits=[]` ile **hareketsiz**; yeni v9 tam-durum golden `12305545` (çift vadeli yolu: 50k/12ay t0 + 20k/6ay t1, ikisi de t13'e kadar krediler).
 
 ---
 
@@ -96,7 +99,7 @@ Sevk edilen kapsam (şema v6, 206/206 vitest + tsc + lint + web export):
 **Amaç:** uç oyun derinliği — teklif makinesi ve yeni ekonomik sınıflar.
 
 - **Teklif makinesi** (yüksek kiralı daire avı: teklif kira alımında sabitlenir; teklifler faz 1b'de zaman-kapılı sabit slotta)
-- **Dükkan, mevduat, kripto, vakıf** sink'leri
+- **Dükkan, ~~mevduat~~, kripto, vakıf** sink'leri — *mevduat v9'da sevk edildi (2026-10-30, plan dışı öne çekme — bkz. §0 v9 notu)*
 - Bölge dedikoduları (olay metniyle)
 
 **Kabul:** teklif zaman-kapısı çekiş sözleşmesi testleri; her yeni sınıfın soak bandı.

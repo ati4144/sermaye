@@ -51,6 +51,7 @@ export default {
         withIncome: 'Gelir dahil',
         upkeepTotal: 'Toplam bakım',
         pending: 'Bekleyen satış',
+        deposits: 'Vadeli mevduat',
       },
     },
     time: {
@@ -145,6 +146,7 @@ export default {
         metals: 'Altın',
         property: 'Emlak',
         vehicles: 'Araç',
+        deposits: 'Mevduat',
       },
       price: 'Fiyat',
       yieldM: 'Aylık getiri',
@@ -168,6 +170,29 @@ export default {
         title: 'Sermayeni topraktan tuğlaya taşı',
         text: 'Altın, konut, tarla ve klasik araç yatırımları bu kayıtta henüz kapalı. Açarsan piyasalar aynen devam eder — zarar yok, kazanç senin.',
         cta: 'Varlık Piyasalarını Aç',
+      },
+    },
+    deposits: {
+      panel: {
+        empty: 'Açık vadeli mevduatın yok — "Vadeli Aç" ile faize kilitle.',
+        monthsLeft: '{{n}} ay kaldı',
+        accrued: 'İşlememiş faiz',
+        break: 'Boz',
+        breakWarning: 'Emin misin? Faiz yanar',
+        locked: 'Vadesi dolmadan bozarsan anapara döner, işlememiş faizin tamamı yanar.',
+        open: 'Vadeli Aç',
+      },
+      sheet: {
+        title: 'Vadeli Mevduat Aç',
+        rateLine: 'Oran açılışta kilitlenir: ülkenin TÜFE\'si + vade primi. Vade uzadıkça prim büyür.',
+        termChip: '{{n}} ay · {{rate}}/yıl',
+        payoutPreview: 'Vade sonunda: {{amount}} (faiz {{interest}})',
+        tooSmall: 'En az {{min}} tutarında vadeli açılabilir.',
+        max: 'Aynı anda en fazla {{n}} vadeli açık tutulabilir.',
+        open: 'Aç',
+      },
+      flow: {
+        interest: 'Mevduat faizi',
       },
     },
     family: {
@@ -300,6 +325,9 @@ export default {
       INCOME_ACTIVE: 'Gelir katmanı zaten açık.',
       INVALID_SALARY: 'Geçersiz maaş.',
       RESIDENCY_ACTIVE: 'Vatan zaten seçili.',
+      INVALID_TERM: 'Geçersiz vade — 3, 6 veya 12 ay olabilir.',
+      DEPOSIT_LIMIT: 'Aynı anda en fazla 4 vadeli açık tutulabilir.',
+      DEPOSIT_NOT_FOUND: 'Vadeli bulunamadı.',
       UNKNOWN: 'Bir şeyler ters gitti.',
     },
   },
@@ -412,6 +440,22 @@ export default {
     log: {
       income_init: { title: 'Gelir Katmanı Açıldı', text: 'Aylık maaş {{amount}} olarak işlenmeye başladı.' },
       salary_set: { title: 'Maaş Güncellendi', text: 'Maaş {{amount}}/ay olarak güncellendi.' },
+    },
+  },
+  deposits: {
+    log: {
+      deposit_opened: {
+        title: 'Vadeli Açıldı',
+        text: '{{amount}} · {{months}} ay vadeliye kilitlendi — vadesi dolunca faiziyle döner.',
+      },
+      deposit_matured: {
+        title: 'Vadeli Doldu',
+        text: 'Vadesi doldu: {{amount}} nakde geçti ({{months}} ay vadeliydi).',
+      },
+      deposit_broken: {
+        title: 'Vadeli Bozuldu',
+        text: 'Erken bozum: {{amount}} anapara geri döndü, işlememiş faiz yandı.',
+      },
     },
   },
   expenses: {

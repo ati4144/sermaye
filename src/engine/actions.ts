@@ -8,6 +8,7 @@ import { applyFateOption } from './fate/tick';
 import { performInheritance } from './life';
 import { createIncome, migrateState } from './create';
 import { basketMult } from './residency';
+import { depositRateFor } from './deposits';
 import { createWorld } from './world';
 import {
   assetFeeFor,
@@ -101,6 +102,12 @@ export function applyAction(state: GameState, action: EngineAction): GameState {
       break;
     case 'INIT_RESIDENCY':
       initResidency(s, action.countryId);
+      break;
+    case 'OPEN_DEPOSIT':
+      openDeposit(s, action.amount, action.termMonths);
+      break;
+    case 'BREAK_DEPOSIT':
+      breakDeposit(s, action.uid);
       break;
   }
 
@@ -537,6 +544,61 @@ function initResidency(s: GameState, countryId: string): void {
     uid: `${s.tick}:residency_init`,
     eventId: 'residency_init',
     countryId, // the LogEntry interpolation slot
+    netWorth: roundCash(netWorth(s)),
+    generation: s.player.generation,
+  });
+}
+
+/**
+ * OPEN_DEPOSIT (v9) — lock cash for a term at the rate this month's CPI path
+ * prices (depositRateFor, locked INTO state). Zero draws. Guards in price
+ * order: term, amount, ledger cap, cash. The interest itself is DERIVED
+ * (accruedDepositInterest), never stored. Logged so the history screen
+ * anchors the contract.
+ */
+function openDeposit(s: GameState, amount: number, termMonths: number): void {
+  requirePlaying(s);
+  if (!(balance.DEPOSITS.SPREAD_BY_TERM[termMonths] > 0)) throw new Error('INVALID_TERM');
+  if (!(amount > 0)) throw new Error('INVALID_AMOUNT');
+  if (amount < balance.DEPOSITS.MIN_AMOUNT) throw new Error('TOO_SMALL');
+  if (s.deposits.length >= balance.DEPOSITS.MAX_OPEN) throw new Error('DEPOSIT_LIMIT');
+  if (amount > s.cash + 1e-9) throw new Error('INSUFFICIENT_CASH');
+  const principal = roundCash(amount);
+  s.cash = roundCash(s.cash - principal);
+  s.deposits.push({
+    uid: `${s.tick}:${s.deposits.length}`,
+    principal,
+    annualRate: depositRateFor(s, termMonths),
+    openedTick: s.tick,
+    termMonths,
+  });
+  s.eventLog.push({
+    tick: s.tick,
+    uid: `${s.tick}:deposit_opened:${s.eventLog.length}`,
+    eventId: 'deposit_opened',
+    assetAmount: principal, // generic amount slot — the locked principal (v9)
+    assetUnits: termMonths, // generic count slot — the term in months (v9)
+    netWorth: roundCash(netWorth(s)),
+    generation: s.player.generation,
+  });
+}
+
+/**
+ * BREAK_DEPOSIT (v9) — early exit: the principal returns, ALL accrued
+ * interest forfeits (the one-rule penalty — the term mattered). Zero draws.
+ */
+function breakDeposit(s: GameState, uid: string): void {
+  requirePlaying(s);
+  const idx = s.deposits.findIndex((d) => d.uid === uid);
+  if (idx < 0) throw new Error('DEPOSIT_NOT_FOUND');
+  const [d] = s.deposits.splice(idx, 1);
+  s.cash = roundCash(s.cash + d.principal);
+  s.eventLog.push({
+    tick: s.tick,
+    uid: `${s.tick}:deposit_broken:${s.eventLog.length}`,
+    eventId: 'deposit_broken',
+    assetAmount: d.principal, // generic amount slot — the returned principal (v9)
+    assetUnits: d.termMonths, // generic count slot — the term in months (v9)
     netWorth: roundCash(netWorth(s)),
     generation: s.player.generation,
   });

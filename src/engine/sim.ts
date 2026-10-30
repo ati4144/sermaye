@@ -7,6 +7,7 @@ import { liveLife } from './life';
 import { triggerFateBeats } from './fate/tick';
 import { evolveMarkets, evolveAssetMarkets, collectAssetIncome, collectDueSales, homeReliefFor, liquidateToRaise, netWorth, roundCash, salaryFor } from './market';
 import { basketMult, cpiMult, evolveResidency, livingClampFor } from './residency';
+import { collectDueDeposits } from './deposits';
 import { nextFloat } from './rng';
 import { evolveWorld, applyScenarioBeats, eventProb } from './world';
 import type { RngState } from './rng';
@@ -86,6 +87,13 @@ import type { GameState } from './types';
  *     INIT_RESIDENCY carries a player-picked id. residency === null (every
  *     pre-v8 path) keeps the exact v7 budget and bits: legacy replays stay
  *     bit-for-bit.
+ * 14. DEPOSIT LAYER (v9): adds ZERO draws anywhere. OPEN_DEPOSIT /
+ *     BREAK_DEPOSIT read state only (the rate LOCKS at open from
+ *     annualCpiRate + term spread); phase 4c credits matured deposits
+ *     BEFORE the deficit check (the escrow month-rescue rule); accrued
+ *     interest is DERIVED (principal + accruedDepositInterest in netWorth),
+ *     never stored or drawn. deposits === [] (every pre-v9 path) keeps the
+ *     exact v8 budget and bits: legacy replays stay bit-for-bit.
  *
  * With these rules, the same code runs identically on Hermes (Android), JSC
  * (iOS), and V8 (web/Node).
@@ -172,7 +180,8 @@ function eligible(s: GameState, def: { cooldown: number; minTick?: number; condi
  *  2.5 fate beats (draw-free) 3. player life
  *  3.5 employment transitions (v7, gated, zero draws)
  *  4. cash flow — 4a-pre salary credit (v7, gated), 4a asset income (gated),
- *     4b living costs, forced liquidation via the asset ladder
+ *     4b living costs, 4c escrow/deposit maturation (v6/v9), 4d forced
+ *     liquidation via the asset ladder
  *  5. valuation & bookkeeping   (net worth history, bankruptcy check)
  *
  * Mutates the passed state (callers apply it to a cloned draft).
@@ -272,6 +281,12 @@ export function tick(s: GameState): void {
   // a matured sale credits cash this month instead of triggering a fire sale.
   collectDueSales(s);
 
+  // Phase 4c (cont.) — deposit maturation (v9, zero draws). Same month-rescue
+  // rule: a matured vadeli credits before the deficit check. The interest
+  // feeds the flow row below via the conditional `interest` key; the
+  // principal is returned capital and never enters the record.
+  const dep = collectDueDeposits(s);
+
   // Phase 4d — forced liquidation
   if (s.cash < 0) {
     liquidateToRaise(s, -s.cash);
@@ -289,9 +304,10 @@ export function tick(s: GameState): void {
       upkeep: income.upkeep,
       items: roundCash(itemsPart * fateMult),
       wealthLevy: roundCash((clamped - itemsPart) * fateMult),
-      net: roundCash(salary + income.rent - income.upkeep - living),
+      net: roundCash(salary + dep.interest + income.rent - income.upkeep - living),
       ...(relief > 0 ? { relief } : {}),
       ...(salary > 0 ? { salary: roundCash(salary) } : {}),
+      ...(dep.interest > 0 ? { interest: roundCash(dep.interest) } : {}),
     });
     while (s.expenses.flow.length > balance.EXPENSES.FLOW_CAP) s.expenses.flow.shift();
   }

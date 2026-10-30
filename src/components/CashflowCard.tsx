@@ -200,6 +200,10 @@ export function CashflowCard({ game }: { game: GameState }) {
               <FlowRow label={t('ui.income.flow.salary')} value={`+${formatMoney(last.salary)}`} color={Colors.positive} />
             </Pressable>
           ) : null}
+          {last.interest ? (
+            // v9: the conditional flow key — present only on maturity months
+            <FlowRow label={t('ui.deposits.flow.interest')} value={`+${formatMoney(last.interest)}`} color={Colors.positive} />
+          ) : null}
           {last.rent > 0 ? <FlowRow label={t('expenses.flow.rent')} value={`+${formatMoney(last.rent)}`} color={Colors.positive} /> : null}
           {last.upkeep > 0 ? <FlowRow label={t('expenses.flow.upkeep')} value={`−${formatMoney(last.upkeep)}`} color={Colors.negative} /> : null}
           <FlowRow

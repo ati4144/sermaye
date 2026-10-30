@@ -9,6 +9,7 @@ export {
   healHome,
   healIncome,
   healResidency,
+  healDeposits,
   migrateState,
   SCHEMA_VERSION,
 } from './create';
@@ -39,6 +40,7 @@ export {
   escrowProceedsFor,
   salaryFor,
 } from './market';
+export { depositRateFor, accruedDepositInterest, depositPayoutFor } from './deposits';
 export { ageYears } from './life';
 export { COUNTRIES, COUNTRY_IDS, countryDef } from './data/countries';
 export { ASSETS_CATALOG, ASSET_IDS, DEED_LIQUIDATION_ORDER, assetDef, activeAssetIds } from './data/assets';

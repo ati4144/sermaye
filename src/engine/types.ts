@@ -293,6 +293,13 @@ export interface CashflowMonth {
    * pre-v7 rows and unemployed months omit it, staying byte-identical).
    */
   salary?: number;
+  /**
+   * v9 matured-deposit interest credited this month (present only on months
+   * with interest > 0 — pre-v9 rows and no-maturity months omit it, staying
+   * byte-identical). The principal is returned capital, not income: like
+   * escrow proceeds it never enters this record.
+   */
+  interest?: number;
 }
 
 export interface ExpensesState {
@@ -368,6 +375,26 @@ export interface ResidencyState {
   cpi: number;
   /** activation stamp — 0 on new games, s.tick on INIT_RESIDENCY */
   sinceTick: number;
+}
+
+/**
+ * The v9 deposit layer — one vadeli mevduat (time deposit). The interest is
+ * DERIVED, never stored: elapsed months × locked rate
+ * (accruedDepositInterest). Empty array on legacy saves (inert: no accrual,
+ * no draws, replay bit-for-bit) — there is no INIT action; the layer is a
+ * facility, always available, not an opening question.
+ */
+export interface DepositState {
+  /** `${tick}:${deposits.length}` — unique among live entries */
+  uid: string;
+  /** locked principal in USD (roundCash, >= MIN_AMOUNT at open) */
+  principal: number;
+  /** ANNUAL rate locked at open: annualCpiRate(s) + term spread (round4) */
+  annualRate: number;
+  /** s.tick at OPEN_DEPOSIT */
+  openedTick: number;
+  /** balance.DEPOSITS.TERMS member — months until maturity */
+  termMonths: number;
 }
 
 // ---------- Fate ("Kader") ----------
@@ -462,7 +489,11 @@ export type EngineAction =
   | { type: 'INIT_INCOME'; salaryM?: number }
   | { type: 'SET_SALARY'; salaryM: number }
   // v8 residency layer — the home-country pick; zero-draw (pure initial data)
-  | { type: 'INIT_RESIDENCY'; countryId: string };
+  | { type: 'INIT_RESIDENCY'; countryId: string }
+  // v9 deposit layer — vadeli mevduat: the rate locks at open from state
+  // (zero draws); BREAK returns the principal, accrued interest forfeits
+  | { type: 'OPEN_DEPOSIT'; amount: number; termMonths: number }
+  | { type: 'BREAK_DEPOSIT'; uid: string };
 
 export interface ActionLogEntry {
   seq: number;
@@ -543,4 +574,10 @@ export interface GameState {
    * question captured (default 'us').
    */
   residency: ResidencyState | null;
+  /**
+   * v9 deposit layer — vadeli mevduat positions. [] on legacy saves (inert:
+   * no accrual, no draws, replay bit-for-bit). Not a question layer — no
+   * INIT action exists; the player opens one whenever they like.
+   */
+  deposits: DepositState[];
 }

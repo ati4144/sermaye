@@ -51,6 +51,7 @@ export default {
         withIncome: 'With income',
         upkeepTotal: 'Total upkeep',
         pending: 'Pending sale',
+        deposits: 'Time deposits',
       },
     },
     time: {
@@ -145,6 +146,7 @@ export default {
         metals: 'Metals',
         property: 'Property',
         vehicles: 'Vehicles',
+        deposits: 'Deposits',
       },
       price: 'Price',
       yieldM: 'Monthly yield',
@@ -168,6 +170,29 @@ export default {
         title: 'Move capital from paper to soil and brick',
         text: 'Gold, housing, farmland and classic cars are still closed on this save. Opening them leaves every market untouched — no loss, the upside is yours.',
         cta: 'Open Asset Markets',
+      },
+    },
+    deposits: {
+      panel: {
+        empty: 'No open time deposits — lock cash into interest with "Open Deposit".',
+        monthsLeft: '{{n}} mo left',
+        accrued: 'Accrued interest',
+        break: 'Break',
+        breakWarning: 'Sure? Interest burns',
+        locked: 'Break before maturity and the principal returns — all accrued interest is forfeited.',
+        open: 'Open Deposit',
+      },
+      sheet: {
+        title: 'Open a Time Deposit',
+        rateLine: 'The rate locks at opening: your country\'s CPI + a term premium. Longer terms, bigger premiums.',
+        termChip: '{{n}} mo · {{rate}}/yr',
+        payoutPreview: 'At maturity: {{amount}} (interest {{interest}})',
+        tooSmall: 'Deposits start at {{min}}.',
+        max: 'At most {{n}} deposits can be open at once.',
+        open: 'Open',
+      },
+      flow: {
+        interest: 'Deposit interest',
       },
     },
     family: {
@@ -300,6 +325,9 @@ export default {
       INCOME_ACTIVE: 'The income layer is already on.',
       INVALID_SALARY: 'Invalid salary.',
       RESIDENCY_ACTIVE: 'The homeland is already picked.',
+      INVALID_TERM: 'Invalid term — must be 3, 6 or 12 months.',
+      DEPOSIT_LIMIT: 'At most 4 deposits can be open at once.',
+      DEPOSIT_NOT_FOUND: 'Deposit not found.',
       UNKNOWN: 'Something went wrong.',
     },
   },
@@ -412,6 +440,22 @@ export default {
     log: {
       income_init: { title: 'Income Layer Opened', text: 'The monthly salary of {{amount}} starts flowing.' },
       salary_set: { title: 'Salary Updated', text: 'The salary is now {{amount}}/mo.' },
+    },
+  },
+  deposits: {
+    log: {
+      deposit_opened: {
+        title: 'Deposit Opened',
+        text: '{{amount}} locked into a {{months}}-month deposit — it returns with interest at term.',
+      },
+      deposit_matured: {
+        title: 'Deposit Matured',
+        text: 'The term ended: {{amount}} credited to cash ({{months}}-month deposit).',
+      },
+      deposit_broken: {
+        title: 'Deposit Broken',
+        text: 'Early break: the {{amount}} principal returned, accrued interest forfeited.',
+      },
     },
   },
   expenses: {

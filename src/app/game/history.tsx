@@ -32,6 +32,8 @@ const HOME_LOG_EVENTS = new Set(['home_set']);
 const INCOME_LOG_EVENTS = new Set(['income_init', 'salary_set']);
 /** Residency-layer annotations (v8) — the home-country pick (no catalog EventDef, like every INIT). */
 const RESIDENCY_LOG_EVENTS = new Set(['residency_init']);
+/** Deposit-layer annotations (v9) — open/mature/break (assetAmount = principal·payout, assetUnits = term). */
+const DEPOSIT_LOG_EVENTS = new Set(['deposit_opened', 'deposit_matured', 'deposit_broken']);
 
 export default function History() {
   const { t } = useTranslation();
@@ -54,7 +56,9 @@ export default function History() {
           const isHomeLog = HOME_LOG_EVENTS.has(e.eventId);
           const isIncomeLog = INCOME_LOG_EVENTS.has(e.eventId);
           const isResidencyLog = RESIDENCY_LOG_EVENTS.has(e.eventId);
-          const isAnnotation = isAssetLog || isWorldLog || isExpenseLog || isHomeLog || isIncomeLog || isResidencyLog;
+          const isDepositLog = DEPOSIT_LOG_EVENTS.has(e.eventId);
+          const isAnnotation =
+            isAssetLog || isWorldLog || isExpenseLog || isHomeLog || isIncomeLog || isResidencyLog || isDepositLog;
           const def = isAnnotation ? undefined : eventDef(e.eventId);
           const isFate = def?.trigger === 'FATE';
           const isLife = def?.trigger === 'LIFE';
@@ -72,7 +76,9 @@ export default function History() {
                     ? t(`income.log.${e.eventId}.title`)
                     : isResidencyLog
                       ? t('ui.country.log.residency_init.title')
-                      : t(`events.${e.eventId}.title`, { country: market ?? '—' });
+                      : isDepositLog
+                        ? t(`deposits.log.${e.eventId}.title`)
+                        : t(`events.${e.eventId}.title`, { country: market ?? '—' });
           const body = isAssetLog
             ? t(`assets.log.${e.eventId}.text`, {
                 asset: marketName(t, e.assetId) ?? '—',
@@ -97,9 +103,22 @@ export default function History() {
                       })
                     : isResidencyLog
                       ? t('ui.country.log.residency_init.text', { country: t(`countries.${e.countryId ?? 'us'}.name`) })
-                      : t(`events.${e.eventId}.text`, { country: market ?? '—' });
+                      : isDepositLog
+                        ? t(`deposits.log.${e.eventId}.text`, {
+                            amount: e.assetAmount !== undefined ? formatMoney(e.assetAmount) : '—',
+                            months: e.assetUnits ?? '—',
+                          })
+                        : t(`events.${e.eventId}.text`, { country: market ?? '—' });
           const accent =
-            isFate || isLife || isForced || isWorldLog || isExpenseLog || isHomeLog || isIncomeLog || isResidencyLog
+            isFate ||
+            isLife ||
+            isForced ||
+            isWorldLog ||
+            isExpenseLog ||
+            isHomeLog ||
+            isIncomeLog ||
+            isResidencyLog ||
+            isDepositLog
               ? Colors.gold
               : Colors.accent;
           return (

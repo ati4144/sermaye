@@ -27,12 +27,14 @@ Ortak fiyat modeli: **birim fiyat = `startPrice` × `index/100`**; endeks `r = c
 | Tarla (`farm`) | tapu | 25.000$/dönüm | %2,5 / %5 (en düşük) | hasat net %0,35/ay → ~%6,7/yıl | ani satış −%12 | %1,5 | **EVET** |
 | Klasik Araç (`car`) | tapu | 40.000$ | %3 / %9 | bakım −%0,15/ay → ~%1,2/yıl | ani satış −%10 | %5 (mezat) | **EVET** |
 | Devlet Tahvili (`bond`) | kesirli | 100$ | %0,5 / %6; κcpi −0,8 (faz 3) | kupon %4,2/yıl | anlık | %0,25 | Faz 3 |
-| Vadeli Mevduat (`deposit`) | kilitli | 1.000$ | vol ~0; faiz 0,002+1,1×CPI₁₂ | ~%4,9/yıl | vadeye dek kilitli | %0 | Faz 4 |
+| Vadeli Mevduat (`deposit`) | kilitli | 1.000$ | vol ~0; faiz 0,002+1,1×CPI₁₂ | ~%4,9/yıl | vadeye dek kilitli | %0 | ✅ v9'da sevk (CPI+spread dikişiyle) |
 | İşletme (`business`) | tapu | 60–250k | %4 / %20 | kira %0,8/ay, olay zincirli | escrow 6 ay / ani −%20 | %3–5 | Faz 4 |
 | Kripto (`crypto`) | kesirli | ~10$ | %8 / %70, crash-wired | — | anlık | %1 | Faz 4 |
 | Vakıf (`foundation`) | saf sink | 500k+ | — | —; kader kaçışları + epilog | geri satılamaz | — | Faz 4 |
 
 TR lezzeti i18n'de: 'Kuyumcudan gram altın', 'Şehirde 2+1 — kiraya ver', 'Toprak baba malı', '67 model — garajdaki tutku'. Yeni sınıf = katalog satırı + i18n anahtarı (kader-design §5 deseni). Bilet merdiveni 100.000$ başlangıca göre: tarla ilk hedef, araç yıllık birikim, daire 1–2 yıllık dönüm noktası, villa/vakıf geç oyun.
+
+> **v9 notu (2026-10-30):** Vadeli mevduat sevk edildi — tablodaki parametre-katalogu yerine **deterministik dikiş**: oran açılışta `annualCpiRate + vade primi` (%1,5/%2,5/%3,5) olarak kilitlenir (senaryo yayı + rejim eğimi bedavaya biner), faiz asla state'e yazılmaz (`accruedDepositInterest` türetmesi), vade faz 4c'te açlık kontrolünden önce krediler (escrow kuralı), erken bozumda faizin tamamı yanar. Ayrıntılar: `src/engine/deposits.ts` + `deposits.test.ts`.
 
 ## 3. Motor tasarımı
 

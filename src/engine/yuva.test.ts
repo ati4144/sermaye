@@ -20,9 +20,9 @@ function richGame(seed: number, cash = 1_000_000): GameState {
 }
 
 describe('Yuva layer: schema & migration', () => {
-  it('new games start as renters at schema v8 with an empty escrow ledger', () => {
+  it('new games start as renters at schema v9 with an empty escrow ledger', () => {
     const s = makeGame(1);
-    expect(s.schemaVersion).toBe(8);
+    expect(s.schemaVersion).toBe(9);
     expect(s.home).toEqual({ role: 'rental', assetId: null, sinceTick: 0 });
     expect(s.pendingSales).toEqual([]);
   });
@@ -34,14 +34,16 @@ describe('Yuva layer: schema & migration', () => {
     delete (v5 as Partial<GameState>).pendingSales;
     delete (v5 as Partial<GameState>).income;
     delete (v5 as Partial<GameState>).residency;
+    delete (v5 as Partial<GameState>).deposits;
     (v5 as { schemaVersion: number }).schemaVersion = 5;
     const m = migrateState(v5);
-    expect(m.schemaVersion).toBe(8);
+    expect(m.schemaVersion).toBe(9);
     expect(m.home).toBeNull();
     expect(m.pendingSales).toEqual([]);
     expect(m.income).toBeNull();
     expect(m.residency).toBeNull(); // v7→v8 step: cpi 1 until INIT_RESIDENCY
-    const v5Plus = { ...clone(v5), schemaVersion: 8, pendingSales: [], home: null, income: null, residency: null }; // key order = migrateState's
+    expect(m.deposits).toEqual([]); // v8→v9 step: empty ledger until OPEN_DEPOSIT
+    const v5Plus = { ...clone(v5), schemaVersion: 9, pendingSales: [], home: null, income: null, residency: null, deposits: [] }; // key order = migrateState's
     expect(JSON.stringify(m)).toBe(JSON.stringify(v5Plus));
   });
 

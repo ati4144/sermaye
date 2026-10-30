@@ -153,6 +153,24 @@ export const balance = {
     } as Record<LifestyleTier, { key: string; amount: number }[]>,
   },
 
+  /**
+   * Vadeli mevduat v9 — time deposits. Rate = the country's current annual
+   * CPI path (annualCpiRate: catalog / scenario-arc override / regime tilt)
+   * plus a term spread, LOCKED at open — banks price the contract once. The
+   * nominal number tracks inflation by construction: the real return is the
+   * spread everywhere (~+1.5-3.5%/yr), which is the whole lesson.
+   */
+  DEPOSITS: {
+    /** selectable terms, months */
+    TERMS: [3, 6, 12],
+    /** annual spread over the CPI path, by term (reward for the longer lock) */
+    SPREAD_BY_TERM: { 3: 0.015, 6: 0.025, 12: 0.035 } as Record<number, number>,
+    /** simultaneous open deposits */
+    MAX_OPEN: 4,
+    /** smallest openable principal, USD (engine money) */
+    MIN_AMOUNT: 500,
+  },
+
   FATE: {
     /** per-field clamp for every FateMods entry */
     MOD_CLAMP: [0.5, 1.5] as [number, number],

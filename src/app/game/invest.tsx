@@ -2,26 +2,28 @@ import { useMemo, useState } from 'react';
 import { Modal, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import Animated, { FadeInDown, FadeOutUp, SlideInDown } from 'react-native-reanimated';
 import { useTranslation } from 'react-i18next';
-import { ASSETS_CATALOG, feeRateFor } from '@/engine';
+import { accruedDepositInterest, ASSETS_CATALOG, feeRateFor } from '@/engine';
 import { ChoiceButton } from '@/components/ChoiceButton';
 import { CountryRow } from '@/components/CountryRow';
 import { AssetRow } from '@/components/AssetRow';
 import { AssetTradeSheet } from '@/components/AssetTradeSheet';
+import { DepositSheet } from '@/components/DepositSheet';
 import { AnalystLine } from '@/components/AnalystLine';
-import type { CountryState } from '@/engine';
-import { formatDisplayAmount, formatMoney, formatNumber, inputToUsd, useCurrencySync, usdToSeed } from '@/lib/money';
+import type { CountryState, GameState } from '@/engine';
+import { formatDisplayAmount, formatMoney, formatNumber, formatPct, inputToUsd, useCurrencySync, usdToSeed } from '@/lib/money';
 import { useActiveGame, useGameStore } from '@/store/gameStore';
 import { Colors, Radius, ScreenContainer, Spacing, Typography } from '@/theme';
 
 type Mode = { kind: 'buy'; country: CountryState } | { kind: 'sell'; country: CountryState } | null;
-type Segment = 'stocks' | 'metals' | 'property' | 'vehicles';
+type Segment = 'stocks' | 'metals' | 'property' | 'vehicles' | 'deposits';
 
-const SEGMENTS: Segment[] = ['stocks', 'metals', 'property', 'vehicles'];
+const SEGMENTS: Segment[] = ['stocks', 'metals', 'property', 'vehicles', 'deposits'];
 const SEGMENT_CATEGORIES: Record<Segment, string[]> = {
   stocks: [],
   metals: ['METAL'],
   property: ['REAL_ESTATE', 'LAND'],
   vehicles: ['VEHICLE'],
+  deposits: [], // the fixed panel — no catalog entries behind it
 };
 
 export default function Invest() {
@@ -34,6 +36,7 @@ export default function Invest() {
   const [amount, setAmount] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [segment, setSegment] = useState<Segment>('stocks');
+  const [depositOpen, setDepositOpen] = useState(false);
 
   const sorted = useMemo(() => (game ? Object.values(game.countries).sort((a, b) => a.id.localeCompare(b.id)) : []), [game]);
   const segmentAssets = useMemo(
@@ -134,13 +137,15 @@ export default function Invest() {
           ))}
         </View>
 
-        {segment === 'stocks'
-          ? sorted.map((cs, i) => (
-              <Animated.View key={cs.id} entering={FadeInDown.duration(250).delay(i * 30)}>
-                <CountryRow country={cs} holding={game.holdings[cs.id]} onPress={() => openTrade(cs.id)} />
-              </Animated.View>
-            ))
-          : game.assets === null
+        {segment === 'deposits' ? (
+          <DepositPanel game={game} onOpen={() => setDepositOpen(true)} />
+        ) : segment === 'stocks' ? (
+          sorted.map((cs, i) => (
+            <Animated.View key={cs.id} entering={FadeInDown.duration(250).delay(i * 30)}>
+              <CountryRow country={cs} holding={game.holdings[cs.id]} onPress={() => openTrade(cs.id)} />
+            </Animated.View>
+          ))
+        ) : game.assets === null
             ? // legacy save: the segment is inert until INIT_ASSETS runs — point
               // at the banner above instead of rendering a blank body
               <Text style={{ ...Typography.dim, fontSize: 13, textAlign: 'center', paddingVertical: Spacing.lg }}>
@@ -232,6 +237,7 @@ export default function Invest() {
       </Modal>
 
       {assetId && game.assets ? <AssetTradeSheet game={game} assetId={assetId} onClose={() => setAssetId(null)} /> : null}
+      {depositOpen ? <DepositSheet game={game} onClose={() => setDepositOpen(false)} /> : null}
     </ScreenContainer>
   );
 }
@@ -266,6 +272,82 @@ function ModeToggle({ label, active, disabled, onPress }: { label: string; activ
     >
       <Text style={{ color: active ? '#FFFFFF' : Colors.text, fontWeight: '700', fontSize: 13 }}>{label}</Text>
     </Pressable>
+  );
+}
+
+/**
+ * The v9 Mevduat panel — the fixed body of the deposits segment. Open
+ * positions: principal · locked rate · months left · accrued interest (the
+ * same derived-from-state seam netWorth uses) with a two-tap Boz — the break
+ * forfeits ALL accrued interest, so the first tap asks, the second acts.
+ */
+function DepositPanel({ game, onOpen }: { game: GameState; onOpen: () => void }) {
+  const { t } = useTranslation();
+  const dispatch = useGameStore((s) => s.dispatch);
+  const [confirmUid, setConfirmUid] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  const breakDeposit = (uid: string) => {
+    try {
+      dispatch({ type: 'BREAK_DEPOSIT', uid });
+      setConfirmUid(null);
+    } catch (e) {
+      const code = e instanceof Error ? e.message : 'UNKNOWN';
+      setError(t(`ui.errors.${code}`, { defaultValue: t('ui.errors.UNKNOWN') }));
+    }
+  };
+
+  return (
+    <Animated.View entering={FadeInDown.duration(250)} style={styles.depPanel}>
+      {game.deposits.length === 0 ? (
+        <Text style={{ ...Typography.dim, fontSize: 13, textAlign: 'center', paddingVertical: Spacing.sm }}>
+          {t('ui.deposits.panel.empty')}
+        </Text>
+      ) : (
+        game.deposits.map((d) => {
+          const monthsLeft = Math.max(0, d.openedTick + d.termMonths - game.tick);
+          const accrued = accruedDepositInterest(d, game.tick);
+          const confirming = confirmUid === d.uid;
+          return (
+            <View key={d.uid} style={styles.depRow}>
+              <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', gap: Spacing.sm }}>
+                <Text style={{ ...Typography.h2, fontSize: 15, fontVariant: ['tabular-nums'] }}>{formatMoney(d.principal)}</Text>
+                <Text style={{ color: Colors.accent, fontWeight: '700', fontSize: 13, fontVariant: ['tabular-nums'] }}>
+                  {formatPct(d.annualRate)} · {t('ui.deposits.panel.monthsLeft', { n: monthsLeft })}
+                </Text>
+              </View>
+              <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+                <Text style={{ ...Typography.dim, fontSize: 12 }}>
+                  {t('ui.deposits.panel.accrued')}:{' '}
+                  <Text style={{ color: Colors.positive, fontWeight: '600' }}>{formatMoney(accrued)}</Text>
+                </Text>
+                <Pressable
+                  accessibilityRole="button"
+                  hitSlop={8}
+                  testID={`deposit-break-${d.uid}`}
+                  onPress={() => (confirming ? breakDeposit(d.uid) : setConfirmUid(d.uid))}
+                  style={{
+                    backgroundColor: confirming ? Colors.negative : Colors.surfaceAlt,
+                    borderWidth: 1,
+                    borderColor: confirming ? 'transparent' : Colors.border,
+                    borderRadius: Radius.sm,
+                    paddingHorizontal: Spacing.md,
+                    paddingVertical: Spacing.xs,
+                  }}
+                >
+                  <Text style={{ color: confirming ? '#FFFFFF' : Colors.negative, fontWeight: '600', fontSize: 12 }}>
+                    {confirming ? t('ui.deposits.panel.breakWarning') : t('ui.deposits.panel.break')}
+                  </Text>
+                </Pressable>
+              </View>
+            </View>
+          );
+        })
+      )}
+      {error ? <Text style={{ color: Colors.negative, fontSize: 13 }}>{error}</Text> : null}
+      <Text style={{ ...Typography.dim, fontSize: 11 }}>{t('ui.deposits.panel.locked')}</Text>
+      <ChoiceButton label={t('ui.deposits.panel.open')} variant="primary" onPress={onOpen} />
+    </Animated.View>
   );
 }
 
@@ -305,5 +387,19 @@ const styles = StyleSheet.create({
     borderRadius: Radius.sm,
     paddingHorizontal: 6,
     paddingVertical: 2,
+  },
+  depPanel: {
+    backgroundColor: Colors.surface,
+    borderWidth: 1,
+    borderColor: Colors.border,
+    borderRadius: Radius.md,
+    padding: Spacing.md,
+    gap: Spacing.sm,
+  },
+  depRow: {
+    borderTopWidth: StyleSheet.hairlineWidth,
+    borderTopColor: Colors.border,
+    paddingTop: Spacing.sm,
+    gap: 2,
   },
 });

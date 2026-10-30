@@ -10,6 +10,7 @@ import { applyOpeningBeats, createWorld, packAgenda, REGIME_IDS } from './world'
 import { WORLD_PACK } from './worldpack';
 import type {
   AssetsState,
+  DepositState,
   ExpenseItem,
   ExpensesState,
   GameState,
@@ -19,7 +20,7 @@ import type {
   WorldState,
 } from './types';
 
-export const SCHEMA_VERSION = 8;
+export const SCHEMA_VERSION = 9;
 
 export interface NewGameOptions {
   seed: number;
@@ -146,6 +147,9 @@ export function createNewGame(opts: NewGameOptions): GameState {
     // 100. Legacy saves migrate to residency: null (inert until
     // INIT_RESIDENCY); the whole inflation path is zero-draw.
     residency: createResidency(opts.homeCountryId),
+    // v9 deposit layer — an empty ledger from day one (inert: no accrual,
+    // no draws). Not a question layer — the player opens via OPEN_DEPOSIT.
+    deposits: [],
   };
 
   // Fate: exactly ONE unconditional draw from the main stream seeds the
@@ -189,6 +193,9 @@ export function createNewGame(opts: NewGameOptions): GameState {
  *  v7 → v8: `residency: null` (inert residency layer — cpi multiplier 1, no
  *           asset-drift add-on, no basket indexing; replay bit-for-bit until
  *           the player activates via INIT_RESIDENCY, which draws nothing)
+ *  v8 → v9: `deposits: []` (inert deposit layer — no accrual, no draws;
+ *           replay bit-for-bit until the player opens one via OPEN_DEPOSIT,
+ *           which draws nothing)
  * replay() applies this on entry so (initial, actionLog) pairs from any
  * schema version reproduce identically.
  */
@@ -215,6 +222,9 @@ export function migrateState(state: GameState): GameState {
   }
   if (st.schemaVersion < 8) {
     st = { ...st, schemaVersion: 8, residency: null };
+  }
+  if (st.schemaVersion < 9) {
+    st = { ...st, schemaVersion: 9, deposits: [] };
   }
   return st;
 }
@@ -506,4 +516,67 @@ export function healResidency(state: GameState): GameState {
       : state.tick;
   if (cpi === r.cpi && sinceTick === r.sinceTick) return state;
   return { ...state, residency: { countryId: r.countryId, cpi, sinceTick } };
+}
+
+/**
+ * Repair a persisted save whose v9 deposit layer predates the final shape —
+ * dev-stage envelopes can carry malformed rows (NaN principal, unknown term,
+ * future openedTick) or an over-full ledger (the same hazard class the other
+ * healers exist for). Malformed rows are dropped (conscious, like escrow
+ * rows); the ledger caps at MAX_OPEN keeping the oldest. Returns the SAME
+ * reference when the layer is already healthy, so hydration stays cheap.
+ * Runs at the STORE boundary only.
+ */
+export function healDeposits(state: GameState): GameState {
+  const src = state.deposits;
+  if (!Array.isArray(src)) return { ...state, deposits: [] };
+
+  const terms = balance.DEPOSITS.TERMS as readonly number[];
+  const deposits: DepositState[] = [];
+  let dropped = false;
+  for (const d of src) {
+    const ok =
+      d &&
+      typeof d.uid === 'string' &&
+      typeof d.principal === 'number' &&
+      Number.isFinite(d.principal) &&
+      d.principal > 0 &&
+      typeof d.annualRate === 'number' &&
+      Number.isFinite(d.annualRate) &&
+      d.annualRate >= 0 &&
+      typeof d.openedTick === 'number' &&
+      Number.isInteger(d.openedTick) &&
+      d.openedTick >= 0 &&
+      d.openedTick <= state.tick &&
+      typeof d.termMonths === 'number' &&
+      terms.indexOf(d.termMonths) >= 0;
+    if (ok) {
+      deposits.push({
+        uid: d.uid,
+        principal: roundCash(d.principal),
+        annualRate: round4(d.annualRate),
+        openedTick: d.openedTick,
+        termMonths: d.termMonths,
+      });
+    } else {
+      dropped = true;
+    }
+  }
+  if (deposits.length > balance.DEPOSITS.MAX_OPEN) {
+    deposits.length = balance.DEPOSITS.MAX_OPEN;
+    dropped = true;
+  }
+  const same =
+    !dropped &&
+    deposits.length === src.length &&
+    deposits.every(
+      (d, i) =>
+        d.uid === src[i].uid &&
+        d.principal === src[i].principal &&
+        d.annualRate === src[i].annualRate &&
+        d.openedTick === src[i].openedTick &&
+        d.termMonths === src[i].termMonths,
+    );
+  if (same) return state;
+  return { ...state, deposits };
 }

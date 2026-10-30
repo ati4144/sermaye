@@ -6,6 +6,7 @@ import type { RngState } from './rng';
 import { enqueueLifeEvent, logAssetEntry, tickModifiers } from './events/apply';
 import { REGIMES, assetRegimeParams } from './world';
 import { inflationM } from './residency';
+import { accruedDepositInterest } from './deposits';
 import type { GameState } from './types';
 
 /**
@@ -155,6 +156,10 @@ export function netWorth(s: GameState): number {
   // `properties`, so this is the only place they still count (empty array on
   // pre-v6 replays keeps the sum bit-identical).
   for (const ps of s.pendingSales) total += ps.proceeds;
+  // v9: open deposits are receivables — principal plus accrued-but-unpaid
+  // interest, derived here and never stored (empty array on pre-v9 replays
+  // keeps the sum bit-identical).
+  for (const d of s.deposits) total += d.principal + accruedDepositInterest(d, s.tick);
   return total;
 }
 

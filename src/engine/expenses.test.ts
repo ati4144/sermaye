@@ -15,6 +15,7 @@ function v4Game(seed: number): GameState {
   delete (v4 as Partial<GameState>).pendingSales;
   delete (v4 as Partial<GameState>).income;
   delete (v4 as Partial<GameState>).residency;
+  delete (v4 as Partial<GameState>).deposits;
   v4.schemaVersion = 4;
   return v4;
 }
@@ -23,12 +24,13 @@ describe('expense layer: schema & migration', () => {
   it('migrateState stamps v4 saves inert: expenses, home, income and residency null, replay bit-for-bit', () => {
     const v4 = v4Game(9);
     const m = migrateState(v4);
-    expect(m.schemaVersion).toBe(8);
+    expect(m.schemaVersion).toBe(9);
     expect(m.expenses).toBeNull();
     expect(m.home).toBeNull();
     expect(m.income).toBeNull();
     expect(m.residency).toBeNull(); // v7→v8 step: cpi 1 until INIT_RESIDENCY
-    const v4Plus = { ...clone(v4), schemaVersion: 8, expenses: null, pendingSales: [], home: null, income: null, residency: null }; // key order = migrateState's
+    expect(m.deposits).toEqual([]); // v8→v9 step: empty ledger until OPEN_DEPOSIT
+    const v4Plus = { ...clone(v4), schemaVersion: 9, expenses: null, pendingSales: [], home: null, income: null, residency: null, deposits: [] }; // key order = migrateState's
     expect(JSON.stringify(m)).toBe(JSON.stringify(v4Plus));
 
     const { final, actions } = runMonths(v4, 24);
